@@ -1,0 +1,1 @@
+Códigos e projetos antigos de âmbito pessoal e acadêmico, mas que podem ser úteis e servirem de referência.
