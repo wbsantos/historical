@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.avatarbatterywallpaper"
+    android:versionCode="5"
+    android:versionName="2.0.1" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="20" />
+	<uses-feature
+       android:name="android.software.live_wallpaper"
+       android:required="true" >
+   	</uses-feature>
+   	
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar"
+        android:name="com.avatarbatterywallpaper.AvatarApplication"> >
+
+        <service
+            android:name="com.wallpapers.AvatarState"
+            android:enabled="true"
+            android:label="@string/btnAvatarState"
+            android:permission="android.permission.BIND_WALLPAPER" >
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" >
+                </action>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/avatarstatewallpaper" >
+            </meta-data>
+        </service>
+        <service
+            android:name="com.wallpapers.SpiritBend"
+            android:enabled="true"
+            android:label="@string/btnSpiritBend"
+            android:permission="android.permission.BIND_WALLPAPER" >
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" >
+                </action>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/spiritbendwallpaper" >
+            </meta-data>
+        </service>
+        <service
+            android:name="com.wallpapers.AdultAang"
+            android:enabled="true"
+            android:label="@string/btnAdultAang"
+            android:permission="android.permission.BIND_WALLPAPER" >
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" >
+                </action>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/adultaangwallpaper" >
+            </meta-data>
+        </service>
+        <service
+            android:name="com.wallpapers.Wan"
+            android:enabled="true"
+            android:label="@string/btnWan"
+            android:permission="android.permission.BIND_WALLPAPER" >
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" >
+                </action>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/wanwallpaper" >
+            </meta-data>
+        </service>
+        <service
+            android:name="com.wallpapers.KorraSpirit"
+            android:enabled="true"
+            android:label="@string/btnKorraSpirit"
+            android:permission="android.permission.BIND_WALLPAPER" >
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" >
+                </action>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/korraspiritwallpaper" >
+            </meta-data>
+        </service>
+        <service
+            android:name="com.wallpapers.KorraPurifyingSpirit"
+            android:enabled="true"
+            android:label="@string/btnKorraPurifyingSpirit"
+            android:permission="android.permission.BIND_WALLPAPER" >
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" >
+                </action>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/korrapurifyingspiritwallpaper" >
+            </meta-data>
+        </service>
+        <service
+            android:name="com.wallpapers.KorraPurifyingCity"
+            android:enabled="true"
+            android:label="@string/btnKorraPurifyingCity"
+            android:permission="android.permission.BIND_WALLPAPER" >
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" >
+                </action>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/korrapurifyingcitywallpaper" >
+            </meta-data>
+        </service>
+        <service
+            android:name="com.wallpapers.Toph"
+            android:enabled="true"
+            android:label="@string/btnToph"
+            android:permission="android.permission.BIND_WALLPAPER" >
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" >
+                </action>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/tophwallpaper" >
+            </meta-data>
+        </service>
+        <activity
+            android:name="com.avatarbatterywallpaper.SetWallpaperActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+    
+</manifest>

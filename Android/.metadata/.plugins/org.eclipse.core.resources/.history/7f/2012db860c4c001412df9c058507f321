@@ -1,0 +1,14 @@
+package com.wallpapers;
+
+import com.avatarbatterywallpaper.AvatarWallpaperService;
+import com.avatarbatterywallpaper.R;
+
+public class Toph extends AvatarWallpaperService 
+{
+
+	@Override
+	public int getWallpaperId(int i) {
+		return R.drawable.toph100;
+	}
+
+}

@@ -1,0 +1,107 @@
+com.isy.CallReceiver -> com.isy.CallReceiver:
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+com.isy.ConfigActivity -> com.isy.ConfigActivity:
+    android.widget.Spinner mSpnTolerance -> a
+    android.widget.Spinner mSpnVibration -> b
+    android.widget.Spinner mSpnTimer -> c
+    void onCreate(android.os.Bundle) -> onCreate
+    void setSpnTolerance() -> e
+    void preencherSpnTimer() -> f
+    void setSpnTimer() -> g
+    int getPreferenceTimer() -> a
+    int getPreferenceVibration() -> b
+    float getPreferenceTolerance() -> c
+    void setPreferenceTimer(int) -> a
+    void setPreferenceVibration(int) -> b
+    void setPreferenceTolerance(float) -> a
+    void setPreferenceDetector(boolean) -> a
+    boolean getPreferenceDetector() -> d
+    void preencherSpnVibration() -> h
+    void setSpnVibration() -> i
+    int access$0(com.isy.ConfigActivity) -> a
+    float access$1(com.isy.ConfigActivity) -> b
+    int access$2(com.isy.ConfigActivity) -> c
+com.isy.ConfigActivity$1 -> com.isy.a:
+    com.isy.ConfigActivity this$0 -> a
+    void onItemSelected(android.widget.AdapterView,android.view.View,int,long) -> onItemSelected
+    void onNothingSelected(android.widget.AdapterView) -> onNothingSelected
+com.isy.ConfigActivity$2 -> com.isy.b:
+    com.isy.ConfigActivity this$0 -> a
+    void onItemSelected(android.widget.AdapterView,android.view.View,int,long) -> onItemSelected
+    void onNothingSelected(android.widget.AdapterView) -> onNothingSelected
+com.isy.ConfigActivity$3 -> com.isy.c:
+    com.isy.ConfigActivity this$0 -> a
+    void onItemSelected(android.widget.AdapterView,android.view.View,int,long) -> onItemSelected
+    void onNothingSelected(android.widget.AdapterView) -> onNothingSelected
+com.isy.IsyApplication -> com.isy.IsyApplication:
+    android.content.Context mContext -> a
+    void onCreate() -> onCreate
+    android.content.Context getAppContext() -> a
+com.isy.MainActivity -> com.isy.MainActivity:
+    com.isy.SoundsView mSoundsView -> a
+    com.isy.SoundsGet mSoungsGet -> b
+    android.widget.Button mBtnConfiguration -> c
+    android.widget.Button mBtnDetector -> d
+    boolean mDrawBackGround -> e
+    void onWindowFocusChanged(boolean) -> onWindowFocusChanged
+    void onStart() -> onStart
+    void onStop() -> onStop
+    void onCreate(android.os.Bundle) -> onCreate
+    void onClick(android.view.View) -> onClick
+com.isy.MainService -> com.isy.MainService:
+    com.isy.SoundsGet mSoundsGet -> a
+    android.os.IBinder onBind(android.content.Intent) -> onBind
+    void onCreate() -> onCreate
+    void onDestroy() -> onDestroy
+    boolean isRunning() -> a
+com.isy.PhoneState -> com.isy.d:
+    boolean mEmLigacao -> a
+    void onCallStateChanged(int,java.lang.String) -> onCallStateChanged
+    boolean emLigacao() -> a
+com.isy.Sounds -> com.isy.e:
+    int mComprimento -> a
+    int mAmplitude -> b
+    short[] mBuffer -> c
+    int[] mAmplitudes -> d
+    int mIndexMedia -> e
+    void setBuffer(short[]) -> a
+    void zerarMediaAmplitude() -> d
+    int getMediaAmplitude() -> a
+    int getComprimento() -> b
+    int getAmplitude() -> c
+com.isy.SoundsGet -> com.isy.f:
+    com.isy.SoundsView mSoundsView -> a
+    boolean mStop -> b
+    short MILESECONDS -> c
+    android.media.AudioRecord mAudio -> d
+    int mContadorThreads -> e
+    float TOLERANCE -> f
+    int TIMER -> g
+    int TIMERVIBRATION -> h
+    void setTolerance(float) -> a
+    void setTimer(int) -> a
+    void setTimerVibration(int) -> b
+    void parar() -> a
+    void run() -> run
+    android.media.AudioRecord createAudioRecord() -> b
+com.isy.SoundsThread -> com.isy.g:
+    com.isy.SoundsView mSoundsView -> a
+    long mTimerDraw -> b
+    float mX -> c
+    float mY -> d
+    float mRaio -> e
+    int mColor -> f
+    void setParameterCircle(float,float,float,int) -> a
+    void run() -> run
+com.isy.SoundsView -> com.isy.SoundsView:
+    int mColorBackGround -> a
+    android.view.SurfaceHolder mSurfaceHolder -> b
+    android.graphics.Bitmap mBitmap -> c
+    void setColorBackGround$13462e() -> a
+    void init() -> c
+    void drawCircle(float,float,float,float,int) -> a
+    void drawCircle$2d93659c(float,float,float,int) -> a
+    void drawBackGround() -> b
+    void updateView() -> d
+com.isy.StartBeforeBoot -> com.isy.StartBeforeBoot:
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive

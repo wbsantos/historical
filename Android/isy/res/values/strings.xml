@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <string name="app_name">Isy</string>
+    <string name="activeService">Activate Detector</string>
+    <string name="about">About Isy</string>
+    <string name="desactiveService">Deactivate Detector</string>
+    <string name="configuration">Settings</string>
+    <string name="tolerance">Tolerance</string>
+    <string name="timer">Reference time (in seconds)</string>
+    <string name="contact">Developed by William Barbosa</string>
+    <string name="email">E-mail: wbs.developer@gmail.com</string>
+    <string name="aboutText">    	
+    	Isy is a system, developed thinking in the deaf community. Its main function is to vibrate the phone when detect a sound louder than the ambient sound. 
+		At "Tolerance" settings, you can define the sound tolerance level, the higher the tolerance, higher the sound must be to vibrate the cell phone.
+    	Isy considers a high volume when it is greater than the volume of the environment, and for this, it uses a range of sampling time, that is configured in "Reference time". 
+		The main screen of the system is a gift, detecting the height and length of the sound, it is drawn circles on the screen in different sizes and colors, to allow to "see" the sound in a different way.	
+    </string>
+    <string name="vibration">Vibration Time (ms)</string>
+</resources>

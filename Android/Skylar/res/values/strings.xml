@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Skylar</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="integral">Cálculo de Integral</string>
+    <string name="derivada">Cálculo de Derivada</string>
+    <string name="function_base">Salvar uma função</string>
+    <string name="config">Configurações</string>
+    <string name="about">Mais Informações</string>
+    <string name="title_activity_function">Cálculo de Função</string>
+    <string name="digite_funcao">Digite a função</string>
+    <string name="resolve_function">Resolver</string>
+    <string name="function_result">Resultado</string>
+    <string name="function_invalid">Expressão Inválida</string>
+    <string name="developerBy">Desenvolvido por William Barbosa dos Santos</string>
+    <string name="contact">wbs.developer@gmail.com</string>
+    <string name="limpar">Limpar</string>
+    <string name="title_activity_last_functions">Últimas Funções</string>
+    <string name="constants">Constantes</string>
+    <string name="title_activity_constants">ConstantsActivity</string>
+
+</resources>

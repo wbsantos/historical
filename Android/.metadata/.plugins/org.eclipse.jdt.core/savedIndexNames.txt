@@ -1,0 +1,9 @@
+INDEX VERSION 1.126+C:\Users\William.wbs\SkyDrive\Projetos\Android\.metadata\.plugins\org.eclipse.jdt.core
+3704860577.index
+4245665684.index
+3394403332.index
+142250415.index
+192675620.index
+4205926679.index
+3301466035.index
+2297886492.index

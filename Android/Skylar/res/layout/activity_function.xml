@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".FunctionActivity" >
+
+    <EditText
+        android:id="@+id/edtFunctionFunction"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/digite_funcao" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btnFunctionResolve"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edtFunctionFunction"
+        android:layout_below="@+id/edtFunctionFunction"
+        android:text="@string/resolve_function" />
+
+    <TextView
+        android:id="@+id/txtFunctionResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnFunctionResolve"
+        android:layout_below="@+id/btnFunctionResolve"
+        android:layout_marginTop="15dp"
+        android:hint="@string/function_result"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textIsSelectable="true" />
+
+    <Button
+        android:id="@+id/btnFunctionLimpar"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txtFunctionResult"
+        android:layout_toRightOf="@+id/btnFunctionResolve"
+        android:text="@string/limpar" />
+
+    <TabHost
+        android:id="@+android:id/tbhFunctionLists"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtFunctionResult" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+
+            </FrameLayout>
+        </LinearLayout>
+
+    </TabHost>
+
+</RelativeLayout>

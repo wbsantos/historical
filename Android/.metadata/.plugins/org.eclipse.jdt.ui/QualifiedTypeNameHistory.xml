@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.wallpapers.AdultAang"/>
+<fullyQualifiedTypeName name="com.wallpapers.Toph"/>
+<fullyQualifiedTypeName name="com.wallpapers.Wan"/>
+<fullyQualifiedTypeName name="com.wallpapers.KorraPurifyingSpirit"/>
+<fullyQualifiedTypeName name="com.wallpapers.KorraSpirit"/>
+<fullyQualifiedTypeName name="com.wallpapers.KorraPurifyingCity"/>
+<fullyQualifiedTypeName name="com.avatarbatterywallpaper.R.drawable"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="android.util.Log"/>
+<fullyQualifiedTypeName name="android.content.SharedPreferences"/>
+<fullyQualifiedTypeName name="android.content.SharedPreferences.Editor"/>
+<fullyQualifiedTypeName name="android.preference.CheckBoxPreference"/>
+<fullyQualifiedTypeName name="android.widget.CheckBox"/>
+<fullyQualifiedTypeName name="android.widget.CompoundButton.OnCheckedChangeListener"/>
+<fullyQualifiedTypeName name="com.avatarbatterywallpaper.AvatarWallpaperService"/>
+<fullyQualifiedTypeName name="android.graphics.Matrix"/>
+<fullyQualifiedTypeName name="com.avatarbatterywallpaper.AvatarApplication"/>
+<fullyQualifiedTypeName name="com.avatarbatterywallpaper.R.string"/>
+</qualifiedTypeNameHistroy>

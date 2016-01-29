@@ -1,0 +1,2 @@
+
+bool isNumber(CString str);

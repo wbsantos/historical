@@ -1,0 +1,116 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0dp"
+    tools:context=".SetWallpaperActivity" >
+
+
+    <ImageView
+        android:id="@+id/main_backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false"
+        android:contentDescription="@string/app_name"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background" />
+    
+    <RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_centerVertical="true"
+	    android:padding="0dp" >
+	    
+	    <ImageView
+	        android:id="@+id/btnSpiritBend"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_marginRight="25dp"
+	        android:layout_marginTop="25dp"
+	        android:contentDescription="@string/btnSpiritBend"
+	        android:src="@drawable/btnspiritbend" />
+	
+	    <ImageView
+	        android:id="@+id/btnAvatarState"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_marginLeft="25dp"
+	        android:layout_marginTop="25dp"
+	        android:contentDescription="@string/btnAvatarState"
+	        android:src="@drawable/btnavatarstate" />
+	    
+	    <ImageView
+	        android:id="@+id/btnAdultAang"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@id/btnAvatarState"
+	        android:layout_marginTop="25dp"
+	        android:layout_below="@id/btnAvatarState"
+	        android:contentDescription="@string/btnAdultAang"
+	        android:src="@drawable/btnadultaang" />
+	    
+	    <ImageView
+	        android:id="@+id/btnWan"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@id/btnSpiritBend"
+	        android:layout_marginTop="25dp"
+	        android:layout_below="@id/btnSpiritBend"
+	        android:contentDescription="@string/btnWan"
+	        android:src="@drawable/btnwan" />
+    </RelativeLayout>
+
+    
+    <TextView
+        android:id="@+id/txtDevelopedBy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_above="@+id/txtEmail"
+        android:layout_marginTop="21dp"
+        android:layout_marginLeft="14dp"
+        android:text="@string/developedBy" />
+
+    <TextView
+        android:id="@+id/txtEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="14dp"
+        android:layout_above="@+id/txtMALinkDisclaimer"
+        android:autoLink="email"
+        android:text="@string/email" />
+
+    <TextView
+        android:id="@+id/txtMALinkDisclaimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="14dp"
+        android:layout_above="@+id/txtMALink"
+        android:text="@string/MALinkDisclaimer" />
+    
+    <TextView
+        android:id="@+id/txtMALink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="14dp"
+        android:text="@string/MALink"
+        android:autoLink="web" />
+
+    <TextView
+        android:id="@+id/txtAppVersion"
+        android:layout_marginRight="5dp"
+	    android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/app_version" />
+    
+</RelativeLayout>

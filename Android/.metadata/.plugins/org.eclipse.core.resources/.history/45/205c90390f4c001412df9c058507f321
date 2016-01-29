@@ -1,0 +1,24 @@
+package com.wallpapers;
+
+import com.avatarbatterywallpaper.AvatarWallpaperService;
+import com.avatarbatterywallpaper.R;
+
+public class Wan extends AvatarWallpaperService 
+{
+
+	static int x = -1;
+	
+	@Override
+	public int getWallpaperId(int i) 
+	{
+		x++;
+		switch (x) {
+		case 0:
+			return R.drawable.wanvsvaatu045;
+		
+		default:
+			return R.drawable.wanvsvaatu100;
+		}
+	}
+
+}

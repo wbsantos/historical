@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8439E218-1045-4D6D-9708-E2EC59DBF070}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kairos</RootNamespace>
+    <AssemblyName>Kairos</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>packages\System.Data.SQLite.1.0.88.0\lib\net40\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq">
+      <HintPath>packages\System.Data.SQLite.1.0.88.0\lib\net40\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAO\Usuario.cs" />
+    <Compile Include="Util\Crypto.cs" />
+    <Compile Include="Util\ListControl.cs" />
+    <Compile Include="DAO\Administrador.cs" />
+    <Compile Include="DAO\DiaSemana.cs" />
+    <Compile Include="DAO\Curso.cs" />
+    <Compile Include="DAO\Disciplina.cs" />
+    <Compile Include="DAO\Grade.cs" />
+    <Compile Include="DAO\HorariosTurno.cs" />
+    <Compile Include="DAO\Periodo.cs" />
+    <Compile Include="DAO\PreferenciaDisciplinas.cs" />
+    <Compile Include="DAO\PreferenciaDiaTurno.cs" />
+    <Compile Include="DAO\Professor.cs" />
+    <Compile Include="DAO\Turma.cs" />
+    <Compile Include="DAO\Turno.cs" />
+    <Compile Include="DA\Connect.cs" />
+    <Compile Include="GA\Cromossomo.cs" />
+    <Compile Include="DAO\Dia.cs" />
+    <Compile Include="DAO\HorarioTurma.cs" />
+    <Compile Include="GA\Populacao.cs" />
+    <Compile Include="GA\Sorteio\Cromossomo.cs" />
+    <Compile Include="GA\Sorteio\Disciplina.cs" />
+    <Compile Include="GA\Sorteio\Horario.cs" />
+    <Compile Include="GA\Sorteio\Professor.cs" />
+    <Compile Include="GA\Sorteio\Random.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Color.cs" />
+    <Compile Include="View\FrmLoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmLoad.Designer.cs">
+      <DependentUpon>FrmLoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmUsuario.Designer.cs">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmValidacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmValidacao.Designer.cs">
+      <DependentUpon>FrmValidacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UcGrade.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UcGrade.Designer.cs">
+      <DependentUpon>UcGrade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UcCurso.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UcCurso.Designer.cs">
+      <DependentUpon>UcCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UcProfessor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UcProfessor.Designer.cs">
+      <DependentUpon>UcProfessor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UcModel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UcModel.Designer.cs">
+      <DependentUpon>UcModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UcTurno.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UcTurno.Designer.cs">
+      <DependentUpon>UcTurno.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Diagramas\UcCurso_atualizarCurso.sequencediagram.layout">
+      <DependentUpon>UcCurso_atualizarCurso.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diagramas\UcCurso_deleteCurso.sequencediagram.layout">
+      <DependentUpon>UcCurso_deleteCurso.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diagramas\UcCurso_inserirCurso.sequencediagram.layout">
+      <DependentUpon>UcCurso_inserirCurso.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diagramas\UcProfessor_atualizarProfessor.sequencediagram.layout">
+      <DependentUpon>UcProfessor_atualizarProfessor.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diagramas\UcProfessor_deleteProfessor.sequencediagram.layout">
+      <DependentUpon>UcProfessor_deleteProfessor.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diagramas\UcProfessor_inserirProfessor.sequencediagram.layout">
+      <DependentUpon>UcProfessor_inserirProfessor.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diagramas\UcCurso_deleteTurma.sequencediagram.layout">
+      <DependentUpon>UcCurso_deleteTurma.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diagramas\UcTurno_inserirTurno.sequencediagram.layout">
+      <DependentUpon>UcTurno_inserirTurno.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diagramas\UcGrade_gerarGrade.sequencediagram.layout">
+      <DependentUpon>UcGrade_gerarGrade.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diagramas\UcCurso_btnDelDisciplina_Click.sequencediagram.layout">
+      <DependentUpon>UcCurso_btnDelDisciplina_Click.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diagramas\UcTurno_btnDelTurno_Click.sequencediagram.layout">
+      <DependentUpon>UcTurno_btnDelTurno_Click.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diagramas\UcCurso_btnAddTurma_Click.sequencediagram.layout">
+      <DependentUpon>UcCurso_btnAddTurma_Click.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diagramas\UcCurso_btnAddDisciplina_Click.sequencediagram.layout">
+      <DependentUpon>UcCurso_btnAddDisciplina_Click.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmLoad.resx">
+      <DependentUpon>FrmLoad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmUsuario.resx">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmValidacao.resx">
+      <DependentUpon>FrmValidacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UcGrade.resx">
+      <DependentUpon>UcGrade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UcCurso.resx">
+      <DependentUpon>UcCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UcProfessor.resx">
+      <DependentUpon>UcProfessor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UcModel.resx">
+      <DependentUpon>UcModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UcTurno.resx">
+      <DependentUpon>UcTurno.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Diagramas\UcCurso_atualizarCurso.sequencediagram" />
+    <None Include="Diagramas\UcCurso_deleteCurso.sequencediagram" />
+    <None Include="Diagramas\UcCurso_inserirCurso.sequencediagram" />
+    <None Include="Diagramas\UcProfessor_atualizarProfessor.sequencediagram" />
+    <None Include="Diagramas\UcProfessor_deleteProfessor.sequencediagram" />
+    <None Include="Diagramas\UcProfessor_inserirProfessor.sequencediagram" />
+    <None Include="Diagramas\UcCurso_deleteTurma.sequencediagram" />
+    <None Include="Diagramas\UcTurno_inserirTurno.sequencediagram" />
+    <None Include="Diagramas\UcGrade_gerarGrade.sequencediagram" />
+    <None Include="Diagramas\UcCurso_btnDelDisciplina_Click.sequencediagram" />
+    <None Include="Diagramas\UcTurno_btnDelTurno_Click.sequencediagram" />
+    <None Include="Diagramas\UcCurso_btnAddTurma_Click.sequencediagram" />
+    <None Include="Diagramas\UcCurso_btnAddDisciplina_Click.sequencediagram" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+    <Content Include="x64\SQLite.Interop.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\SQLite.Interop.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,17 @@
+package com.wallpapers;
+
+import com.avatarbatterywallpaper.AvatarWallpaperService;
+import com.avatarbatterywallpaper.R;
+
+public class Wan extends AvatarWallpaperService 
+{
+
+	static int x = 0;
+	
+	@Override
+	public int getWallpaperId(int i) 
+	{
+		
+	}
+
+}

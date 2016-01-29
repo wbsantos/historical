@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Avatar Wallpaper</string>
+    <string name="action_settings">Settings</string>
+    <string name="developedBy">Developed By William Barbosa</string>
+    <string name="email">wbs.developer@gmail.com</string>
+    <string name="MALinkDisclaimer"></string>
+    <string name="MALink"></string>
+    <string name="app_version">v1.2</string>
+	<string name="btnAvatarState">Avatar State</string>
+    <string name="btnSpiritBend">Spirit Bend</string>
+    <string name="btnAdultAang">Adult Aang</string>
+    <string name="btnWan">Wan vs Vaatu</string>
+    <string name="btnKorraSpirit">Korra Spirit</string>
+    <string name="btnKorraPurifyingSpirit">Korra Purifying Spirit</string>
+    <string name="btnKorraPurifyingCity">Korra Purifying City</string>
+    <string name="btnToph">Cosmic Toph</string>
+</resources>

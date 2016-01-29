@@ -1,0 +1,14 @@
+package com.wallpapers;
+
+import com.avatarbatterywallpaper.AvatarWallpaperService;
+import com.avatarbatterywallpaper.R;
+
+public class KorraPurifyingCity extends AvatarWallpaperService 
+{
+	static int x = R.drawable.korrapurifyingcity040;
+	@Override
+	public int getWallpaperId(int i) {
+		return x++;
+	}
+
+}

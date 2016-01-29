@@ -1,0 +1,19 @@
+android.annotation.SuppressLint
+android.annotation.TargetApi
+com.isy.BuildConfig
+com.isy.ConfigActivity:
+    static final java.lang.String PREFERENCETIMER
+    static final java.lang.String PREFERENCETOLERANCE
+    static final java.lang.String PREFERENCEDETECTOR
+    static final java.lang.String PREFERENCEVIBRATION
+com.isy.R
+com.isy.R$attr
+com.isy.R$drawable
+com.isy.R$id
+com.isy.R$layout
+com.isy.R$string
+com.isy.Sounds:
+    12:17:Sounds(short[],int)
+com.isy.SoundsThread:
+    static final int SLEEP
+    24:26:SoundsThread(com.isy.SoundsView)

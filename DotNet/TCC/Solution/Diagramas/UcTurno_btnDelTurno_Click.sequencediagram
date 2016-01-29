@@ -1,0 +1,474 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" dslVersion="1.0.0.0" Id="3f2e8ab9-0f17-4a9d-a256-70c1bc01d644" name="UcTurno_btnDelTurno_Click" mode="DotNet" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+  <packagedElements>
+    <packageHasNamedElement>
+      <interaction Id="4465d232-091c-4525-8daa-5bdcd500dfe6" name="UcTurno_btnDelTurno_Click" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
+        <fragments>
+          <behaviorExecutionSpecification Id="1257d24b-1db9-4270-ada5-bba68254e617" name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker Id="45cddb15-7721-48d3-b9f0-a12149a93d2c" LastKnownName="this : UcTurno" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="c9d82ca4-b4a3-4c9f-84e4-fdeef5974aca" LastKnownName="ExecutionOccurrenceSpecification" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="da9462a8-bcd2-4846-a65e-5119a26298fc" LastKnownName="ExecutionOccurrenceSpecification" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="041e80ea-dc7c-41c8-8e40-ed1266a5574a" LastKnownName="MessageOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="2d1627fe-419f-46a1-bcb8-d8da14ae3d30" LastKnownName="OperandOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="038ed721-ce0b-49ac-b7e4-1fcba88fbbc9" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="1b1096c2-2997-42c9-8e4c-c901509e6268" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="5cd0aee6-5362-4857-a4ad-03289b831b38" LastKnownName="MessageOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="2c6ee48c-99a8-48f5-a359-9e0e8b1af219" LastKnownName="ExecutionOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="bb6c2483-83f2-45d1-81d1-cfd2d8059e4d" LastKnownName="ExecutionOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="47425a81-9526-4cf0-b941-15c45d221722" LastKnownName="OperandOccurrenceSpecification" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="da9462a8-bcd2-4846-a65e-5119a26298fc" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="60e5b6a3-4a85-4ea2-b0a7-034cc6c60db8" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="45cddb15-7721-48d3-b9f0-a12149a93d2c" LastKnownName="this : UcTurno" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <lostFoundTarget Id="76234d9e-205c-4881-bd0a-1b6aff7c2822" name="LostFoundTarget" />
+          <messageOccurrenceSpecification Id="041e80ea-dc7c-41c8-8e40-ed1266a5574a" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="45cddb15-7721-48d3-b9f0-a12149a93d2c" LastKnownName="this : UcTurno" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <combinedFragment Id="07574f99-cbd3-470b-9095-6a95d456ef8c" name="CombinedFragment1" interactionOperator="Opt" customInteractionOperator="If">
+            <coveredLifelines>
+              <lifelineMoniker Id="45cddb15-7721-48d3-b9f0-a12149a93d2c" LastKnownName="this : UcTurno" />
+              <lifelineMoniker Id="f7bad52f-5009-4e01-bb4a-e5aa37b10695" LastKnownName="turno : Turno" />
+            </coveredLifelines>
+            <operands>
+              <interactionOperand Id="a3f94b63-193f-40e6-b8c7-6bd324f1ab43" name="InteractionOperand1">
+                <coveredLifelines>
+                  <lifelineMoniker Id="45cddb15-7721-48d3-b9f0-a12149a93d2c" LastKnownName="this : UcTurno" />
+                  <lifelineMoniker Id="f7bad52f-5009-4e01-bb4a-e5aa37b10695" LastKnownName="turno : Turno" />
+                </coveredLifelines>
+                <fragments>
+                  <combinedFragment Id="1a73bd7d-d9ac-4bd4-9aac-2d64e2157860" name="CombinedFragment1" interactionOperator="Opt" customInteractionOperator="If">
+                    <coveredLifelines>
+                      <lifelineMoniker Id="45cddb15-7721-48d3-b9f0-a12149a93d2c" LastKnownName="this : UcTurno" />
+                    </coveredLifelines>
+                    <operands>
+                      <interactionOperand Id="70b5e3f2-86bd-42ab-84cc-2b0587c6105b" name="InteractionOperand1">
+                        <coveredLifelines>
+                          <lifelineMoniker Id="45cddb15-7721-48d3-b9f0-a12149a93d2c" LastKnownName="this : UcTurno" />
+                        </coveredLifelines>
+                        <guard>
+                          <interactionConstraint Id="393c6b20-81eb-4bb8-893f-8e7f39c1518c" guardText="if (DesignMode)" />
+                        </guard>
+                        <operandOccurrenceSpecifications>
+                          <operandOccurrenceSpecificationMoniker Id="4ffaa97e-4c69-4df3-8851-8081574c1e5c" LastKnownName="OperandOccurrenceSpecification" />
+                          <operandOccurrenceSpecificationMoniker Id="3d4aad27-34e1-4b91-b588-ddcf5efc7f22" LastKnownName="OperandOccurrenceSpecification" />
+                        </operandOccurrenceSpecifications>
+                      </interactionOperand>
+                    </operands>
+                  </combinedFragment>
+                </fragments>
+                <guard>
+                  <interactionConstraint Id="cf376f18-ea4c-4a01-9ee3-6e5a74d77e25" guardText="if (turno != null)" />
+                </guard>
+                <operandOccurrenceSpecifications>
+                  <operandOccurrenceSpecificationMoniker Id="2d1627fe-419f-46a1-bcb8-d8da14ae3d30" LastKnownName="OperandOccurrenceSpecification" />
+                  <operandOccurrenceSpecificationMoniker Id="47425a81-9526-4cf0-b941-15c45d221722" LastKnownName="OperandOccurrenceSpecification" />
+                  <operandOccurrenceSpecificationMoniker Id="e7f62b66-bffa-4da5-bb03-38c8624e3f66" LastKnownName="OperandOccurrenceSpecification" />
+                  <operandOccurrenceSpecificationMoniker Id="46f1fe0b-29a6-498e-a77d-75f864757fdc" LastKnownName="OperandOccurrenceSpecification" />
+                </operandOccurrenceSpecifications>
+              </interactionOperand>
+            </operands>
+          </combinedFragment>
+          <operandOccurrenceSpecification Id="2d1627fe-419f-46a1-bcb8-d8da14ae3d30" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="45cddb15-7721-48d3-b9f0-a12149a93d2c" LastKnownName="this : UcTurno" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="e7f62b66-bffa-4da5-bb03-38c8624e3f66" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="f7bad52f-5009-4e01-bb4a-e5aa37b10695" LastKnownName="turno : Turno" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <behaviorExecutionSpecification Id="2d2ce126-7ba0-4fca-a409-b6a1c781137b" name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker Id="f7bad52f-5009-4e01-bb4a-e5aa37b10695" LastKnownName="turno : Turno" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="1834a3fc-3e26-4846-afc3-9581e6c3bd6a" LastKnownName="ExecutionOccurrenceSpecification" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="09fe5708-6961-4633-ab9c-0715f5bbb8d6" LastKnownName="ExecutionOccurrenceSpecification" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="623f4e65-04de-4755-9fc2-fdd67986fffb" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="0beda06c-345a-4e0c-b8b9-2e1fb174e6e1" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="8143b1d7-83d3-475a-a269-dd5c2fc5c3de" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="904e7e8a-bc3c-4793-bc3c-1e6c2d7b876f" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="edbe9bf4-4738-43ab-b677-764a0879863f" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="8c43e129-83db-4504-9f54-584f54419a88" LastKnownName="MessageOccurrenceSpecification" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="09fe5708-6961-4633-ab9c-0715f5bbb8d6" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="3fa497d5-a9a0-4694-80f8-1ad34e0c7487" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="f7bad52f-5009-4e01-bb4a-e5aa37b10695" LastKnownName="turno : Turno" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="038ed721-ce0b-49ac-b7e4-1fcba88fbbc9" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="45cddb15-7721-48d3-b9f0-a12149a93d2c" LastKnownName="this : UcTurno" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="623f4e65-04de-4755-9fc2-fdd67986fffb" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="f7bad52f-5009-4e01-bb4a-e5aa37b10695" LastKnownName="turno : Turno" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="0beda06c-345a-4e0c-b8b9-2e1fb174e6e1" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="f7bad52f-5009-4e01-bb4a-e5aa37b10695" LastKnownName="turno : Turno" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <lostFoundTarget Id="48d5b35f-1beb-4a88-ab20-ab1b3546b73e" name="LostFoundTarget" />
+          <messageOccurrenceSpecification Id="8143b1d7-83d3-475a-a269-dd5c2fc5c3de" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="f7bad52f-5009-4e01-bb4a-e5aa37b10695" LastKnownName="turno : Turno" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <lostFoundTarget Id="d563d683-7560-4f49-94d7-ec2760a2ba79" name="LostFoundTarget" />
+          <lostFoundTarget Id="c7b492db-6c56-4cf9-99c9-ce71aeed0a1b" name="LostFoundTarget" />
+          <messageOccurrenceSpecification Id="904e7e8a-bc3c-4793-bc3c-1e6c2d7b876f" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="f7bad52f-5009-4e01-bb4a-e5aa37b10695" LastKnownName="turno : Turno" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <lostFoundTarget Id="929fae4e-c5a1-42ec-8286-2d0f929d3aa7" name="LostFoundTarget" />
+          <messageOccurrenceSpecification Id="edbe9bf4-4738-43ab-b677-764a0879863f" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="f7bad52f-5009-4e01-bb4a-e5aa37b10695" LastKnownName="turno : Turno" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="8c43e129-83db-4504-9f54-584f54419a88" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="f7bad52f-5009-4e01-bb4a-e5aa37b10695" LastKnownName="turno : Turno" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="1b1096c2-2997-42c9-8e4c-c901509e6268" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="45cddb15-7721-48d3-b9f0-a12149a93d2c" LastKnownName="this : UcTurno" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="1834a3fc-3e26-4846-afc3-9581e6c3bd6a" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="228f48a1-327c-4844-83d2-31700855ddd4" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="f7bad52f-5009-4e01-bb4a-e5aa37b10695" LastKnownName="turno : Turno" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="5cd0aee6-5362-4857-a4ad-03289b831b38" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="45cddb15-7721-48d3-b9f0-a12149a93d2c" LastKnownName="this : UcTurno" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification Id="b8e8a0fe-1304-4db8-994d-081a34bbf669" name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker Id="45cddb15-7721-48d3-b9f0-a12149a93d2c" LastKnownName="this : UcTurno" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="bb6c2483-83f2-45d1-81d1-cfd2d8059e4d" LastKnownName="ExecutionOccurrenceSpecification" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="2c6ee48c-99a8-48f5-a359-9e0e8b1af219" LastKnownName="ExecutionOccurrenceSpecification" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="32ae0437-0a20-43ca-ae3e-32a801e7293e" LastKnownName="MessageOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="4ffaa97e-4c69-4df3-8851-8081574c1e5c" LastKnownName="OperandOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="71b1c863-24a5-4fd6-aa69-c6c3933e70d6" LastKnownName="MessageOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="3d4aad27-34e1-4b91-b588-ddcf5efc7f22" LastKnownName="OperandOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="84f5bfbf-fc7a-4f54-8a3d-f9bb8ea6f6b4" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="abce9d17-2c13-46b2-b75e-efcabe52f4f9" LastKnownName="MessageOccurrenceSpecification" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="2c6ee48c-99a8-48f5-a359-9e0e8b1af219" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="871c4815-f8e2-4c66-8c12-0fe687339879" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="45cddb15-7721-48d3-b9f0-a12149a93d2c" LastKnownName="this : UcTurno" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="32ae0437-0a20-43ca-ae3e-32a801e7293e" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="45cddb15-7721-48d3-b9f0-a12149a93d2c" LastKnownName="this : UcTurno" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="4ffaa97e-4c69-4df3-8851-8081574c1e5c" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="45cddb15-7721-48d3-b9f0-a12149a93d2c" LastKnownName="this : UcTurno" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <lostFoundTarget Id="00b01604-9ba0-4784-a8a9-f9ae533f51cc" name="LostFoundTarget" />
+          <messageOccurrenceSpecification Id="71b1c863-24a5-4fd6-aa69-c6c3933e70d6" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="45cddb15-7721-48d3-b9f0-a12149a93d2c" LastKnownName="this : UcTurno" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="3d4aad27-34e1-4b91-b588-ddcf5efc7f22" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="45cddb15-7721-48d3-b9f0-a12149a93d2c" LastKnownName="this : UcTurno" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="84f5bfbf-fc7a-4f54-8a3d-f9bb8ea6f6b4" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="45cddb15-7721-48d3-b9f0-a12149a93d2c" LastKnownName="this : UcTurno" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <lostFoundTarget Id="6001f714-d3c4-4f74-9fa4-147e237605b3" name="LostFoundTarget" />
+          <lostFoundTarget Id="3b23ba12-3cd3-45dd-8532-be13c17e21ae" name="LostFoundTarget" />
+          <messageOccurrenceSpecification Id="abce9d17-2c13-46b2-b75e-efcabe52f4f9" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="45cddb15-7721-48d3-b9f0-a12149a93d2c" LastKnownName="this : UcTurno" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="bb6c2483-83f2-45d1-81d1-cfd2d8059e4d" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="b60957d1-8a85-44a6-8191-1cfdd2bf2897" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="45cddb15-7721-48d3-b9f0-a12149a93d2c" LastKnownName="this : UcTurno" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="46f1fe0b-29a6-498e-a77d-75f864757fdc" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="f7bad52f-5009-4e01-bb4a-e5aa37b10695" LastKnownName="turno : Turno" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="47425a81-9526-4cf0-b941-15c45d221722" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="45cddb15-7721-48d3-b9f0-a12149a93d2c" LastKnownName="this : UcTurno" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="c9d82ca4-b4a3-4c9f-84e4-fdeef5974aca" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="12ce1053-49c7-48bf-bd1d-90700f97d4e7" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="45cddb15-7721-48d3-b9f0-a12149a93d2c" LastKnownName="this : UcTurno" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline Id="45cddb15-7721-48d3-b9f0-a12149a93d2c" name="this : UcTurno" isActor="false" lifelineDisplayName="this : UcTurno" referencedInstance="(Assembly=$(8439e218-1045-4d6d-9708-e2ec59dbf070.OutputPathUri) Namespace=Kairos.View Type=UcTurno ObjectInstance=&quot;Object instance 3&quot;)" referencedType="Kairos‎.View‎.UcTurno">
+            <referencesInternal>
+              <reference Id="a1b620ec-c7d2-4850-bcb0-37bbe8525f48" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=Kairos.View)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(8439e218-1045-4d6d-9708-e2ec59dbf070.OutputPathUri)&amp;quot; Namespace=Kairos.View Type=UcTurno)&quot;)" tag="DGQL" />
+              <reference Id="9c754da9-221c-4e2d-bdc5-a44a5b12933d" handle="(Assembly=&quot;$(8439e218-1045-4d6d-9708-e2ec59dbf070.OutputPathUri)&quot; Namespace=Kairos.View Type=UcTurno)" tag="DGML" />
+            </referencesInternal>
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker Id="da9462a8-bcd2-4846-a65e-5119a26298fc" LastKnownName="ExecutionOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="c9d82ca4-b4a3-4c9f-84e4-fdeef5974aca" LastKnownName="ExecutionOccurrenceSpecification" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline Id="f7bad52f-5009-4e01-bb4a-e5aa37b10695" name="turno : Turno" isActor="false" lifelineDisplayName="turno : Turno" referencedInstance="(Assembly=$(8439e218-1045-4d6d-9708-e2ec59dbf070.OutputPathUri) Namespace=Kairos.View Type=UcTurno Member=(Name=btnDelTurno_Click OverloadingParameters=[(Assembly=&quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=EventArgs)]) Statement=[1,1,1,2,1] ObjectInstance=&quot;Object instance 5&quot;)" referencedType="Kairos‎.DAO‎.Turno">
+            <referencesInternal>
+              <reference Id="50c3bf61-db8c-4f88-a708-fe76c5d42280" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=Kairos.DAO)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(8439e218-1045-4d6d-9708-e2ec59dbf070.OutputPathUri)&amp;quot; Namespace=Kairos.DAO Type=Turno)&quot;)" tag="DGQL" />
+              <reference Id="9368542d-9202-4cae-ab72-406edfce5609" handle="(Assembly=&quot;$(8439e218-1045-4d6d-9708-e2ec59dbf070.OutputPathUri)&quot; Namespace=Kairos.DAO Type=Turno)" tag="DGML" />
+            </referencesInternal>
+            <topLevelOccurrences>
+              <operandOccurrenceSpecificationMoniker Id="e7f62b66-bffa-4da5-bb03-38c8624e3f66" LastKnownName="OperandOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="09fe5708-6961-4633-ab9c-0715f5bbb8d6" LastKnownName="ExecutionOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="1834a3fc-3e26-4846-afc3-9581e6c3bd6a" LastKnownName="ExecutionOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="46f1fe0b-29a6-498e-a77d-75f864757fdc" LastKnownName="OperandOccurrenceSpecification" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message Id="02374d65-8cfe-4c19-96e0-d88eda645074" name="btnDelTurno_Click" messageKind="Found" messageSort="AsynchCall" createSelfMessage="false">
+            <referencesInternal>
+              <reference Id="99f968a5-feaf-4ad2-a2b9-0efa52b8535a" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=Kairos.View)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(8439e218-1045-4d6d-9708-e2ec59dbf070.OutputPathUri)&amp;quot; Namespace=Kairos.View Type=UcTurno)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(8439e218-1045-4d6d-9708-e2ec59dbf070.OutputPathUri)&amp;quot; Namespace=Kairos.View Type=UcTurno Member=(Name=btnDelTurno_Click OverloadingParameters=[(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.0/Profile/Client/mscorlib.dll&amp;quot; Namespace=System Type=Object),(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.0/Profile/Client/mscorlib.dll&amp;quot; Namespace=System Type=EventArgs)]))&quot;)" tag="DGQL" />
+              <reference Id="3b3c1846-50d0-47de-be08-275036bb3609" handle="(Assembly=&quot;$(8439e218-1045-4d6d-9708-e2ec59dbf070.OutputPathUri)&quot; Namespace=Kairos.View Type=UcTurno Member=(Name=btnDelTurno_Click OverloadingParameters=[(Assembly=&quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=EventArgs)]))" tag="DGML" />
+            </referencesInternal>
+            <sendEvent>
+              <lostFoundTargetMoniker Id="76234d9e-205c-4881-bd0a-1b6aff7c2822" LastKnownName="LostFoundTarget" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="041e80ea-dc7c-41c8-8e40-ed1266a5574a" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="3c1d3b8a-c2dc-4b87-b9be-11643e39a23e" name="delete" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false" signatureText="turno.delete()">
+            <referencesInternal>
+              <reference Id="a374e934-1854-4bde-9dad-c7e37bf54e5a" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=Kairos.DAO)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(8439e218-1045-4d6d-9708-e2ec59dbf070.OutputPathUri)&amp;quot; Namespace=Kairos.DAO Type=Turno)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(8439e218-1045-4d6d-9708-e2ec59dbf070.OutputPathUri)&amp;quot; Namespace=Kairos.DAO Type=Turno Member=delete)&quot;)" tag="DGQL" />
+              <reference Id="56a8d915-9bf8-4c2c-b67a-e076c95df64a" handle="(Assembly=&quot;$(8439e218-1045-4d6d-9708-e2ec59dbf070.OutputPathUri)&quot; Namespace=Kairos.DAO Type=Turno Member=delete)" tag="DGML" />
+            </referencesInternal>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="038ed721-ce0b-49ac-b7e4-1fcba88fbbc9" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="623f4e65-04de-4755-9fc2-fdd67986fffb" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="feffa3d1-4284-418e-91cb-c854c0fef16b" name="execute" messageKind="Lost" messageSort="AsynchCall" createSelfMessage="false">
+            <referencesInternal>
+              <reference Id="4291aedc-df45-4205-a90d-b7606d27721e" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=Kairos.DA)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(8439e218-1045-4d6d-9708-e2ec59dbf070.OutputPathUri)&amp;quot; Namespace=Kairos.DA Type=Connect)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(8439e218-1045-4d6d-9708-e2ec59dbf070.OutputPathUri)&amp;quot; Namespace=Kairos.DA Type=Connect Member=(Name=execute OverloadingParameters=[(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.0/Profile/Client/mscorlib.dll&amp;quot; Namespace=System Type=String)]))&quot;)" tag="DGQL" />
+              <reference Id="dc363798-2004-4ffb-8a7f-42410baf9534" handle="(Assembly=&quot;$(8439e218-1045-4d6d-9708-e2ec59dbf070.OutputPathUri)&quot; Namespace=Kairos.DA Type=Connect Member=(Name=execute OverloadingParameters=[(Assembly=&quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=String)]))" tag="DGML" />
+            </referencesInternal>
+            <generationState>H4sIAAAAAAAEAO2YbWvTUBTHz0cJfSEtSONEROciSOawTPdgIr4QkbTLurg0qU23WT+9v3ty26Y1QlUKakNIc3Luefyfc24uPZBAYplIIpGk/H7j7UJ8fUvliJVIRvCey4GEcoVEIW8l55qKIz1kPWlJW17AL5AbSR+9GdxLZFM4++Lq5Sv1TqUm/LryXiVS9T2Srtyha/iHSBRyjYdcxryH6Po8A95TuYGfQGVw+lCZ1eizMoQ+xlqChxwbXfhfuR05sXkUWIxkAOWtSR6SwymSIdGPdT3E4gT7Odw3NjcTu0fWseY2VdsBz0hp4yGD8uSD7Ml9vR/KR+mA0dLyCRaNhf8NvSp2vvrIoAd4XM3ft2gNkZnAm+PgW1wCdK4UjUg+wU15GnyMjdfQfUXfaARyDqelnVgQQaZeZ2jm5FOozJH2ssGtpV3cQ6LQimWaSdPFTRf/LV18Cvez9bbep3P7T20UxvJYfUfqf9VmCO9Ge76cjVfQEfJVD6tyZjbmO3uBlqsc94c4Su76t6Cq7SyoY+RnO9Id69PVXlj0rI+BRhZrnW9VKsVCRF1NjEM500qWOlOLgZnBOuzuyResGYyf/QTHM417aC067IOllKltm3ieyGM62qVWMRaMt3ixI676S1TLJb+E9RKNHJ0pvOUJ4U578Rpel8xfglPd2q08Yv3BIr557K5OSGJ3HhetAl+5YpQQRReUTCdU866vWQA+hd3HqtUy+9vEIt3R3cypQbyns5tpB11qPKaWJpKRTsAFVDmvHTtbu7L7Nf29i/39K1/7pmZ/VrPtnC7qatucmLd/Yl7ev3NybmbpX5qlTc7te6Cyycm9On3bObtXz+zuxv//fAcuVhUDKhIAAA==
+(Assembly=$(8439e218-1045-4d6d-9708-e2ec59dbf070.OutputPathUri) Namespace=Kairos.DAO Type=Turno Member=delete Statement=[1,1,2] ObjectInstance="Object instance 9")
+SQL : Connect
+DA.Connect.SQL.execute("Delete from Turma where idTurno = " + id.ToString())</generationState>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="0beda06c-345a-4e0c-b8b9-2e1fb174e6e1" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <lostFoundTargetMoniker Id="48d5b35f-1beb-4a88-ab20-ab1b3546b73e" LastKnownName="LostFoundTarget" />
+            </receiveEvent>
+          </message>
+          <message Id="5e850abb-c221-46c9-a5df-da203a0fa686" name="execute" messageKind="Lost" messageSort="AsynchCall" createSelfMessage="false">
+            <referencesInternal>
+              <reference Id="9df7cf14-3e8b-4709-a67b-c7b85cf4b7db" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=Kairos.DA)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(8439e218-1045-4d6d-9708-e2ec59dbf070.OutputPathUri)&amp;quot; Namespace=Kairos.DA Type=Connect)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(8439e218-1045-4d6d-9708-e2ec59dbf070.OutputPathUri)&amp;quot; Namespace=Kairos.DA Type=Connect Member=(Name=execute OverloadingParameters=[(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.0/Profile/Client/mscorlib.dll&amp;quot; Namespace=System Type=String)]))&quot;)" tag="DGQL" />
+              <reference Id="2d6c5512-4369-4817-aa46-5259adf3fe01" handle="(Assembly=&quot;$(8439e218-1045-4d6d-9708-e2ec59dbf070.OutputPathUri)&quot; Namespace=Kairos.DA Type=Connect Member=(Name=execute OverloadingParameters=[(Assembly=&quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=String)]))" tag="DGML" />
+            </referencesInternal>
+            <generationState>H4sIAAAAAAAEAO2YbWvTUBTHz0cJfSEtSOOGiM5FkMxhmW5zifhCRNIu6+LSpDbdQ/30/u7JbZfWCFUpqA0hzcm55/F/zrm5dF8CiWUiiUSS8vuNt3Px9S2VQ1YiGcF7IfsSyiUShZxJzjUVR3rIetKStryEXyA3kj56M7gXyKZw9sTVy1fqvUpN+HXlg0qk6nskXblF1/APkCjkCg+5jHkP0fV5Bryncg0/gcrg9KEyq9FnZQh9hLUEDzk2uvDvuB05tnkUWIxkAOWtSB6QwwmSIdGPdT3E4gT7Ody3NjcTu0fWseY2VdsBz0hp4yGD8uSj7MhDvXflk3TA6N7yMRaNhf8NvSp2vvrIoAd4XM7ft2gNkZnAm+PgW1wCdC4VjUg+w015GnyMjTfQfUXfaATyDk5LO7Eggky9ztDMyadQmUPtZYNbS7u4h0ShFcs0k6aLmy7+W7r4BO4X6221T+f2n9kojOWx+o7U/7LNEN619nw5G6+hI+SrHpblzGzMd/YCLVc57g9xlNzVb0FV21lQR8jPtqQ7VqervbDoWR8DjSzWOt+oVIqFiLqaGIdyqpUsdaYWAzODddg9kK9YMxg//wmOpxr30Fp02AdLKVPbNvE8lSd0tEutYiwYb/FiR1z2l6iWS34J6yUaOTpTePcnhFvtxSt4XTJ/BU51azfymPVHi/jmsbs6IYndeVy0CnzlilFCFF1QMp1Qzbu+ZgH4FHYfq1bL7G8Ti3RHdzOnBvGezm6mHXSh8ZhamkhGOgHnUOW8duxsbcvu1/T3Nvb3r3ztm5r9Wc02c7qoq21zYt7siXnXnprL+3dOzs0s/UuztM65fQdk1jm5V6dvM2f36pndXfv/n+99woroKhIAAA==
+(Assembly=$(8439e218-1045-4d6d-9708-e2ec59dbf070.OutputPathUri) Namespace=Kairos.DAO Type=Turno Member=delete Statement=[1,1,2] ObjectInstance="Object instance 9")
+SQL : Connect
+DA.Connect.SQL.execute("Delete from PreferenciaDiaTurno where idTurno = " + id.ToString())</generationState>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="8143b1d7-83d3-475a-a269-dd5c2fc5c3de" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <lostFoundTargetMoniker Id="d563d683-7560-4f49-94d7-ec2760a2ba79" LastKnownName="LostFoundTarget" />
+            </receiveEvent>
+          </message>
+          <message Id="ffc183d5-155f-4992-b14d-b22fcfa534a2" name="execute" messageKind="Lost" messageSort="AsynchCall" createSelfMessage="false">
+            <referencesInternal>
+              <reference Id="259b7d31-8078-4b68-829a-75acc73d48db" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=Kairos.DA)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(8439e218-1045-4d6d-9708-e2ec59dbf070.OutputPathUri)&amp;quot; Namespace=Kairos.DA Type=Connect)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(8439e218-1045-4d6d-9708-e2ec59dbf070.OutputPathUri)&amp;quot; Namespace=Kairos.DA Type=Connect Member=(Name=execute OverloadingParameters=[(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.0/Profile/Client/mscorlib.dll&amp;quot; Namespace=System Type=String)]))&quot;)" tag="DGQL" />
+              <reference Id="c10410cf-069e-4c2f-9a2e-f6b2aededca6" handle="(Assembly=&quot;$(8439e218-1045-4d6d-9708-e2ec59dbf070.OutputPathUri)&quot; Namespace=Kairos.DA Type=Connect Member=(Name=execute OverloadingParameters=[(Assembly=&quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=String)]))" tag="DGML" />
+            </referencesInternal>
+            <generationState>H4sIAAAAAAAEAO2Y72vTYBDH708pfSEtSONUdOoiSOawTLdpIr4QkbTLurg0qUm32f31fp7L0y6tEapSUBtCmss99/N7d08euie+RJJLLKEk/N7wdiqeviVywEooY3jPZU8COUeikHeScU2lJX1kXWlLR17AL5AbywC9GdwzZBM4T8XRy1PqvUrl/DryQSUS9T2Wnlyja/j7SBRygYdMJrwH6Ho8fd4TuYQfQ6VwBlCp1RiwMoI+xFqMhwwbPfjfuFtyZPMosBjKEMpdkdwnh2MkA6Kf6HqAxRz7Gdw3NjcTu0vWkeY2Vds+z1Bp4yGFcuWj7Mhdve/LJ+mC0a3lIywaC/8belXsPPWRQg/xuJy/Z9EaIZPDm+PgWVx8dM4VjVA+w014GnyMjdfQA0XfaPjyFk5bO7EgglS9ztDMyKdQmQPtZYNbW7u4j0ShFUs1k6aLmy7+W7r4GO4X6221T+f2n9gojOWJ+g7V/7LNAN6l9nw5G6+gQ+SrHpblzGzMd/YCLUc5zg9xlNzVb0FVu7WgDpGfbUl3rE5XZ2HRtT6GGlmkdb5SqQQLIXU1MY7kRCtZ6kwtBmYG67C7I1+xZjB+9hMcTzTukbXYYh8spUxtO8SzK4/oaIdaRVgw3qLFjrjsL1Yth/xi1ks0MnSm8G5PCNfaixfwemT+Epzq1q7kIev3FvHNY3d0QmK78zhoFfjKFKOYKHqgZDqhmnd9zXzwKew+Vq2W2d9yi3RXd7NWDeJ9nd1UO+hM4zG1NJGMdQJOocp57drZ2pbdr+nvbezvX/naNzX7s5pt5nRRV9vmxLzZE/MDe2ou7985OTez9C/N0jrn9h15vNbJvTp9mzm7V8/sztr//3wHKNso/ioSAAA=
+(Assembly=$(8439e218-1045-4d6d-9708-e2ec59dbf070.OutputPathUri) Namespace=Kairos.DAO Type=Turno Member=delete Statement=[1,1,2] ObjectInstance="Object instance 9")
+SQL : Connect
+DA.Connect.SQL.execute("Delete from HorariosTurno where idTurno = " + id.ToString())</generationState>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="904e7e8a-bc3c-4793-bc3c-1e6c2d7b876f" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <lostFoundTargetMoniker Id="c7b492db-6c56-4cf9-99c9-ce71aeed0a1b" LastKnownName="LostFoundTarget" />
+            </receiveEvent>
+          </message>
+          <message Id="85759ee4-268f-4f45-ba89-ec417e72ae7c" name="execute" messageKind="Lost" messageSort="AsynchCall" createSelfMessage="false">
+            <referencesInternal>
+              <reference Id="4a69acf4-ca0e-47df-a48c-bccea8130aed" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=Kairos.DA)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(8439e218-1045-4d6d-9708-e2ec59dbf070.OutputPathUri)&amp;quot; Namespace=Kairos.DA Type=Connect)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(8439e218-1045-4d6d-9708-e2ec59dbf070.OutputPathUri)&amp;quot; Namespace=Kairos.DA Type=Connect Member=(Name=execute OverloadingParameters=[(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.0/Profile/Client/mscorlib.dll&amp;quot; Namespace=System Type=String)]))&quot;)" tag="DGQL" />
+              <reference Id="8678abb0-cdf3-4fa9-8357-56c4232a9017" handle="(Assembly=&quot;$(8439e218-1045-4d6d-9708-e2ec59dbf070.OutputPathUri)&quot; Namespace=Kairos.DA Type=Connect Member=(Name=execute OverloadingParameters=[(Assembly=&quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=String)]))" tag="DGML" />
+            </referencesInternal>
+            <generationState>H4sIAAAAAAAEAO2YbWvTUBTHz0cJfSEtSKNjiM5FkMxhmW5zifhCRNIu6+LSpDbdQ/30/u7JbZfWCFUpqA0hzcm55/F/zrm5dF8CiWUiiUSS8vuNt3Px9S2VQ1YiGcF7IfsSyiUShZxJzjUVR3rIetKStryEXyA3kj56M7gXyKZw9sTVy1fqvUpN+HXlg0qk6nskXblF1/APkCjkCg+5jHkP0fV5Bryncg0/gcrg9KEyq9FnZQh9hLUEDzk2uvDvuB05tnkUWIxkAOWtSB6QwwmSIdGPdT3E4gT7Ody3NjcTu0fWseY2VdsBz0hp4yGD8uSjPJaHeu/IJ+mA0b3lYywaC/8belXsfPWRQQ/wuJy/b9EaIjOBN8fBt7gE6FwqGpF8hpvyNPgYG2+g+4q+0QjkHZyWdmJBBJl6naGZk0+hMofaywa3lnZxD4lCK5ZpJk0XN138t3TxCdwv1ttqn87tP7NRGMtj9R2p/2WbIbxr7flyNl5DR8hXPSzLmdmY7+wFWq5y3B/iKLmr34KqtrOgjpCfbUl3rE5Xe2HRsz4GGlmsdb5RqRQLEXU1MQ7lVCtZ6kwtBmYG67B7IF+xZjB+/hMcTzXuobXosA+WUqa2beJ5Kk/oaJdaxVgw3uLFjrjsL1Etl/wS1ks0cnSm8O5PCLfai1fwumT+Cpzq1m5kl/VHi/jmsbs6IYndeVy0CnzlilFCFF1QMp1Qzbu+ZgH4FHYfq1bL7G8Ti3RHdzOnBvGezm6mHXSh8ZhamkhGOgHnUOW8duxsbcvu1/T3Nvb3r3ztm5r9Wc02c7qoq21zYt7siXnXnprL+3dOzs0s/UuztM65fQdU1jm5V6dvM2f36pndXfv/n+8Oag3NKhIAAA==
+(Assembly=$(8439e218-1045-4d6d-9708-e2ec59dbf070.OutputPathUri) Namespace=Kairos.DAO Type=Turno Member=delete Statement=[1,1,2] ObjectInstance="Object instance 9")
+SQL : Connect
+DA.Connect.SQL.execute("Delete from Turno where id = " + id.ToString())</generationState>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="edbe9bf4-4738-43ab-b677-764a0879863f" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <lostFoundTargetMoniker Id="929fae4e-c5a1-42ec-8286-2d0f929d3aa7" LastKnownName="LostFoundTarget" />
+            </receiveEvent>
+          </message>
+          <message Id="75e8b495-c268-4939-b692-eb3afa3cdd34" name="&lt;&lt;return&gt;&gt;" messageKind="Complete" messageSort="Reply" createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="8c43e129-83db-4504-9f54-584f54419a88" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="1b1096c2-2997-42c9-8e4c-c901509e6268" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="cbeef234-6d7f-4665-b3cb-275363e3b8e1" name="UcTurno_Load" messageKind="Complete" messageSort="SynchCall" createSelfMessage="true" signatureText="UcTurno_Load(sender, e)">
+            <referencesInternal>
+              <reference Id="89745bac-ab00-490e-bad9-7b45ab337a57" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=Kairos.View)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(8439e218-1045-4d6d-9708-e2ec59dbf070.OutputPathUri)&amp;quot; Namespace=Kairos.View Type=UcTurno)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(8439e218-1045-4d6d-9708-e2ec59dbf070.OutputPathUri)&amp;quot; Namespace=Kairos.View Type=UcTurno Member=(Name=UcTurno_Load OverloadingParameters=[(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.0/Profile/Client/mscorlib.dll&amp;quot; Namespace=System Type=Object),(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.0/Profile/Client/mscorlib.dll&amp;quot; Namespace=System Type=EventArgs)]))&quot;)" tag="DGQL" />
+              <reference Id="e0403a14-9505-4f46-b31a-17f237d34ab0" handle="(Assembly=&quot;$(8439e218-1045-4d6d-9708-e2ec59dbf070.OutputPathUri)&quot; Namespace=Kairos.View Type=UcTurno Member=(Name=UcTurno_Load OverloadingParameters=[(Assembly=&quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=EventArgs)]))" tag="DGML" />
+            </referencesInternal>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="5cd0aee6-5362-4857-a4ad-03289b831b38" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="32ae0437-0a20-43ca-ae3e-32a801e7293e" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="42a161e7-abc4-4ff1-b688-89944fa52914" name="Return" messageKind="Lost" messageSort="AsynchCall" createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="71b1c863-24a5-4fd6-aa69-c6c3933e70d6" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <lostFoundTargetMoniker Id="00b01604-9ba0-4784-a8a9-f9ae533f51cc" LastKnownName="LostFoundTarget" />
+            </receiveEvent>
+          </message>
+          <message Id="3665092c-4140-40e7-b6de-92e82650213f" name="get" messageKind="Lost" messageSort="AsynchCall" createSelfMessage="false">
+            <referencesInternal>
+              <reference Id="524ff796-2e03-4a21-8f16-2b6602ded367" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=Kairos.DAO)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(8439e218-1045-4d6d-9708-e2ec59dbf070.OutputPathUri)&amp;quot; Namespace=Kairos.DAO Type=Turno)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(8439e218-1045-4d6d-9708-e2ec59dbf070.OutputPathUri)&amp;quot; Namespace=Kairos.DAO Type=Turno Member=get)&quot;)" tag="DGQL" />
+              <reference Id="80a99398-c5a5-416e-b68a-832646ce9588" handle="(Assembly=&quot;$(8439e218-1045-4d6d-9708-e2ec59dbf070.OutputPathUri)&quot; Namespace=Kairos.DAO Type=Turno Member=get)" tag="DGML" />
+            </referencesInternal>
+            <generationState>H4sIAAAAAAAEALNhCGZIZShiyGRIZMgBklVAXgqDM5iXw+AGlElkyAWKKTDoM9gxAAADaotELgAAAA==
+
+Turno
+Turno.get()</generationState>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="84f5bfbf-fc7a-4f54-8a3d-f9bb8ea6f6b4" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <lostFoundTargetMoniker Id="6001f714-d3c4-4f74-9fa4-147e237605b3" LastKnownName="LostFoundTarget" />
+            </receiveEvent>
+          </message>
+          <message Id="446c894a-6146-4e37-aede-f7a4b0c176bd" name="Create List‎&lt;HorariosTurno‎&gt;" messageKind="Lost" messageSort="AsynchCall" createSelfMessage="false">
+            <referencesInternal>
+              <reference Id="e103eae5-eae4-4c7e-816a-a2824592bef0" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=System.Collections.Generic)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.0/Profile/Client/mscorlib.dll&amp;quot; Namespace=System.Collections.Generic Type=(Name=List GenericParameterCount=1))&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.0/Profile/Client/mscorlib.dll&amp;quot; Namespace=System.Collections.Generic Type=(Name=List GenericParameterCount=1) Member=.ctor)&quot;)" tag="DGQL" />
+              <reference Id="7e6c20e8-e813-495e-9b05-3a76ceba2aef" handle="(Assembly=&quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System.Collections.Generic Type=(Name=List GenericParameterCount=1) Member=.ctor)" tag="DGML" />
+            </referencesInternal>
+            <generationState>H4sIAAAAAAAEAO1X207bQBScL+AbrDyg8BJDVbUVECQUoKBSQBDEQ1Uh52ZSnDjNOgX365kzvpCEIPWxAstyvJ6dcz+bI+/iCn1MMUSAiL9/+dZDS28RjrgTYERsD7to444Mh0vEvBJ4OCG3iRrq2CfuyBuhQ7mU6Dp+YybeDgaUi7i7DV9XS6sLao8R5jY8WstYjus6HvEFn7BB3iWxgbzsY4wuf70le0NJ+fjOVVdaHe8BbftzMTwQm+KeWANnOGQ8q/b+4CP3N0v/Ct/N68zSWHpHtNGVlKEdyvSUs/m4PdrJ9DtMuDLfm8x4yvdE3jeoNZZcn7sJNcXU74h/laWsNl1qalNqIvl6qbWJU1XEarHIvyCjiC0RanZm8r2JrRf8fT5D7o/y+BxZP1bWdXUtr8Waqgo3YkTqKYvwgbKGHygP99QeMxKfEbV4+cyHZWBWRu+TP9TTJDrcCbn+Rm3DvLYN4o/qg1X5XWQeMIbzhfwdq2qBIjdOmxamtBez237y3mBHP/PPiPf4rHq96vW33uv2v28ZDCWVlj3fys/AFa3eKUMBbtUjgXJmOk657nAvkkRRqzVvnYj1x+ueGCcUp6aZ4hjFWNlJackq6aTzSFPJcl/TPDpR9yREi5NSndHqjL71M1rNo6rX30uv/w/z6JxafuUdsjxxCn8+4HPut/kyKTWnS160ic00v7I5d8x1QP68jUWezbnie8vOpi/Ef+FJhi5/oWXov37hPQE8/8uaDA4AAA==
+(Assembly="$(FxReferenceAssembliesUri)/.NETFramework/v4.0/Profile/Client/mscorlib.dll" Namespace=System.Collections.Generic Type=(Name=List GenericParameterCount=1 GenericArguments=[(Assembly=$(8439e218-1045-4d6d-9708-e2ec59dbf070.OutputPathUri) Namespace=Kairos.DAO Type=HorariosTurno)]) ObjectInstance="Object instance 27")
+DataSource : List‎&lt;HorariosTurno‎&gt;
+new List&lt;HorariosTurno&gt;()</generationState>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="abce9d17-2c13-46b2-b75e-efcabe52f4f9" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <lostFoundTargetMoniker Id="3b23ba12-3cd3-45dd-8532-be13c17e21ae" LastKnownName="LostFoundTarget" />
+            </receiveEvent>
+          </message>
+        </messages>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="60e5b6a3-4a85-4ea2-b0a7-034cc6c60db8" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="12ce1053-49c7-48bf-bd1d-90700f97d4e7" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="3fa497d5-a9a0-4694-80f8-1ad34e0c7487" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="228f48a1-327c-4844-83d2-31700855ddd4" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="871c4815-f8e2-4c66-8c12-0fe687339879" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="b60957d1-8a85-44a6-8191-1cfdd2bf2897" name="ExecutionEvent" />
+    </packageHasNamedElement>
+  </packagedElements>
+</SequenceDesignerModel>

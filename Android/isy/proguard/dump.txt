@@ -1,0 +1,3872 @@
+_____________________________________________________________________
++ Program class: com/isy/CallReceiver
+  Superclass:    android/content/BroadcastReceiver
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x21
+    = public class com.isy.CallReceiver extends android.content.BroadcastReceiver
+
+Interfaces (count = 0):
+
+Constant Pool (count = 29):
+  + String [phone]
+  + Class [android/content/BroadcastReceiver]
+  + Class [android/content/Context]
+  + Class [android/telephony/TelephonyManager]
+  + Class [com/isy/CallReceiver]
+  + Class [com/isy/d]
+  + Methodref [android/content/BroadcastReceiver.<init> ()V]
+  + Methodref [android/content/Context.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+  + Methodref [android/telephony/TelephonyManager.listen (Landroid/telephony/PhoneStateListener;I)V]
+  + Methodref [com/isy/d.<init> ()V]
+  + NameAndType [<init> ()V]
+  + NameAndType [getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+  + NameAndType [listen (Landroid/telephony/PhoneStateListener;I)V]
+  + Utf8 [()V]
+  + Utf8 [(Landroid/content/Context;Landroid/content/Intent;)V]
+  + Utf8 [(Landroid/telephony/PhoneStateListener;I)V]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/Object;]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [android/content/BroadcastReceiver]
+  + Utf8 [android/content/Context]
+  + Utf8 [android/telephony/TelephonyManager]
+  + Utf8 [com/isy/CallReceiver]
+  + Utf8 [com/isy/d]
+  + Utf8 [getSystemService]
+  + Utf8 [listen]
+  + Utf8 [onReceive]
+  + Utf8 [phone]
+
+Fields (count = 0):
+
+Methods (count = 2):
+  - Method:       <init>()V
+    Access flags: 0x1
+      = public CallReceiver()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #7
+        + Methodref [android/content/BroadcastReceiver.<init> ()V]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    Access flags: 0x1
+      = public void onReceive(android.content.Context,android.content.Intent)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 24, locals = 3, stack = 3):
+      [0] new #6
+        + Class [com/isy/d]
+      [3] dup
+      [4] invokespecial #10
+        + Methodref [com/isy/d.<init> ()V]
+      [7] astore_2 v2
+      [8] aload_1 v1
+      [9] ldc #1
+        + String [phone]
+      [11] invokevirtual #8
+        + Methodref [android/content/Context.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+      [14] checkcast #4
+        + Class [android/telephony/TelephonyManager]
+      [17] aload_2 v2
+      [18] bipush 32
+      [20] invokevirtual #9
+        + Methodref [android/telephony/TelephonyManager.listen (Landroid/telephony/PhoneStateListener;I)V]
+      [23] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: com/isy/ConfigActivity
+  Superclass:    android/app/Activity
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x21
+    = public class com.isy.ConfigActivity extends android.app.Activity
+
+Interfaces (count = 0):
+
+Constant Pool (count = 200):
+  + Integer [17367048]
+  + Integer [17367049]
+  + Integer [2130903040]
+  + Integer [2131034113]
+  + Integer [2131034115]
+  + Integer [2131034117]
+  + Float [2.5]
+  + Float [15.0]
+  + String [PREFERENCEDETECTOR]
+  + String [PREFERENCETIMER]
+  + String [PREFERENCETOLERANCE]
+  + String [PREFERENCEVIBRATION]
+  + Class [[Ljava/lang/String;]
+  + Class [android/app/Activity]
+  + Class [android/content/Context]
+  + Class [android/content/SharedPreferences]
+  + Class [android/content/SharedPreferences$Editor]
+  + Class [android/widget/ArrayAdapter]
+  + Class [android/widget/Spinner]
+  + Class [com/isy/ConfigActivity]
+  + Class [com/isy/IsyApplication]
+  + Class [com/isy/a]
+  + Class [com/isy/b]
+  + Class [com/isy/c]
+  + Class [com/isy/f]
+  + Class [java/lang/Float]
+  + Class [java/lang/Integer]
+  + Class [java/lang/String]
+  + Double [0.5]
+  + Fieldref [com/isy/ConfigActivity.a Landroid/widget/Spinner;]
+  + Fieldref [com/isy/ConfigActivity.b Landroid/widget/Spinner;]
+  + Fieldref [com/isy/ConfigActivity.c Landroid/widget/Spinner;]
+  + Methodref [android/app/Activity.<init> ()V]
+  + Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
+  + Methodref [android/content/Context.getSharedPreferences (Ljava/lang/String;I)Landroid/content/SharedPreferences;]
+  + Methodref [android/widget/ArrayAdapter.<init> (Landroid/content/Context;I[Ljava/lang/Object;)V]
+  + Methodref [android/widget/ArrayAdapter.setDropDownViewResource (I)V]
+  + Methodref [android/widget/Spinner.getCount ()I]
+  + Methodref [android/widget/Spinner.getItemAtPosition (I)Ljava/lang/Object;]
+  + Methodref [android/widget/Spinner.getSelectedItem ()Ljava/lang/Object;]
+  + Methodref [android/widget/Spinner.setAdapter (Landroid/widget/SpinnerAdapter;)V]
+  + Methodref [android/widget/Spinner.setOnItemSelectedListener (Landroid/widget/AdapterView$OnItemSelectedListener;)V]
+  + Methodref [android/widget/Spinner.setSelection (I)V]
+  + Methodref [com/isy/ConfigActivity.a ()I]
+  + Methodref [com/isy/ConfigActivity.b ()I]
+  + Methodref [com/isy/ConfigActivity.c ()F]
+  + Methodref [com/isy/ConfigActivity.e ()V]
+  + Methodref [com/isy/ConfigActivity.f ()V]
+  + Methodref [com/isy/ConfigActivity.findViewById (I)Landroid/view/View;]
+  + Methodref [com/isy/ConfigActivity.g ()V]
+  + Methodref [com/isy/ConfigActivity.h ()V]
+  + Methodref [com/isy/ConfigActivity.i ()V]
+  + Methodref [com/isy/ConfigActivity.setContentView (I)V]
+  + Methodref [com/isy/IsyApplication.a ()Landroid/content/Context;]
+  + Methodref [com/isy/a.<init> (Lcom/isy/ConfigActivity;)V]
+  + Methodref [com/isy/b.<init> (Lcom/isy/ConfigActivity;)V]
+  + Methodref [com/isy/c.<init> (Lcom/isy/ConfigActivity;)V]
+  + Methodref [com/isy/f.a (F)V]
+  + Methodref [com/isy/f.a (I)V]
+  + Methodref [com/isy/f.b (I)V]
+  + Methodref [java/lang/Float.parseFloat (Ljava/lang/String;)F]
+  + Methodref [java/lang/Float.toString (F)Ljava/lang/String;]
+  + Methodref [java/lang/Integer.parseInt (Ljava/lang/String;)I]
+  + Methodref [java/lang/Integer.toString (I)Ljava/lang/String;]
+  + InterfaceMethodref [android/content/SharedPreferences.edit ()Landroid/content/SharedPreferences$Editor;]
+  + InterfaceMethodref [android/content/SharedPreferences.getBoolean (Ljava/lang/String;Z)Z]
+  + InterfaceMethodref [android/content/SharedPreferences.getFloat (Ljava/lang/String;F)F]
+  + InterfaceMethodref [android/content/SharedPreferences.getInt (Ljava/lang/String;I)I]
+  + InterfaceMethodref [android/content/SharedPreferences$Editor.commit ()Z]
+  + InterfaceMethodref [android/content/SharedPreferences$Editor.putBoolean (Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;]
+  + InterfaceMethodref [android/content/SharedPreferences$Editor.putFloat (Ljava/lang/String;F)Landroid/content/SharedPreferences$Editor;]
+  + InterfaceMethodref [android/content/SharedPreferences$Editor.putInt (Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;]
+  + NameAndType [<init> ()V]
+  + NameAndType [<init> (Landroid/content/Context;I[Ljava/lang/Object;)V]
+  + NameAndType [<init> (Lcom/isy/ConfigActivity;)V]
+  + NameAndType [a ()I]
+  + NameAndType [a ()Landroid/content/Context;]
+  + NameAndType [a (F)V]
+  + NameAndType [a (I)V]
+  + NameAndType [a Landroid/widget/Spinner;]
+  + NameAndType [b ()I]
+  + NameAndType [b (I)V]
+  + NameAndType [b Landroid/widget/Spinner;]
+  + NameAndType [c ()F]
+  + NameAndType [c Landroid/widget/Spinner;]
+  + NameAndType [commit ()Z]
+  + NameAndType [e ()V]
+  + NameAndType [edit ()Landroid/content/SharedPreferences$Editor;]
+  + NameAndType [f ()V]
+  + NameAndType [findViewById (I)Landroid/view/View;]
+  + NameAndType [g ()V]
+  + NameAndType [getBoolean (Ljava/lang/String;Z)Z]
+  + NameAndType [getCount ()I]
+  + NameAndType [getFloat (Ljava/lang/String;F)F]
+  + NameAndType [getInt (Ljava/lang/String;I)I]
+  + NameAndType [getItemAtPosition (I)Ljava/lang/Object;]
+  + NameAndType [getSelectedItem ()Ljava/lang/Object;]
+  + NameAndType [getSharedPreferences (Ljava/lang/String;I)Landroid/content/SharedPreferences;]
+  + NameAndType [h ()V]
+  + NameAndType [i ()V]
+  + NameAndType [onCreate (Landroid/os/Bundle;)V]
+  + NameAndType [parseFloat (Ljava/lang/String;)F]
+  + NameAndType [parseInt (Ljava/lang/String;)I]
+  + NameAndType [putBoolean (Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;]
+  + NameAndType [putFloat (Ljava/lang/String;F)Landroid/content/SharedPreferences$Editor;]
+  + NameAndType [putInt (Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;]
+  + NameAndType [setAdapter (Landroid/widget/SpinnerAdapter;)V]
+  + NameAndType [setContentView (I)V]
+  + NameAndType [setDropDownViewResource (I)V]
+  + NameAndType [setOnItemSelectedListener (Landroid/widget/AdapterView$OnItemSelectedListener;)V]
+  + NameAndType [setSelection (I)V]
+  + NameAndType [toString (F)Ljava/lang/String;]
+  + NameAndType [toString (I)Ljava/lang/String;]
+  + Utf8 [()F]
+  + Utf8 [()I]
+  + Utf8 [()Landroid/content/Context;]
+  + Utf8 [()Landroid/content/SharedPreferences$Editor;]
+  + Utf8 [()Ljava/lang/Object;]
+  + Utf8 [()V]
+  + Utf8 [()Z]
+  + Utf8 [(F)Ljava/lang/String;]
+  + Utf8 [(F)V]
+  + Utf8 [(I)Landroid/view/View;]
+  + Utf8 [(I)Ljava/lang/Object;]
+  + Utf8 [(I)Ljava/lang/String;]
+  + Utf8 [(I)V]
+  + Utf8 [(Landroid/content/Context;I[Ljava/lang/Object;)V]
+  + Utf8 [(Landroid/os/Bundle;)V]
+  + Utf8 [(Landroid/widget/AdapterView$OnItemSelectedListener;)V]
+  + Utf8 [(Landroid/widget/SpinnerAdapter;)V]
+  + Utf8 [(Lcom/isy/ConfigActivity;)F]
+  + Utf8 [(Lcom/isy/ConfigActivity;)I]
+  + Utf8 [(Lcom/isy/ConfigActivity;)V]
+  + Utf8 [(Ljava/lang/String;)F]
+  + Utf8 [(Ljava/lang/String;)I]
+  + Utf8 [(Ljava/lang/String;F)F]
+  + Utf8 [(Ljava/lang/String;F)Landroid/content/SharedPreferences$Editor;]
+  + Utf8 [(Ljava/lang/String;I)I]
+  + Utf8 [(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;]
+  + Utf8 [(Ljava/lang/String;I)Landroid/content/SharedPreferences;]
+  + Utf8 [(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;]
+  + Utf8 [(Ljava/lang/String;Z)Z]
+  + Utf8 [(Z)V]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [Landroid/widget/Spinner;]
+  + Utf8 [PREFERENCEDETECTOR]
+  + Utf8 [PREFERENCETIMER]
+  + Utf8 [PREFERENCETOLERANCE]
+  + Utf8 [PREFERENCEVIBRATION]
+  + Utf8 [StackMapTable]
+  + Utf8 [[Ljava/lang/String;]
+  + Utf8 [a]
+  + Utf8 [android/app/Activity]
+  + Utf8 [android/content/Context]
+  + Utf8 [android/content/SharedPreferences]
+  + Utf8 [android/content/SharedPreferences$Editor]
+  + Utf8 [android/widget/ArrayAdapter]
+  + Utf8 [android/widget/Spinner]
+  + Utf8 [b]
+  + Utf8 [c]
+  + Utf8 [com/isy/ConfigActivity]
+  + Utf8 [com/isy/IsyApplication]
+  + Utf8 [com/isy/a]
+  + Utf8 [com/isy/b]
+  + Utf8 [com/isy/c]
+  + Utf8 [com/isy/f]
+  + Utf8 [commit]
+  + Utf8 [d]
+  + Utf8 [e]
+  + Utf8 [edit]
+  + Utf8 [f]
+  + Utf8 [findViewById]
+  + Utf8 [g]
+  + Utf8 [getBoolean]
+  + Utf8 [getCount]
+  + Utf8 [getFloat]
+  + Utf8 [getInt]
+  + Utf8 [getItemAtPosition]
+  + Utf8 [getSelectedItem]
+  + Utf8 [getSharedPreferences]
+  + Utf8 [h]
+  + Utf8 [i]
+  + Utf8 [java/lang/Float]
+  + Utf8 [java/lang/Integer]
+  + Utf8 [java/lang/String]
+  + Utf8 [onCreate]
+  + Utf8 [parseFloat]
+  + Utf8 [parseInt]
+  + Utf8 [putBoolean]
+  + Utf8 [putFloat]
+  + Utf8 [putInt]
+  + Utf8 [setAdapter]
+  + Utf8 [setContentView]
+  + Utf8 [setDropDownViewResource]
+  + Utf8 [setOnItemSelectedListener]
+  + Utf8 [setSelection]
+  + Utf8 [toString]
+
+Fields (count = 3):
+  + Field:        a Landroid/widget/Spinner;
+    Access flags: 0x0
+      = android.widget.Spinner a
+  + Field:        b Landroid/widget/Spinner;
+    Access flags: 0x0
+      = android.widget.Spinner b
+  + Field:        c Landroid/widget/Spinner;
+    Access flags: 0x0
+      = android.widget.Spinner c
+
+Methods (count = 18):
+  - Method:       <init>()V
+    Access flags: 0x1
+      = public ConfigActivity()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #34
+        + Methodref [android/app/Activity.<init> ()V]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onCreate(Landroid/os/Bundle;)V
+    Access flags: 0x4
+      = protected void onCreate(android.os.Bundle)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 188, locals = 5, stack = 5):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] invokespecial #35
+        + Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
+      [5] aload_0 v0
+      [6] ldc #3
+        + Integer [2130903040]
+      [8] invokevirtual #54
+        + Methodref [com/isy/ConfigActivity.setContentView (I)V]
+      [11] aload_0 v0
+      [12] aload_0 v0
+      [13] ldc #4
+        + Integer [2131034113]
+      [15] invokevirtual #50
+        + Methodref [com/isy/ConfigActivity.findViewById (I)Landroid/view/View;]
+      [18] checkcast #19
+        + Class [android/widget/Spinner]
+      [21] putfield #31
+        + Fieldref [com/isy/ConfigActivity.a Landroid/widget/Spinner;]
+      [24] aload_0 v0
+      [25] aload_0 v0
+      [26] ldc #6
+        + Integer [2131034117]
+      [28] invokevirtual #50
+        + Methodref [com/isy/ConfigActivity.findViewById (I)Landroid/view/View;]
+      [31] checkcast #19
+        + Class [android/widget/Spinner]
+      [34] putfield #32
+        + Fieldref [com/isy/ConfigActivity.b Landroid/widget/Spinner;]
+      [37] aload_0 v0
+      [38] aload_0 v0
+      [39] ldc #5
+        + Integer [2131034115]
+      [41] invokevirtual #50
+        + Methodref [com/isy/ConfigActivity.findViewById (I)Landroid/view/View;]
+      [44] checkcast #19
+        + Class [android/widget/Spinner]
+      [47] putfield #33
+        + Fieldref [com/isy/ConfigActivity.c Landroid/widget/Spinner;]
+      [50] aload_0 v0
+      [51] astore_1 v1
+      [52] bipush 29
+      [54] anewarray #28
+        + Class [java/lang/String]
+      [57] astore_2 v2
+      [58] fconst_1
+      [59] fstore_3 v3
+      [60] fconst_0
+      [61] fstore v4
+      [63] goto +26 (target=89)
+      [66] aload_2 v2
+      [67] fload v4
+      [69] f2i
+      [70] fload_3 v3
+      [71] invokestatic #63
+        + Methodref [java/lang/Float.toString (F)Ljava/lang/String;]
+      [74] aastore
+      [75] fload v4
+      [77] fconst_1
+      [78] fadd
+      [79] fstore v4
+      [81] fload_3 v3
+      [82] f2d
+      [83] ldc2_w #29
+        + Double [0.5]
+      [86] dadd
+      [87] d2f
+      [88] fstore_3 v3
+      [89] fload_3 v3
+      [90] ldc #8
+        + Float [15.0]
+      [92] fcmpg
+      [93] ifle -27 (target=66)
+      [96] new #18
+        + Class [android/widget/ArrayAdapter]
+      [99] dup
+      [100] aload_1 v1
+      [101] ldc #1
+        + Integer [17367048]
+      [103] aload_2 v2
+      [104] invokespecial #37
+        + Methodref [android/widget/ArrayAdapter.<init> (Landroid/content/Context;I[Ljava/lang/Object;)V]
+      [107] dup
+      [108] astore_3 v3
+      [109] ldc #2
+        + Integer [17367049]
+      [111] invokevirtual #38
+        + Methodref [android/widget/ArrayAdapter.setDropDownViewResource (I)V]
+      [114] aload_1 v1
+      [115] getfield #31
+        + Fieldref [com/isy/ConfigActivity.a Landroid/widget/Spinner;]
+      [118] aload_3 v3
+      [119] invokevirtual #42
+        + Methodref [android/widget/Spinner.setAdapter (Landroid/widget/SpinnerAdapter;)V]
+      [122] aload_0 v0
+      [123] invokespecial #49
+        + Methodref [com/isy/ConfigActivity.f ()V]
+      [126] aload_0 v0
+      [127] invokespecial #52
+        + Methodref [com/isy/ConfigActivity.h ()V]
+      [130] aload_0 v0
+      [131] invokespecial #48
+        + Methodref [com/isy/ConfigActivity.e ()V]
+      [134] aload_0 v0
+      [135] invokespecial #51
+        + Methodref [com/isy/ConfigActivity.g ()V]
+      [138] aload_0 v0
+      [139] invokespecial #53
+        + Methodref [com/isy/ConfigActivity.i ()V]
+      [142] aload_0 v0
+      [143] getfield #32
+        + Fieldref [com/isy/ConfigActivity.b Landroid/widget/Spinner;]
+      [146] new #22
+        + Class [com/isy/a]
+      [149] dup
+      [150] aload_0 v0
+      [151] invokespecial #56
+        + Methodref [com/isy/a.<init> (Lcom/isy/ConfigActivity;)V]
+      [154] invokevirtual #43
+        + Methodref [android/widget/Spinner.setOnItemSelectedListener (Landroid/widget/AdapterView$OnItemSelectedListener;)V]
+      [157] aload_0 v0
+      [158] getfield #31
+        + Fieldref [com/isy/ConfigActivity.a Landroid/widget/Spinner;]
+      [161] new #23
+        + Class [com/isy/b]
+      [164] dup
+      [165] aload_0 v0
+      [166] invokespecial #57
+        + Methodref [com/isy/b.<init> (Lcom/isy/ConfigActivity;)V]
+      [169] invokevirtual #43
+        + Methodref [android/widget/Spinner.setOnItemSelectedListener (Landroid/widget/AdapterView$OnItemSelectedListener;)V]
+      [172] aload_0 v0
+      [173] getfield #33
+        + Fieldref [com/isy/ConfigActivity.c Landroid/widget/Spinner;]
+      [176] new #24
+        + Class [com/isy/c]
+      [179] dup
+      [180] aload_0 v0
+      [181] invokespecial #58
+        + Methodref [com/isy/c.<init> (Lcom/isy/ConfigActivity;)V]
+      [184] invokevirtual #43
+        + Methodref [android/widget/Spinner.setOnItemSelectedListener (Landroid/widget/AdapterView$OnItemSelectedListener;)V]
+      [187] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       e()V
+    Access flags: 0x2
+      = private void e()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 54, locals = 4, stack = 2):
+      [0] invokestatic #47
+        + Methodref [com/isy/ConfigActivity.c ()F]
+      [3] fstore_1 v1
+      [4] iconst_0
+      [5] istore_2 v2
+      [6] goto +36 (target=42)
+      [9] aload_0 v0
+      [10] iload_2 v2
+      [11] istore_3 v3
+      [12] getfield #31
+        + Fieldref [com/isy/ConfigActivity.a Landroid/widget/Spinner;]
+      [15] iload_3 v3
+      [16] invokevirtual #40
+        + Methodref [android/widget/Spinner.getItemAtPosition (I)Ljava/lang/Object;]
+      [19] checkcast #28
+        + Class [java/lang/String]
+      [22] invokestatic #62
+        + Methodref [java/lang/Float.parseFloat (Ljava/lang/String;)F]
+      [25] fload_1 v1
+      [26] fcmpl
+      [27] ifne +12 (target=39)
+      [30] aload_0 v0
+      [31] getfield #31
+        + Fieldref [com/isy/ConfigActivity.a Landroid/widget/Spinner;]
+      [34] iload_2 v2
+      [35] invokevirtual #44
+        + Methodref [android/widget/Spinner.setSelection (I)V]
+      [38] return
+      [39] iinc v2, 1
+      [42] iload_2 v2
+      [43] aload_0 v0
+      [44] getfield #31
+        + Fieldref [com/isy/ConfigActivity.a Landroid/widget/Spinner;]
+      [47] invokevirtual #39
+        + Methodref [android/widget/Spinner.getCount ()I]
+      [50] ificmplt -41 (target=9)
+      [53] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 3):
+        - [9] Var: ...[f][i], Stack: (empty)
+        - [39] Var: ..., Stack: (empty)
+        - [42] Var: ..., Stack: (empty)
+  + Method:       f()V
+    Access flags: 0x2
+      = private void f()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 59, locals = 4, stack = 5):
+      [0] bipush 19
+      [2] anewarray #28
+        + Class [java/lang/String]
+      [5] astore_1 v1
+      [6] iconst_2
+      [7] istore_2 v2
+      [8] iconst_0
+      [9] istore_3 v3
+      [10] goto +16 (target=26)
+      [13] aload_1 v1
+      [14] iload_3 v3
+      [15] iload_2 v2
+      [16] invokestatic #65
+        + Methodref [java/lang/Integer.toString (I)Ljava/lang/String;]
+      [19] aastore
+      [20] iinc v3, 1
+      [23] iinc v2, 1
+      [26] iload_2 v2
+      [27] bipush 20
+      [29] ificmple -16 (target=13)
+      [32] new #18
+        + Class [android/widget/ArrayAdapter]
+      [35] dup
+      [36] aload_0 v0
+      [37] ldc #1
+        + Integer [17367048]
+      [39] aload_1 v1
+      [40] invokespecial #37
+        + Methodref [android/widget/ArrayAdapter.<init> (Landroid/content/Context;I[Ljava/lang/Object;)V]
+      [43] dup
+      [44] astore_2 v2
+      [45] ldc #2
+        + Integer [17367049]
+      [47] invokevirtual #38
+        + Methodref [android/widget/ArrayAdapter.setDropDownViewResource (I)V]
+      [50] aload_0 v0
+      [51] getfield #33
+        + Fieldref [com/isy/ConfigActivity.c Landroid/widget/Spinner;]
+      [54] aload_2 v2
+      [55] invokevirtual #42
+        + Methodref [android/widget/Spinner.setAdapter (Landroid/widget/SpinnerAdapter;)V]
+      [58] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 2):
+        - [13] Var: ...[a:[Ljava/lang/String;][i][i], Stack: (empty)
+        - [26] Var: ..., Stack: (empty)
+  + Method:       g()V
+    Access flags: 0x2
+      = private void g()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 53, locals = 4, stack = 2):
+      [0] invokestatic #45
+        + Methodref [com/isy/ConfigActivity.a ()I]
+      [3] istore_1 v1
+      [4] iconst_0
+      [5] istore_2 v2
+      [6] goto +35 (target=41)
+      [9] aload_0 v0
+      [10] iload_2 v2
+      [11] istore_3 v3
+      [12] getfield #33
+        + Fieldref [com/isy/ConfigActivity.c Landroid/widget/Spinner;]
+      [15] iload_3 v3
+      [16] invokevirtual #40
+        + Methodref [android/widget/Spinner.getItemAtPosition (I)Ljava/lang/Object;]
+      [19] checkcast #28
+        + Class [java/lang/String]
+      [22] invokestatic #64
+        + Methodref [java/lang/Integer.parseInt (Ljava/lang/String;)I]
+      [25] iload_1 v1
+      [26] ificmpne +12 (target=38)
+      [29] aload_0 v0
+      [30] getfield #33
+        + Fieldref [com/isy/ConfigActivity.c Landroid/widget/Spinner;]
+      [33] iload_2 v2
+      [34] invokevirtual #44
+        + Methodref [android/widget/Spinner.setSelection (I)V]
+      [37] return
+      [38] iinc v2, 1
+      [41] iload_2 v2
+      [42] aload_0 v0
+      [43] getfield #33
+        + Fieldref [com/isy/ConfigActivity.c Landroid/widget/Spinner;]
+      [46] invokevirtual #39
+        + Methodref [android/widget/Spinner.getCount ()I]
+      [49] ificmplt -40 (target=9)
+      [52] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 3):
+        - [9] Var: ...[i][i], Stack: (empty)
+        - [38] Var: ..., Stack: (empty)
+        - [41] Var: ..., Stack: (empty)
+  + Method:       a()I
+    Access flags: 0x9
+      = public static int a()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 19, locals = 0, stack = 3):
+      [0] invokestatic #55
+        + Methodref [com/isy/IsyApplication.a ()Landroid/content/Context;]
+      [3] ldc #10
+        + String [PREFERENCETIMER]
+      [5] iconst_0
+      [6] invokevirtual #36
+        + Methodref [android/content/Context.getSharedPreferences (Ljava/lang/String;I)Landroid/content/SharedPreferences;]
+      [9] ldc #10
+        + String [PREFERENCETIMER]
+      [11] bipush 6
+      [13] invokeinterface #69
+        + InterfaceMethodref [android/content/SharedPreferences.getInt (Ljava/lang/String;I)I]
+      [18] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       b()I
+    Access flags: 0x9
+      = public static int b()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 20, locals = 0, stack = 3):
+      [0] invokestatic #55
+        + Methodref [com/isy/IsyApplication.a ()Landroid/content/Context;]
+      [3] ldc #12
+        + String [PREFERENCEVIBRATION]
+      [5] iconst_0
+      [6] invokevirtual #36
+        + Methodref [android/content/Context.getSharedPreferences (Ljava/lang/String;I)Landroid/content/SharedPreferences;]
+      [9] ldc #12
+        + String [PREFERENCEVIBRATION]
+      [11] sipush 500
+      [14] invokeinterface #69
+        + InterfaceMethodref [android/content/SharedPreferences.getInt (Ljava/lang/String;I)I]
+      [19] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       c()F
+    Access flags: 0x9
+      = public static float c()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 19, locals = 0, stack = 3):
+      [0] invokestatic #55
+        + Methodref [com/isy/IsyApplication.a ()Landroid/content/Context;]
+      [3] ldc #11
+        + String [PREFERENCETOLERANCE]
+      [5] iconst_0
+      [6] invokevirtual #36
+        + Methodref [android/content/Context.getSharedPreferences (Ljava/lang/String;I)Landroid/content/SharedPreferences;]
+      [9] ldc #11
+        + String [PREFERENCETOLERANCE]
+      [11] ldc #7
+        + Float [2.5]
+      [13] invokeinterface #68
+        + InterfaceMethodref [android/content/SharedPreferences.getFloat (Ljava/lang/String;F)F]
+      [18] freturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       a(I)V
+    Access flags: 0x9
+      = public static void a(int)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 37, locals = 2, stack = 3):
+      [0] invokestatic #55
+        + Methodref [com/isy/IsyApplication.a ()Landroid/content/Context;]
+      [3] ldc #10
+        + String [PREFERENCETIMER]
+      [5] iconst_0
+      [6] invokevirtual #36
+        + Methodref [android/content/Context.getSharedPreferences (Ljava/lang/String;I)Landroid/content/SharedPreferences;]
+      [9] invokeinterface #66
+        + InterfaceMethodref [android/content/SharedPreferences.edit ()Landroid/content/SharedPreferences$Editor;]
+      [14] dup
+      [15] astore_1 v1
+      [16] ldc #10
+        + String [PREFERENCETIMER]
+      [18] iload_0 v0
+      [19] invokeinterface #73
+        + InterfaceMethodref [android/content/SharedPreferences$Editor.putInt (Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;]
+      [24] pop
+      [25] aload_1 v1
+      [26] invokeinterface #70
+        + InterfaceMethodref [android/content/SharedPreferences$Editor.commit ()Z]
+      [31] pop
+      [32] iload_0 v0
+      [33] invokestatic #60
+        + Methodref [com/isy/f.a (I)V]
+      [36] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       b(I)V
+    Access flags: 0x9
+      = public static void b(int)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 37, locals = 2, stack = 3):
+      [0] invokestatic #55
+        + Methodref [com/isy/IsyApplication.a ()Landroid/content/Context;]
+      [3] ldc #12
+        + String [PREFERENCEVIBRATION]
+      [5] iconst_0
+      [6] invokevirtual #36
+        + Methodref [android/content/Context.getSharedPreferences (Ljava/lang/String;I)Landroid/content/SharedPreferences;]
+      [9] invokeinterface #66
+        + InterfaceMethodref [android/content/SharedPreferences.edit ()Landroid/content/SharedPreferences$Editor;]
+      [14] dup
+      [15] astore_1 v1
+      [16] ldc #12
+        + String [PREFERENCEVIBRATION]
+      [18] iload_0 v0
+      [19] invokeinterface #73
+        + InterfaceMethodref [android/content/SharedPreferences$Editor.putInt (Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;]
+      [24] pop
+      [25] aload_1 v1
+      [26] invokeinterface #70
+        + InterfaceMethodref [android/content/SharedPreferences$Editor.commit ()Z]
+      [31] pop
+      [32] iload_0 v0
+      [33] invokestatic #61
+        + Methodref [com/isy/f.b (I)V]
+      [36] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       a(F)V
+    Access flags: 0x9
+      = public static void a(float)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 37, locals = 2, stack = 3):
+      [0] invokestatic #55
+        + Methodref [com/isy/IsyApplication.a ()Landroid/content/Context;]
+      [3] ldc #11
+        + String [PREFERENCETOLERANCE]
+      [5] iconst_0
+      [6] invokevirtual #36
+        + Methodref [android/content/Context.getSharedPreferences (Ljava/lang/String;I)Landroid/content/SharedPreferences;]
+      [9] invokeinterface #66
+        + InterfaceMethodref [android/content/SharedPreferences.edit ()Landroid/content/SharedPreferences$Editor;]
+      [14] dup
+      [15] astore_1 v1
+      [16] ldc #11
+        + String [PREFERENCETOLERANCE]
+      [18] fload_0 v0
+      [19] invokeinterface #72
+        + InterfaceMethodref [android/content/SharedPreferences$Editor.putFloat (Ljava/lang/String;F)Landroid/content/SharedPreferences$Editor;]
+      [24] pop
+      [25] aload_1 v1
+      [26] invokeinterface #70
+        + InterfaceMethodref [android/content/SharedPreferences$Editor.commit ()Z]
+      [31] pop
+      [32] fload_0 v0
+      [33] invokestatic #59
+        + Methodref [com/isy/f.a (F)V]
+      [36] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       a(Z)V
+    Access flags: 0x9
+      = public static void a(boolean)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 33, locals = 2, stack = 3):
+      [0] invokestatic #55
+        + Methodref [com/isy/IsyApplication.a ()Landroid/content/Context;]
+      [3] ldc #9
+        + String [PREFERENCEDETECTOR]
+      [5] iconst_0
+      [6] invokevirtual #36
+        + Methodref [android/content/Context.getSharedPreferences (Ljava/lang/String;I)Landroid/content/SharedPreferences;]
+      [9] invokeinterface #66
+        + InterfaceMethodref [android/content/SharedPreferences.edit ()Landroid/content/SharedPreferences$Editor;]
+      [14] dup
+      [15] astore_1 v1
+      [16] ldc #9
+        + String [PREFERENCEDETECTOR]
+      [18] iload_0 v0
+      [19] invokeinterface #71
+        + InterfaceMethodref [android/content/SharedPreferences$Editor.putBoolean (Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;]
+      [24] pop
+      [25] aload_1 v1
+      [26] invokeinterface #70
+        + InterfaceMethodref [android/content/SharedPreferences$Editor.commit ()Z]
+      [31] pop
+      [32] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       d()Z
+    Access flags: 0x9
+      = public static boolean d()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 18, locals = 0, stack = 3):
+      [0] invokestatic #55
+        + Methodref [com/isy/IsyApplication.a ()Landroid/content/Context;]
+      [3] ldc #9
+        + String [PREFERENCEDETECTOR]
+      [5] iconst_0
+      [6] invokevirtual #36
+        + Methodref [android/content/Context.getSharedPreferences (Ljava/lang/String;I)Landroid/content/SharedPreferences;]
+      [9] ldc #9
+        + String [PREFERENCEDETECTOR]
+      [11] iconst_0
+      [12] invokeinterface #67
+        + InterfaceMethodref [android/content/SharedPreferences.getBoolean (Ljava/lang/String;Z)Z]
+      [17] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       h()V
+    Access flags: 0x2
+      = private void h()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 64, locals = 4, stack = 5):
+      [0] bipush 6
+      [2] anewarray #28
+        + Class [java/lang/String]
+      [5] astore_1 v1
+      [6] sipush 500
+      [9] istore_2 v2
+      [10] iconst_0
+      [11] istore_3 v3
+      [12] goto +19 (target=31)
+      [15] aload_1 v1
+      [16] iload_3 v3
+      [17] iload_2 v2
+      [18] invokestatic #65
+        + Methodref [java/lang/Integer.toString (I)Ljava/lang/String;]
+      [21] aastore
+      [22] iinc v3, 1
+      [25] iinc_w v2, 500
+      [31] iload_3 v3
+      [32] bipush 6
+      [34] ificmplt -19 (target=15)
+      [37] new #18
+        + Class [android/widget/ArrayAdapter]
+      [40] dup
+      [41] aload_0 v0
+      [42] ldc #1
+        + Integer [17367048]
+      [44] aload_1 v1
+      [45] invokespecial #37
+        + Methodref [android/widget/ArrayAdapter.<init> (Landroid/content/Context;I[Ljava/lang/Object;)V]
+      [48] dup
+      [49] astore_2 v2
+      [50] ldc #2
+        + Integer [17367049]
+      [52] invokevirtual #38
+        + Methodref [android/widget/ArrayAdapter.setDropDownViewResource (I)V]
+      [55] aload_0 v0
+      [56] getfield #32
+        + Fieldref [com/isy/ConfigActivity.b Landroid/widget/Spinner;]
+      [59] aload_2 v2
+      [60] invokevirtual #42
+        + Methodref [android/widget/Spinner.setAdapter (Landroid/widget/SpinnerAdapter;)V]
+      [63] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 2):
+        - [15] Var: ...[a:[Ljava/lang/String;][i][i], Stack: (empty)
+        - [31] Var: ..., Stack: (empty)
+  + Method:       i()V
+    Access flags: 0x2
+      = private void i()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 53, locals = 4, stack = 2):
+      [0] invokestatic #46
+        + Methodref [com/isy/ConfigActivity.b ()I]
+      [3] istore_1 v1
+      [4] iconst_0
+      [5] istore_2 v2
+      [6] goto +35 (target=41)
+      [9] aload_0 v0
+      [10] iload_2 v2
+      [11] istore_3 v3
+      [12] getfield #32
+        + Fieldref [com/isy/ConfigActivity.b Landroid/widget/Spinner;]
+      [15] iload_3 v3
+      [16] invokevirtual #40
+        + Methodref [android/widget/Spinner.getItemAtPosition (I)Ljava/lang/Object;]
+      [19] checkcast #28
+        + Class [java/lang/String]
+      [22] invokestatic #64
+        + Methodref [java/lang/Integer.parseInt (Ljava/lang/String;)I]
+      [25] iload_1 v1
+      [26] ificmpne +12 (target=38)
+      [29] aload_0 v0
+      [30] getfield #32
+        + Fieldref [com/isy/ConfigActivity.b Landroid/widget/Spinner;]
+      [33] iload_2 v2
+      [34] invokevirtual #44
+        + Methodref [android/widget/Spinner.setSelection (I)V]
+      [37] return
+      [38] iinc v2, 1
+      [41] iload_2 v2
+      [42] aload_0 v0
+      [43] getfield #32
+        + Fieldref [com/isy/ConfigActivity.b Landroid/widget/Spinner;]
+      [46] invokevirtual #39
+        + Methodref [android/widget/Spinner.getCount ()I]
+      [49] ificmplt -40 (target=9)
+      [52] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 3):
+        - [9] Var: ...[i][i], Stack: (empty)
+        - [38] Var: ..., Stack: (empty)
+        - [41] Var: ..., Stack: (empty)
+  + Method:       a(Lcom/isy/ConfigActivity;)I
+    Access flags: 0x1008
+      = static synthetic int a(com.isy.ConfigActivity)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 14, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] getfield #32
+        + Fieldref [com/isy/ConfigActivity.b Landroid/widget/Spinner;]
+      [4] invokevirtual #41
+        + Methodref [android/widget/Spinner.getSelectedItem ()Ljava/lang/Object;]
+      [7] checkcast #28
+        + Class [java/lang/String]
+      [10] invokestatic #64
+        + Methodref [java/lang/Integer.parseInt (Ljava/lang/String;)I]
+      [13] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       b(Lcom/isy/ConfigActivity;)F
+    Access flags: 0x1008
+      = static synthetic float b(com.isy.ConfigActivity)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 14, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] getfield #31
+        + Fieldref [com/isy/ConfigActivity.a Landroid/widget/Spinner;]
+      [4] invokevirtual #41
+        + Methodref [android/widget/Spinner.getSelectedItem ()Ljava/lang/Object;]
+      [7] checkcast #28
+        + Class [java/lang/String]
+      [10] invokestatic #62
+        + Methodref [java/lang/Float.parseFloat (Ljava/lang/String;)F]
+      [13] freturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       c(Lcom/isy/ConfigActivity;)I
+    Access flags: 0x1008
+      = static synthetic int c(com.isy.ConfigActivity)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 14, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] getfield #33
+        + Fieldref [com/isy/ConfigActivity.c Landroid/widget/Spinner;]
+      [4] invokevirtual #41
+        + Methodref [android/widget/Spinner.getSelectedItem ()Ljava/lang/Object;]
+      [7] checkcast #28
+        + Class [java/lang/String]
+      [10] invokestatic #64
+        + Methodref [java/lang/Integer.parseInt (Ljava/lang/String;)I]
+      [13] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: com/isy/a
+  Superclass:    java/lang/Object
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x30
+    = final class com.isy.a extends java.lang.Object
+
+Interfaces (count = 1):
+  + Class [android/widget/AdapterView$OnItemSelectedListener]
+
+Constant Pool (count = 30):
+  + Class [android/widget/AdapterView$OnItemSelectedListener]
+  + Class [com/isy/ConfigActivity]
+  + Class [com/isy/a]
+  + Class [java/lang/Object]
+  + Fieldref [com/isy/a.a Lcom/isy/ConfigActivity;]
+  + Methodref [com/isy/ConfigActivity.a (Lcom/isy/ConfigActivity;)I]
+  + Methodref [com/isy/ConfigActivity.b (I)V]
+  + Methodref [java/lang/Object.<init> ()V]
+  + NameAndType [<init> ()V]
+  + NameAndType [a (Lcom/isy/ConfigActivity;)I]
+  + NameAndType [a Lcom/isy/ConfigActivity;]
+  + NameAndType [b (I)V]
+  + Utf8 [()V]
+  + Utf8 [(I)V]
+  + Utf8 [(Landroid/widget/AdapterView;)V]
+  + Utf8 [(Landroid/widget/AdapterView;Landroid/view/View;IJ)V]
+  + Utf8 [(Lcom/isy/ConfigActivity;)I]
+  + Utf8 [(Lcom/isy/ConfigActivity;)V]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [Lcom/isy/ConfigActivity;]
+  + Utf8 [a]
+  + Utf8 [android/widget/AdapterView$OnItemSelectedListener]
+  + Utf8 [b]
+  + Utf8 [com/isy/ConfigActivity]
+  + Utf8 [com/isy/a]
+  + Utf8 [java/lang/Object]
+  + Utf8 [onItemSelected]
+  + Utf8 [onNothingSelected]
+
+Fields (count = 1):
+  + Field:        a Lcom/isy/ConfigActivity;
+    Access flags: 0x1010
+      = final synthetic com.isy.ConfigActivity a
+
+Methods (count = 3):
+  - Method:       <init>(Lcom/isy/ConfigActivity;)V
+    Access flags: 0x0
+      = a(com.isy.ConfigActivity)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 10, locals = 2, stack = 2):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] putfield #5
+        + Fieldref [com/isy/a.a Lcom/isy/ConfigActivity;]
+      [5] aload_0 v0
+      [6] invokespecial #8
+        + Methodref [java/lang/Object.<init> ()V]
+      [9] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onItemSelected(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+    Access flags: 0x11
+      = public final void onItemSelected(android.widget.AdapterView,android.view.View,int,long)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 11, locals = 6, stack = 1):
+      [0] aload_0 v0
+      [1] getfield #5
+        + Fieldref [com/isy/a.a Lcom/isy/ConfigActivity;]
+      [4] invokestatic #6
+        + Methodref [com/isy/ConfigActivity.a (Lcom/isy/ConfigActivity;)I]
+      [7] invokestatic #7
+        + Methodref [com/isy/ConfigActivity.b (I)V]
+      [10] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onNothingSelected(Landroid/widget/AdapterView;)V
+    Access flags: 0x11
+      = public final void onNothingSelected(android.widget.AdapterView)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 1, locals = 2, stack = 0):
+      [0] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: com/isy/b
+  Superclass:    java/lang/Object
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x30
+    = final class com.isy.b extends java.lang.Object
+
+Interfaces (count = 1):
+  + Class [android/widget/AdapterView$OnItemSelectedListener]
+
+Constant Pool (count = 30):
+  + Class [android/widget/AdapterView$OnItemSelectedListener]
+  + Class [com/isy/ConfigActivity]
+  + Class [com/isy/b]
+  + Class [java/lang/Object]
+  + Fieldref [com/isy/b.a Lcom/isy/ConfigActivity;]
+  + Methodref [com/isy/ConfigActivity.a (F)V]
+  + Methodref [com/isy/ConfigActivity.b (Lcom/isy/ConfigActivity;)F]
+  + Methodref [java/lang/Object.<init> ()V]
+  + NameAndType [<init> ()V]
+  + NameAndType [a (F)V]
+  + NameAndType [a Lcom/isy/ConfigActivity;]
+  + NameAndType [b (Lcom/isy/ConfigActivity;)F]
+  + Utf8 [()V]
+  + Utf8 [(F)V]
+  + Utf8 [(Landroid/widget/AdapterView;)V]
+  + Utf8 [(Landroid/widget/AdapterView;Landroid/view/View;IJ)V]
+  + Utf8 [(Lcom/isy/ConfigActivity;)F]
+  + Utf8 [(Lcom/isy/ConfigActivity;)V]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [Lcom/isy/ConfigActivity;]
+  + Utf8 [a]
+  + Utf8 [android/widget/AdapterView$OnItemSelectedListener]
+  + Utf8 [b]
+  + Utf8 [com/isy/ConfigActivity]
+  + Utf8 [com/isy/b]
+  + Utf8 [java/lang/Object]
+  + Utf8 [onItemSelected]
+  + Utf8 [onNothingSelected]
+
+Fields (count = 1):
+  + Field:        a Lcom/isy/ConfigActivity;
+    Access flags: 0x1010
+      = final synthetic com.isy.ConfigActivity a
+
+Methods (count = 3):
+  - Method:       <init>(Lcom/isy/ConfigActivity;)V
+    Access flags: 0x0
+      = b(com.isy.ConfigActivity)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 10, locals = 2, stack = 2):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] putfield #5
+        + Fieldref [com/isy/b.a Lcom/isy/ConfigActivity;]
+      [5] aload_0 v0
+      [6] invokespecial #8
+        + Methodref [java/lang/Object.<init> ()V]
+      [9] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onItemSelected(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+    Access flags: 0x11
+      = public final void onItemSelected(android.widget.AdapterView,android.view.View,int,long)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 11, locals = 6, stack = 1):
+      [0] aload_0 v0
+      [1] getfield #5
+        + Fieldref [com/isy/b.a Lcom/isy/ConfigActivity;]
+      [4] invokestatic #7
+        + Methodref [com/isy/ConfigActivity.b (Lcom/isy/ConfigActivity;)F]
+      [7] invokestatic #6
+        + Methodref [com/isy/ConfigActivity.a (F)V]
+      [10] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onNothingSelected(Landroid/widget/AdapterView;)V
+    Access flags: 0x11
+      = public final void onNothingSelected(android.widget.AdapterView)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 1, locals = 2, stack = 0):
+      [0] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: com/isy/c
+  Superclass:    java/lang/Object
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x30
+    = final class com.isy.c extends java.lang.Object
+
+Interfaces (count = 1):
+  + Class [android/widget/AdapterView$OnItemSelectedListener]
+
+Constant Pool (count = 30):
+  + Class [android/widget/AdapterView$OnItemSelectedListener]
+  + Class [com/isy/ConfigActivity]
+  + Class [com/isy/c]
+  + Class [java/lang/Object]
+  + Fieldref [com/isy/c.a Lcom/isy/ConfigActivity;]
+  + Methodref [com/isy/ConfigActivity.a (I)V]
+  + Methodref [com/isy/ConfigActivity.c (Lcom/isy/ConfigActivity;)I]
+  + Methodref [java/lang/Object.<init> ()V]
+  + NameAndType [<init> ()V]
+  + NameAndType [a (I)V]
+  + NameAndType [a Lcom/isy/ConfigActivity;]
+  + NameAndType [c (Lcom/isy/ConfigActivity;)I]
+  + Utf8 [()V]
+  + Utf8 [(I)V]
+  + Utf8 [(Landroid/widget/AdapterView;)V]
+  + Utf8 [(Landroid/widget/AdapterView;Landroid/view/View;IJ)V]
+  + Utf8 [(Lcom/isy/ConfigActivity;)I]
+  + Utf8 [(Lcom/isy/ConfigActivity;)V]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [Lcom/isy/ConfigActivity;]
+  + Utf8 [a]
+  + Utf8 [android/widget/AdapterView$OnItemSelectedListener]
+  + Utf8 [c]
+  + Utf8 [com/isy/ConfigActivity]
+  + Utf8 [com/isy/c]
+  + Utf8 [java/lang/Object]
+  + Utf8 [onItemSelected]
+  + Utf8 [onNothingSelected]
+
+Fields (count = 1):
+  + Field:        a Lcom/isy/ConfigActivity;
+    Access flags: 0x1010
+      = final synthetic com.isy.ConfigActivity a
+
+Methods (count = 3):
+  - Method:       <init>(Lcom/isy/ConfigActivity;)V
+    Access flags: 0x0
+      = c(com.isy.ConfigActivity)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 10, locals = 2, stack = 2):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] putfield #5
+        + Fieldref [com/isy/c.a Lcom/isy/ConfigActivity;]
+      [5] aload_0 v0
+      [6] invokespecial #8
+        + Methodref [java/lang/Object.<init> ()V]
+      [9] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onItemSelected(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+    Access flags: 0x11
+      = public final void onItemSelected(android.widget.AdapterView,android.view.View,int,long)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 11, locals = 6, stack = 1):
+      [0] aload_0 v0
+      [1] getfield #5
+        + Fieldref [com/isy/c.a Lcom/isy/ConfigActivity;]
+      [4] invokestatic #7
+        + Methodref [com/isy/ConfigActivity.c (Lcom/isy/ConfigActivity;)I]
+      [7] invokestatic #6
+        + Methodref [com/isy/ConfigActivity.a (I)V]
+      [10] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onNothingSelected(Landroid/widget/AdapterView;)V
+    Access flags: 0x11
+      = public final void onNothingSelected(android.widget.AdapterView)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 1, locals = 2, stack = 0):
+      [0] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: com/isy/IsyApplication
+  Superclass:    android/app/Application
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x21
+    = public class com.isy.IsyApplication extends android.app.Application
+
+Interfaces (count = 0):
+
+Constant Pool (count = 21):
+  + Class [android/app/Application]
+  + Class [com/isy/IsyApplication]
+  + Fieldref [com/isy/IsyApplication.a Landroid/content/Context;]
+  + Methodref [android/app/Application.<init> ()V]
+  + Methodref [android/app/Application.onCreate ()V]
+  + Methodref [com/isy/IsyApplication.getApplicationContext ()Landroid/content/Context;]
+  + NameAndType [<init> ()V]
+  + NameAndType [a Landroid/content/Context;]
+  + NameAndType [getApplicationContext ()Landroid/content/Context;]
+  + NameAndType [onCreate ()V]
+  + Utf8 [()Landroid/content/Context;]
+  + Utf8 [()V]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [Landroid/content/Context;]
+  + Utf8 [a]
+  + Utf8 [android/app/Application]
+  + Utf8 [com/isy/IsyApplication]
+  + Utf8 [getApplicationContext]
+  + Utf8 [onCreate]
+
+Fields (count = 1):
+  + Field:        a Landroid/content/Context;
+    Access flags: 0xa
+      = private static android.content.Context a
+
+Methods (count = 3):
+  - Method:       <init>()V
+    Access flags: 0x1
+      = public IsyApplication()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #4
+        + Methodref [android/app/Application.<init> ()V]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onCreate()V
+    Access flags: 0x1
+      = public void onCreate()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 12, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #5
+        + Methodref [android/app/Application.onCreate ()V]
+      [4] aload_0 v0
+      [5] invokevirtual #6
+        + Methodref [com/isy/IsyApplication.getApplicationContext ()Landroid/content/Context;]
+      [8] putstatic #3
+        + Fieldref [com/isy/IsyApplication.a Landroid/content/Context;]
+      [11] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       a()Landroid/content/Context;
+    Access flags: 0x9
+      = public static android.content.Context a()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 4, locals = 0, stack = 1):
+      [0] getstatic #3
+        + Fieldref [com/isy/IsyApplication.a Landroid/content/Context;]
+      [3] areturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: com/isy/MainActivity
+  Superclass:    android/app/Activity
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x21
+    = public class com.isy.MainActivity extends android.app.Activity
+
+Interfaces (count = 1):
+  + Class [android/view/View$OnClickListener]
+
+Constant Pool (count = 125):
+  + Integer [2130903041]
+  + Integer [2130968577]
+  + Integer [2130968579]
+  + Integer [2130968580]
+  + Integer [2131034123]
+  + Integer [2131034124]
+  + Integer [2131034125]
+  + Class [android/app/Activity]
+  + Class [android/content/Intent]
+  + Class [android/view/View]
+  + Class [android/view/View$OnClickListener]
+  + Class [android/widget/Button]
+  + Class [com/isy/ConfigActivity]
+  + Class [com/isy/MainActivity]
+  + Class [com/isy/MainService]
+  + Class [com/isy/SoundsView]
+  + Class [com/isy/f]
+  + Fieldref [com/isy/MainActivity.a Lcom/isy/SoundsView;]
+  + Fieldref [com/isy/MainActivity.b Lcom/isy/f;]
+  + Fieldref [com/isy/MainActivity.c Landroid/widget/Button;]
+  + Fieldref [com/isy/MainActivity.d Landroid/widget/Button;]
+  + Fieldref [com/isy/MainActivity.e Z]
+  + Methodref [android/app/Activity.<init> ()V]
+  + Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
+  + Methodref [android/app/Activity.onStart ()V]
+  + Methodref [android/app/Activity.onStop ()V]
+  + Methodref [android/app/Activity.onWindowFocusChanged (Z)V]
+  + Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+  + Methodref [android/view/View.getId ()I]
+  + Methodref [android/widget/Button.setOnClickListener (Landroid/view/View$OnClickListener;)V]
+  + Methodref [android/widget/Button.setText (I)V]
+  + Methodref [android/widget/Button.setWidth (I)V]
+  + Methodref [com/isy/ConfigActivity.a (Z)V]
+  + Methodref [com/isy/MainActivity.findViewById (I)Landroid/view/View;]
+  + Methodref [com/isy/MainActivity.setContentView (I)V]
+  + Methodref [com/isy/MainActivity.startActivity (Landroid/content/Intent;)V]
+  + Methodref [com/isy/MainActivity.startService (Landroid/content/Intent;)Landroid/content/ComponentName;]
+  + Methodref [com/isy/MainActivity.stopService (Landroid/content/Intent;)Z]
+  + Methodref [com/isy/MainService.a ()Z]
+  + Methodref [com/isy/SoundsView.a ()V]
+  + Methodref [com/isy/SoundsView.b ()V]
+  + Methodref [com/isy/SoundsView.getWidth ()I]
+  + Methodref [com/isy/f.<init> (Lcom/isy/SoundsView;)V]
+  + Methodref [com/isy/f.a ()V]
+  + Methodref [com/isy/f.start ()V]
+  + NameAndType [<init> ()V]
+  + NameAndType [<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+  + NameAndType [<init> (Lcom/isy/SoundsView;)V]
+  + NameAndType [a ()V]
+  + NameAndType [a ()Z]
+  + NameAndType [a (Z)V]
+  + NameAndType [a Lcom/isy/SoundsView;]
+  + NameAndType [b ()V]
+  + NameAndType [b Lcom/isy/f;]
+  + NameAndType [c Landroid/widget/Button;]
+  + NameAndType [d Landroid/widget/Button;]
+  + NameAndType [e Z]
+  + NameAndType [findViewById (I)Landroid/view/View;]
+  + NameAndType [getId ()I]
+  + NameAndType [getWidth ()I]
+  + NameAndType [onCreate (Landroid/os/Bundle;)V]
+  + NameAndType [onStart ()V]
+  + NameAndType [onStop ()V]
+  + NameAndType [onWindowFocusChanged (Z)V]
+  + NameAndType [setContentView (I)V]
+  + NameAndType [setOnClickListener (Landroid/view/View$OnClickListener;)V]
+  + NameAndType [setText (I)V]
+  + NameAndType [setWidth (I)V]
+  + NameAndType [start ()V]
+  + NameAndType [startActivity (Landroid/content/Intent;)V]
+  + NameAndType [startService (Landroid/content/Intent;)Landroid/content/ComponentName;]
+  + NameAndType [stopService (Landroid/content/Intent;)Z]
+  + Utf8 [()I]
+  + Utf8 [()V]
+  + Utf8 [()Z]
+  + Utf8 [(I)Landroid/view/View;]
+  + Utf8 [(I)V]
+  + Utf8 [(Landroid/content/Context;Ljava/lang/Class;)V]
+  + Utf8 [(Landroid/content/Intent;)Landroid/content/ComponentName;]
+  + Utf8 [(Landroid/content/Intent;)V]
+  + Utf8 [(Landroid/content/Intent;)Z]
+  + Utf8 [(Landroid/os/Bundle;)V]
+  + Utf8 [(Landroid/view/View$OnClickListener;)V]
+  + Utf8 [(Landroid/view/View;)V]
+  + Utf8 [(Lcom/isy/SoundsView;)V]
+  + Utf8 [(Z)V]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [Landroid/widget/Button;]
+  + Utf8 [Lcom/isy/SoundsView;]
+  + Utf8 [Lcom/isy/f;]
+  + Utf8 [StackMapTable]
+  + Utf8 [Z]
+  + Utf8 [a]
+  + Utf8 [android/app/Activity]
+  + Utf8 [android/content/Intent]
+  + Utf8 [android/view/View]
+  + Utf8 [android/view/View$OnClickListener]
+  + Utf8 [android/widget/Button]
+  + Utf8 [b]
+  + Utf8 [c]
+  + Utf8 [com/isy/ConfigActivity]
+  + Utf8 [com/isy/MainActivity]
+  + Utf8 [com/isy/MainService]
+  + Utf8 [com/isy/SoundsView]
+  + Utf8 [com/isy/f]
+  + Utf8 [d]
+  + Utf8 [e]
+  + Utf8 [findViewById]
+  + Utf8 [getId]
+  + Utf8 [getWidth]
+  + Utf8 [onClick]
+  + Utf8 [onCreate]
+  + Utf8 [onStart]
+  + Utf8 [onStop]
+  + Utf8 [onWindowFocusChanged]
+  + Utf8 [setContentView]
+  + Utf8 [setOnClickListener]
+  + Utf8 [setText]
+  + Utf8 [setWidth]
+  + Utf8 [start]
+  + Utf8 [startActivity]
+  + Utf8 [startService]
+  + Utf8 [stopService]
+
+Fields (count = 5):
+  + Field:        a Lcom/isy/SoundsView;
+    Access flags: 0x0
+      = com.isy.SoundsView a
+  + Field:        b Lcom/isy/f;
+    Access flags: 0x0
+      = com.isy.f b
+  + Field:        c Landroid/widget/Button;
+    Access flags: 0x0
+      = android.widget.Button c
+  + Field:        d Landroid/widget/Button;
+    Access flags: 0x0
+      = android.widget.Button d
+  + Field:        e Z
+    Access flags: 0x0
+      = boolean e
+
+Methods (count = 6):
+  - Method:       <init>()V
+    Access flags: 0x1
+      = public MainActivity()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 10, locals = 1, stack = 2):
+      [0] aload_0 v0
+      [1] invokespecial #23
+        + Methodref [android/app/Activity.<init> ()V]
+      [4] aload_0 v0
+      [5] iconst_1
+      [6] putfield #22
+        + Fieldref [com/isy/MainActivity.e Z]
+      [9] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onWindowFocusChanged(Z)V
+    Access flags: 0x1
+      = public void onWindowFocusChanged(boolean)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 120, locals = 2, stack = 4):
+      [0] aload_0 v0
+      [1] iload_1 v1
+      [2] invokespecial #27
+        + Methodref [android/app/Activity.onWindowFocusChanged (Z)V]
+      [5] iload_1 v1
+      [6] ifeq +106 (target=112)
+      [9] aload_0 v0
+      [10] getfield #22
+        + Fieldref [com/isy/MainActivity.e Z]
+      [13] ifeq +15 (target=28)
+      [16] aload_0 v0
+      [17] getfield #18
+        + Fieldref [com/isy/MainActivity.a Lcom/isy/SoundsView;]
+      [20] invokevirtual #41
+        + Methodref [com/isy/SoundsView.b ()V]
+      [23] aload_0 v0
+      [24] iconst_0
+      [25] putfield #22
+        + Fieldref [com/isy/MainActivity.e Z]
+      [28] aload_0 v0
+      [29] new #17
+        + Class [com/isy/f]
+      [32] dup
+      [33] aload_0 v0
+      [34] getfield #18
+        + Fieldref [com/isy/MainActivity.a Lcom/isy/SoundsView;]
+      [37] invokespecial #43
+        + Methodref [com/isy/f.<init> (Lcom/isy/SoundsView;)V]
+      [40] putfield #19
+        + Fieldref [com/isy/MainActivity.b Lcom/isy/f;]
+      [43] aload_0 v0
+      [44] getfield #19
+        + Fieldref [com/isy/MainActivity.b Lcom/isy/f;]
+      [47] invokevirtual #45
+        + Methodref [com/isy/f.start ()V]
+      [50] aload_0 v0
+      [51] getfield #20
+        + Fieldref [com/isy/MainActivity.c Landroid/widget/Button;]
+      [54] aload_0 v0
+      [55] getfield #18
+        + Fieldref [com/isy/MainActivity.a Lcom/isy/SoundsView;]
+      [58] invokevirtual #42
+        + Methodref [com/isy/SoundsView.getWidth ()I]
+      [61] iconst_2
+      [62] idiv
+      [63] invokevirtual #32
+        + Methodref [android/widget/Button.setWidth (I)V]
+      [66] aload_0 v0
+      [67] getfield #20
+        + Fieldref [com/isy/MainActivity.c Landroid/widget/Button;]
+      [70] ldc #4
+        + Integer [2130968580]
+      [72] invokevirtual #31
+        + Methodref [android/widget/Button.setText (I)V]
+      [75] aload_0 v0
+      [76] getfield #21
+        + Fieldref [com/isy/MainActivity.d Landroid/widget/Button;]
+      [79] aload_0 v0
+      [80] getfield #18
+        + Fieldref [com/isy/MainActivity.a Lcom/isy/SoundsView;]
+      [83] invokevirtual #42
+        + Methodref [com/isy/SoundsView.getWidth ()I]
+      [86] iconst_2
+      [87] idiv
+      [88] invokevirtual #32
+        + Methodref [android/widget/Button.setWidth (I)V]
+      [91] aload_0 v0
+      [92] getfield #21
+        + Fieldref [com/isy/MainActivity.d Landroid/widget/Button;]
+      [95] invokestatic #39
+        + Methodref [com/isy/MainService.a ()Z]
+      [98] ifeq +8 (target=106)
+      [101] ldc #3
+        + Integer [2130968579]
+      [103] goto +5 (target=108)
+      [106] ldc #2
+        + Integer [2130968577]
+      [108] invokevirtual #31
+        + Methodref [android/widget/Button.setText (I)V]
+      [111] return
+      [112] aload_0 v0
+      [113] getfield #19
+        + Fieldref [com/isy/MainActivity.b Lcom/isy/f;]
+      [116] invokevirtual #44
+        + Methodref [com/isy/f.a ()V]
+      [119] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 5):
+        - [28] Var: ..., Stack: (empty)
+        - [106] Var: ..., Stack: [a:android/widget/Button]
+        - [108] Var: [a:com/isy/MainActivity][i], Stack: [a:android/widget/Button][i]
+        - [112] Var: ..., Stack: (empty)
+        - [119] Var: ..., Stack: (empty)
+  + Method:       onStart()V
+    Access flags: 0x1
+      = public void onStart()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 10, locals = 1, stack = 2):
+      [0] aload_0 v0
+      [1] invokespecial #25
+        + Methodref [android/app/Activity.onStart ()V]
+      [4] aload_0 v0
+      [5] iconst_1
+      [6] putfield #22
+        + Fieldref [com/isy/MainActivity.e Z]
+      [9] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onStop()V
+    Access flags: 0x1
+      = public void onStop()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 10, locals = 1, stack = 2):
+      [0] aload_0 v0
+      [1] invokespecial #26
+        + Methodref [android/app/Activity.onStop ()V]
+      [4] aload_0 v0
+      [5] iconst_0
+      [6] putfield #22
+        + Fieldref [com/isy/MainActivity.e Z]
+      [9] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onCreate(Landroid/os/Bundle;)V
+    Access flags: 0x1
+      = public void onCreate(android.os.Bundle)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 74, locals = 2, stack = 3):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] invokespecial #24
+        + Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
+      [5] aload_0 v0
+      [6] ldc #1
+        + Integer [2130903041]
+      [8] invokevirtual #35
+        + Methodref [com/isy/MainActivity.setContentView (I)V]
+      [11] aload_0 v0
+      [12] aload_0 v0
+      [13] ldc #7
+        + Integer [2131034125]
+      [15] invokevirtual #34
+        + Methodref [com/isy/MainActivity.findViewById (I)Landroid/view/View;]
+      [18] checkcast #16
+        + Class [com/isy/SoundsView]
+      [21] putfield #18
+        + Fieldref [com/isy/MainActivity.a Lcom/isy/SoundsView;]
+      [24] aload_0 v0
+      [25] getfield #18
+        + Fieldref [com/isy/MainActivity.a Lcom/isy/SoundsView;]
+      [28] invokevirtual #40
+        + Methodref [com/isy/SoundsView.a ()V]
+      [31] aload_0 v0
+      [32] aload_0 v0
+      [33] ldc #6
+        + Integer [2131034124]
+      [35] invokevirtual #34
+        + Methodref [com/isy/MainActivity.findViewById (I)Landroid/view/View;]
+      [38] checkcast #12
+        + Class [android/widget/Button]
+      [41] putfield #20
+        + Fieldref [com/isy/MainActivity.c Landroid/widget/Button;]
+      [44] aload_0 v0
+      [45] aload_0 v0
+      [46] ldc #5
+        + Integer [2131034123]
+      [48] invokevirtual #34
+        + Methodref [com/isy/MainActivity.findViewById (I)Landroid/view/View;]
+      [51] checkcast #12
+        + Class [android/widget/Button]
+      [54] putfield #21
+        + Fieldref [com/isy/MainActivity.d Landroid/widget/Button;]
+      [57] aload_0 v0
+      [58] getfield #20
+        + Fieldref [com/isy/MainActivity.c Landroid/widget/Button;]
+      [61] aload_0 v0
+      [62] invokevirtual #30
+        + Methodref [android/widget/Button.setOnClickListener (Landroid/view/View$OnClickListener;)V]
+      [65] aload_0 v0
+      [66] getfield #21
+        + Fieldref [com/isy/MainActivity.d Landroid/widget/Button;]
+      [69] aload_0 v0
+      [70] invokevirtual #30
+        + Methodref [android/widget/Button.setOnClickListener (Landroid/view/View$OnClickListener;)V]
+      [73] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onClick(Landroid/view/View;)V
+    Access flags: 0x1
+      = public void onClick(android.view.View)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 97, locals = 2, stack = 5):
+      [0] aload_1 v1
+      [1] invokevirtual #29
+        + Methodref [android/view/View.getId ()I]
+      [4] ldc #6
+        + Integer [2131034124]
+      [6] ificmpne +18 (target=24)
+      [9] aload_0 v0
+      [10] new #9
+        + Class [android/content/Intent]
+      [13] dup
+      [14] aload_0 v0
+      [15] ldc #13
+        + Class [com/isy/ConfigActivity]
+      [17] invokespecial #28
+        + Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+      [20] invokevirtual #36
+        + Methodref [com/isy/MainActivity.startActivity (Landroid/content/Intent;)V]
+      [23] return
+      [24] aload_1 v1
+      [25] invokevirtual #29
+        + Methodref [android/view/View.getId ()I]
+      [28] ldc #5
+        + Integer [2131034123]
+      [30] ificmpne +66 (target=96)
+      [33] invokestatic #39
+        + Methodref [com/isy/MainService.a ()Z]
+      [36] ifeq +32 (target=68)
+      [39] aload_0 v0
+      [40] new #9
+        + Class [android/content/Intent]
+      [43] dup
+      [44] aload_0 v0
+      [45] ldc #15
+        + Class [com/isy/MainService]
+      [47] invokespecial #28
+        + Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+      [50] invokevirtual #38
+        + Methodref [com/isy/MainActivity.stopService (Landroid/content/Intent;)Z]
+      [53] pop
+      [54] aload_0 v0
+      [55] getfield #21
+        + Fieldref [com/isy/MainActivity.d Landroid/widget/Button;]
+      [58] ldc #2
+        + Integer [2130968577]
+      [60] invokevirtual #31
+        + Methodref [android/widget/Button.setText (I)V]
+      [63] iconst_0
+      [64] invokestatic #33
+        + Methodref [com/isy/ConfigActivity.a (Z)V]
+      [67] return
+      [68] aload_0 v0
+      [69] new #9
+        + Class [android/content/Intent]
+      [72] dup
+      [73] aload_0 v0
+      [74] ldc #15
+        + Class [com/isy/MainService]
+      [76] invokespecial #28
+        + Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+      [79] invokevirtual #37
+        + Methodref [com/isy/MainActivity.startService (Landroid/content/Intent;)Landroid/content/ComponentName;]
+      [82] pop
+      [83] aload_0 v0
+      [84] getfield #21
+        + Fieldref [com/isy/MainActivity.d Landroid/widget/Button;]
+      [87] ldc #3
+        + Integer [2130968579]
+      [89] invokevirtual #31
+        + Methodref [android/widget/Button.setText (I)V]
+      [92] iconst_1
+      [93] invokestatic #33
+        + Methodref [com/isy/ConfigActivity.a (Z)V]
+      [96] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 3):
+        - [24] Var: ..., Stack: (empty)
+        - [68] Var: ..., Stack: (empty)
+        - [96] Var: ..., Stack: (empty)
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: com/isy/MainService
+  Superclass:    android/app/Service
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x21
+    = public class com.isy.MainService extends android.app.Service
+
+Interfaces (count = 0):
+
+Constant Pool (count = 47):
+  + Class [android/app/Service]
+  + Class [com/isy/ConfigActivity]
+  + Class [com/isy/MainService]
+  + Class [com/isy/f]
+  + Class [java/lang/InterruptedException]
+  + Fieldref [com/isy/MainService.a Lcom/isy/f;]
+  + Methodref [android/app/Service.<init> ()V]
+  + Methodref [android/app/Service.onCreate ()V]
+  + Methodref [android/app/Service.onDestroy ()V]
+  + Methodref [com/isy/ConfigActivity.a (Z)V]
+  + Methodref [com/isy/ConfigActivity.d ()Z]
+  + Methodref [com/isy/f.<init> (Lcom/isy/SoundsView;)V]
+  + Methodref [com/isy/f.a ()V]
+  + Methodref [com/isy/f.join ()V]
+  + Methodref [com/isy/f.start ()V]
+  + NameAndType [<init> ()V]
+  + NameAndType [<init> (Lcom/isy/SoundsView;)V]
+  + NameAndType [a ()V]
+  + NameAndType [a (Z)V]
+  + NameAndType [a Lcom/isy/f;]
+  + NameAndType [d ()Z]
+  + NameAndType [join ()V]
+  + NameAndType [onCreate ()V]
+  + NameAndType [onDestroy ()V]
+  + NameAndType [start ()V]
+  + Utf8 [()V]
+  + Utf8 [()Z]
+  + Utf8 [(Landroid/content/Intent;)Landroid/os/IBinder;]
+  + Utf8 [(Lcom/isy/SoundsView;)V]
+  + Utf8 [(Z)V]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [Lcom/isy/f;]
+  + Utf8 [StackMapTable]
+  + Utf8 [a]
+  + Utf8 [android/app/Service]
+  + Utf8 [com/isy/ConfigActivity]
+  + Utf8 [com/isy/MainService]
+  + Utf8 [com/isy/f]
+  + Utf8 [d]
+  + Utf8 [java/lang/InterruptedException]
+  + Utf8 [join]
+  + Utf8 [onBind]
+  + Utf8 [onCreate]
+  + Utf8 [onDestroy]
+  + Utf8 [start]
+
+Fields (count = 1):
+  + Field:        a Lcom/isy/f;
+    Access flags: 0x2
+      = private com.isy.f a
+
+Methods (count = 5):
+  - Method:       <init>()V
+    Access flags: 0x1
+      = public MainService()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #7
+        + Methodref [android/app/Service.<init> ()V]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onBind(Landroid/content/Intent;)Landroid/os/IBinder;
+    Access flags: 0x1
+      = public android.os.IBinder onBind(android.content.Intent)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 2, locals = 2, stack = 1):
+      [0] aconst_null
+      [1] areturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onCreate()V
+    Access flags: 0x1
+      = public void onCreate()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 28, locals = 1, stack = 4):
+      [0] aload_0 v0
+      [1] invokespecial #8
+        + Methodref [android/app/Service.onCreate ()V]
+      [4] aload_0 v0
+      [5] new #4
+        + Class [com/isy/f]
+      [8] dup
+      [9] aconst_null
+      [10] invokespecial #12
+        + Methodref [com/isy/f.<init> (Lcom/isy/SoundsView;)V]
+      [13] putfield #6
+        + Fieldref [com/isy/MainService.a Lcom/isy/f;]
+      [16] aload_0 v0
+      [17] getfield #6
+        + Fieldref [com/isy/MainService.a Lcom/isy/f;]
+      [20] invokevirtual #15
+        + Methodref [com/isy/f.start ()V]
+      [23] iconst_1
+      [24] invokestatic #10
+        + Methodref [com/isy/ConfigActivity.a (Z)V]
+      [27] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onDestroy()V
+    Access flags: 0x1
+      = public void onDestroy()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 25, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #9
+        + Methodref [android/app/Service.onDestroy ()V]
+      [4] iconst_0
+      [5] invokestatic #10
+        + Methodref [com/isy/ConfigActivity.a (Z)V]
+      [8] aload_0 v0
+      [9] getfield #6
+        + Fieldref [com/isy/MainService.a Lcom/isy/f;]
+      [12] invokevirtual #13
+        + Methodref [com/isy/f.a ()V]
+      [15] aload_0 v0
+      [16] getfield #6
+        + Fieldref [com/isy/MainService.a Lcom/isy/f;]
+      [19] invokevirtual #14
+        + Methodref [com/isy/f.join ()V]
+      [22] return
+      [23] pop
+      [24] return
+      Code attribute exceptions (count = 1):
+      - ExceptionInfo (8 -> 22: 23):
+      + Class [java/lang/InterruptedException]
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 2):
+        - [23] Var: ..., Stack: [a:java/lang/InterruptedException]
+        - [24] Var: ..., Stack: (empty)
+  + Method:       a()Z
+    Access flags: 0x9
+      = public static boolean a()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 4, locals = 0, stack = 1):
+      [0] invokestatic #11
+        + Methodref [com/isy/ConfigActivity.d ()Z]
+      [3] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: com/isy/d
+  Superclass:    android/telephony/PhoneStateListener
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x31
+    = public final class com.isy.d extends android.telephony.PhoneStateListener
+
+Interfaces (count = 0):
+
+Constant Pool (count = 19):
+  + Class [android/telephony/PhoneStateListener]
+  + Class [com/isy/d]
+  + Fieldref [com/isy/d.a Z]
+  + Methodref [android/telephony/PhoneStateListener.<init> ()V]
+  + NameAndType [<init> ()V]
+  + NameAndType [a Z]
+  + Utf8 [()V]
+  + Utf8 [()Z]
+  + Utf8 [(ILjava/lang/String;)V]
+  + Utf8 [<clinit>]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [StackMapTable]
+  + Utf8 [Z]
+  + Utf8 [a]
+  + Utf8 [android/telephony/PhoneStateListener]
+  + Utf8 [com/isy/d]
+  + Utf8 [onCallStateChanged]
+
+Fields (count = 1):
+  + Field:        a Z
+    Access flags: 0xa
+      = private static boolean a
+
+Methods (count = 4):
+  - Method:       <clinit>()V
+    Access flags: 0x8
+      = static void <clinit>()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 0, stack = 1):
+      [0] iconst_0
+      [1] putstatic #3
+        + Fieldref [com/isy/d.a Z]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       <init>()V
+    Access flags: 0x1
+      = public d()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #4
+        + Methodref [android/telephony/PhoneStateListener.<init> ()V]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onCallStateChanged(ILjava/lang/String;)V
+    Access flags: 0x11
+      = public final void onCallStateChanged(int,java.lang.String)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 13, locals = 3, stack = 1):
+      [0] iload_1 v1
+      [1] ifeq +7 (target=8)
+      [4] iconst_1
+      [5] goto +4 (target=9)
+      [8] iconst_0
+      [9] putstatic #3
+        + Fieldref [com/isy/d.a Z]
+      [12] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 2):
+        - [8] Var: ..., Stack: (empty)
+        - [9] Var: ..., Stack: [i]
+  + Method:       a()Z
+    Access flags: 0x9
+      = public static boolean a()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 4, locals = 0, stack = 1):
+      [0] getstatic #3
+        + Fieldref [com/isy/d.a Z]
+      [3] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: com/isy/e
+  Superclass:    java/lang/Object
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x31
+    = public final class com.isy.e extends java.lang.Object
+
+Interfaces (count = 0):
+
+Constant Pool (count = 34):
+  + Class [com/isy/e]
+  + Class [java/lang/Object]
+  + Fieldref [com/isy/e.a I]
+  + Fieldref [com/isy/e.b I]
+  + Fieldref [com/isy/e.c [S]
+  + Fieldref [com/isy/e.d [I]
+  + Fieldref [com/isy/e.e I]
+  + Methodref [com/isy/e.d ()V]
+  + Methodref [java/lang/Object.<init> ()V]
+  + NameAndType [<init> ()V]
+  + NameAndType [a I]
+  + NameAndType [b I]
+  + NameAndType [c [S]
+  + NameAndType [d ()V]
+  + NameAndType [d [I]
+  + NameAndType [e I]
+  + Utf8 [()I]
+  + Utf8 [()V]
+  + Utf8 [(I)V]
+  + Utf8 [([S)V]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [I]
+  + Utf8 [StackMapTable]
+  + Utf8 [[I]
+  + Utf8 [[S]
+  + Utf8 [a]
+  + Utf8 [b]
+  + Utf8 [c]
+  + Utf8 [com/isy/e]
+  + Utf8 [d]
+  + Utf8 [e]
+  + Utf8 [java/lang/Object]
+
+Fields (count = 5):
+  + Field:        a I
+    Access flags: 0x2
+      = private int a
+  + Field:        b I
+    Access flags: 0x2
+      = private int b
+  + Field:        c [S
+    Access flags: 0x2
+      = private short[] c
+  + Field:        d [I
+    Access flags: 0x2
+      = private int[] d
+  + Field:        e I
+    Access flags: 0x2
+      = private int e
+
+Methods (count = 6):
+  - Method:       <init>(I)V
+    Access flags: 0x0
+      = e(int)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 16, locals = 2, stack = 2):
+      [0] aload_0 v0
+      [1] invokespecial #9
+        + Methodref [java/lang/Object.<init> ()V]
+      [4] aload_0 v0
+      [5] iload_1 v1
+      [6] newarray 10
+      [8] putfield #6
+        + Fieldref [com/isy/e.d [I]
+      [11] aload_0 v0
+      [12] invokespecial #8
+        + Methodref [com/isy/e.d ()V]
+      [15] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       a([S)V
+    Access flags: 0x11
+      = public final void a(short[])
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 310, locals = 7, stack = 5):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] putfield #5
+        + Fieldref [com/isy/e.c [S]
+      [5] aload_0 v0
+      [6] dup
+      [7] astore_1 v1
+      [8] getfield #5
+        + Fieldref [com/isy/e.c [S]
+      [11] iconst_0
+      [12] saload
+      [13] aload_1 v1
+      [14] getfield #5
+        + Fieldref [com/isy/e.c [S]
+      [17] iconst_1
+      [18] saload
+      [19] ificmpgt +7 (target=26)
+      [22] iconst_1
+      [23] goto +4 (target=27)
+      [26] iconst_0
+      [27] istore v5
+      [29] iconst_0
+      [30] dup
+      [31] istore v4
+      [33] dup
+      [34] istore_3 v3
+      [35] istore_2 v2
+      [36] iconst_1
+      [37] istore v6
+      [39] goto +146 (target=185)
+      [42] aload_1 v1
+      [43] getfield #5
+        + Fieldref [com/isy/e.c [S]
+      [46] iload v6
+      [48] iconst_1
+      [49] isub
+      [50] saload
+      [51] ifge +13 (target=64)
+      [54] aload_1 v1
+      [55] getfield #5
+        + Fieldref [com/isy/e.c [S]
+      [58] iload v6
+      [60] saload
+      [61] ifgt +25 (target=86)
+      [64] aload_1 v1
+      [65] getfield #5
+        + Fieldref [com/isy/e.c [S]
+      [68] iload v6
+      [70] iconst_1
+      [71] isub
+      [72] saload
+      [73] ifle +16 (target=89)
+      [76] aload_1 v1
+      [77] getfield #5
+        + Fieldref [com/isy/e.c [S]
+      [80] iload v6
+      [82] saload
+      [83] ifge +6 (target=89)
+      [86] iinc v4, 1
+      [89] aload_1 v1
+      [90] getfield #5
+        + Fieldref [com/isy/e.c [S]
+      [93] iload v6
+      [95] iconst_1
+      [96] isub
+      [97] saload
+      [98] aload_1 v1
+      [99] getfield #5
+        + Fieldref [com/isy/e.c [S]
+      [102] iload v6
+      [104] saload
+      [105] ificmple +8 (target=113)
+      [108] iload v5
+      [110] ifne +27 (target=137)
+      [113] aload_1 v1
+      [114] getfield #5
+        + Fieldref [com/isy/e.c [S]
+      [117] iload v6
+      [119] iconst_1
+      [120] isub
+      [121] saload
+      [122] aload_1 v1
+      [123] getfield #5
+        + Fieldref [com/isy/e.c [S]
+      [126] iload v6
+      [128] saload
+      [129] ificmpge +53 (target=182)
+      [132] iload v5
+      [134] ifne +48 (target=182)
+      [137] iload_2 v2
+      [138] aload_1 v1
+      [139] getfield #5
+        + Fieldref [com/isy/e.c [S]
+      [142] iload v6
+      [144] iconst_1
+      [145] isub
+      [146] saload
+      [147] aload_1 v1
+      [148] getfield #5
+        + Fieldref [com/isy/e.c [S]
+      [151] iload v6
+      [153] iconst_1
+      [154] isub
+      [155] saload
+      [156] ifge +7 (target=163)
+      [159] iconst_m1
+      [160] goto +4 (target=164)
+      [163] iconst_1
+      [164] imul
+      [165] iadd
+      [166] istore_2 v2
+      [167] iinc v3, 1
+      [170] iload v5
+      [172] ifeq +7 (target=179)
+      [175] iconst_0
+      [176] goto +4 (target=180)
+      [179] iconst_1
+      [180] istore v5
+      [182] iinc v6, 2
+      [185] iload v6
+      [187] aload_1 v1
+      [188] getfield #5
+        + Fieldref [com/isy/e.c [S]
+      [191] arraylength
+      [192] iconst_1
+      [193] isub
+      [194] ificmplt -152 (target=42)
+      [197] iload_3 v3
+      [198] ifne +5 (target=203)
+      [201] iconst_1
+      [202] istore_3 v3
+      [203] aload_1 v1
+      [204] iload_2 v2
+      [205] iload_3 v3
+      [206] idiv
+      [207] putfield #4
+        + Fieldref [com/isy/e.b I]
+      [210] aload_1 v1
+      [211] iload v4
+      [213] iconst_2
+      [214] idiv
+      [215] putfield #3
+        + Fieldref [com/isy/e.a I]
+      [218] aload_1 v1
+      [219] dup
+      [220] astore_1 v1
+      [221] getfield #7
+        + Fieldref [com/isy/e.e I]
+      [224] ifge +45 (target=269)
+      [227] iconst_0
+      [228] istore_2 v2
+      [229] goto +26 (target=255)
+      [232] aload_1 v1
+      [233] getfield #6
+        + Fieldref [com/isy/e.d [I]
+      [236] iload_2 v2
+      [237] iaload
+      [238] ifge +14 (target=252)
+      [241] aload_1 v1
+      [242] getfield #6
+        + Fieldref [com/isy/e.d [I]
+      [245] iload_2 v2
+      [246] aload_1 v1
+      [247] getfield #4
+        + Fieldref [com/isy/e.b I]
+      [250] iastore
+      [251] return
+      [252] iinc v2, 1
+      [255] iload_2 v2
+      [256] aload_1 v1
+      [257] getfield #6
+        + Fieldref [com/isy/e.d [I]
+      [260] arraylength
+      [261] ificmplt -29 (target=232)
+      [264] aload_1 v1
+      [265] iconst_0
+      [266] putfield #7
+        + Fieldref [com/isy/e.e I]
+      [269] aload_1 v1
+      [270] getfield #6
+        + Fieldref [com/isy/e.d [I]
+      [273] aload_1 v1
+      [274] getfield #7
+        + Fieldref [com/isy/e.e I]
+      [277] aload_1 v1
+      [278] getfield #4
+        + Fieldref [com/isy/e.b I]
+      [281] iastore
+      [282] aload_1 v1
+      [283] dup
+      [284] getfield #7
+        + Fieldref [com/isy/e.e I]
+      [287] iconst_1
+      [288] iadd
+      [289] putfield #7
+        + Fieldref [com/isy/e.e I]
+      [292] aload_1 v1
+      [293] getfield #7
+        + Fieldref [com/isy/e.e I]
+      [296] aload_1 v1
+      [297] getfield #6
+        + Fieldref [com/isy/e.d [I]
+      [300] arraylength
+      [301] ificmplt +8 (target=309)
+      [304] aload_1 v1
+      [305] iconst_0
+      [306] putfield #7
+        + Fieldref [com/isy/e.e I]
+      [309] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       d()V
+    Access flags: 0x2
+      = private void d()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 30, locals = 2, stack = 3):
+      [0] iconst_0
+      [1] istore_1 v1
+      [2] goto +13 (target=15)
+      [5] aload_0 v0
+      [6] getfield #6
+        + Fieldref [com/isy/e.d [I]
+      [9] iload_1 v1
+      [10] iconst_m1
+      [11] iastore
+      [12] iinc v1, 1
+      [15] iload_1 v1
+      [16] aload_0 v0
+      [17] getfield #6
+        + Fieldref [com/isy/e.d [I]
+      [20] arraylength
+      [21] ificmplt -16 (target=5)
+      [24] aload_0 v0
+      [25] iconst_m1
+      [26] putfield #7
+        + Fieldref [com/isy/e.e I]
+      [29] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 2):
+        - [5] Var: ...[i], Stack: (empty)
+        - [15] Var: ..., Stack: (empty)
+  + Method:       a()I
+    Access flags: 0x11
+      = public final int a()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 74, locals = 3, stack = 3):
+      [0] iconst_0
+      [1] istore_1 v1
+      [2] iconst_0
+      [3] istore_2 v2
+      [4] goto +59 (target=63)
+      [7] aload_0 v0
+      [8] getfield #6
+        + Fieldref [com/isy/e.d [I]
+      [11] iload_2 v2
+      [12] iaload
+      [13] ifge +5 (target=18)
+      [16] iload_1 v1
+      [17] ireturn
+      [18] iload_1 v1
+      [19] aload_0 v0
+      [20] getfield #6
+        + Fieldref [com/isy/e.d [I]
+      [23] iload_2 v2
+      [24] iaload
+      [25] ificmpge +35 (target=60)
+      [28] aload_0 v0
+      [29] getfield #6
+        + Fieldref [com/isy/e.d [I]
+      [32] iload_2 v2
+      [33] iaload
+      [34] aload_0 v0
+      [35] getfield #4
+        + Fieldref [com/isy/e.b I]
+      [38] ificmpeq +22 (target=60)
+      [41] iload_1 v1
+      [42] aload_0 v0
+      [43] getfield #6
+        + Fieldref [com/isy/e.d [I]
+      [46] iload_2 v2
+      [47] iaload
+      [48] iadd
+      [49] iload_1 v1
+      [50] ifne +7 (target=57)
+      [53] iconst_1
+      [54] goto +4 (target=58)
+      [57] iconst_2
+      [58] idiv
+      [59] istore_1 v1
+      [60] iinc v2, 1
+      [63] iload_2 v2
+      [64] aload_0 v0
+      [65] getfield #6
+        + Fieldref [com/isy/e.d [I]
+      [68] arraylength
+      [69] ificmplt -62 (target=7)
+      [72] iload_1 v1
+      [73] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 6):
+        - [7] Var: ...[i][i], Stack: (empty)
+        - [18] Var: ..., Stack: (empty)
+        - [57] Var: ..., Stack: [i]
+        - [58] Var: [a:com/isy/e][i][i], Stack: [i][i]
+        - [60] Var: ..., Stack: (empty)
+        - [63] Var: ..., Stack: (empty)
+  + Method:       b()I
+    Access flags: 0x11
+      = public final int b()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] getfield #3
+        + Fieldref [com/isy/e.a I]
+      [4] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       c()I
+    Access flags: 0x11
+      = public final int c()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] getfield #4
+        + Fieldref [com/isy/e.b I]
+      [4] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: com/isy/f
+  Superclass:    java/lang/Thread
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x31
+    = public final class com.isy.f extends java.lang.Thread
+
+Interfaces (count = 0):
+
+Constant Pool (count = 146):
+  + Integer [44100]
+  + String [vibrator]
+  + Class [[I]
+  + Class [[S]
+  + Class [android/content/Context]
+  + Class [android/media/AudioRecord]
+  + Class [android/os/Vibrator]
+  + Class [com/isy/ConfigActivity]
+  + Class [com/isy/IsyApplication]
+  + Class [com/isy/SoundsView]
+  + Class [com/isy/d]
+  + Class [com/isy/e]
+  + Class [com/isy/f]
+  + Class [java/lang/InterruptedException]
+  + Class [java/lang/Thread]
+  + Fieldref [com/isy/f.a Lcom/isy/SoundsView;]
+  + Fieldref [com/isy/f.b Z]
+  + Fieldref [com/isy/f.c S]
+  + Fieldref [com/isy/f.d Landroid/media/AudioRecord;]
+  + Fieldref [com/isy/f.e I]
+  + Fieldref [com/isy/f.f F]
+  + Fieldref [com/isy/f.g I]
+  + Fieldref [com/isy/f.h I]
+  + Methodref [android/content/Context.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+  + Methodref [android/media/AudioRecord.<init> (IIIII)V]
+  + Methodref [android/media/AudioRecord.getMinBufferSize (III)I]
+  + Methodref [android/media/AudioRecord.getSampleRate ()I]
+  + Methodref [android/media/AudioRecord.getState ()I]
+  + Methodref [android/media/AudioRecord.read ([SII)I]
+  + Methodref [android/media/AudioRecord.release ()V]
+  + Methodref [android/media/AudioRecord.startRecording ()V]
+  + Methodref [android/media/AudioRecord.stop ()V]
+  + Methodref [android/os/Vibrator.vibrate (J)V]
+  + Methodref [com/isy/ConfigActivity.a ()I]
+  + Methodref [com/isy/ConfigActivity.b ()I]
+  + Methodref [com/isy/ConfigActivity.c ()F]
+  + Methodref [com/isy/IsyApplication.a ()Landroid/content/Context;]
+  + Methodref [com/isy/SoundsView.a (FFFI)V]
+  + Methodref [com/isy/SoundsView.getHeight ()I]
+  + Methodref [com/isy/SoundsView.getWidth ()I]
+  + Methodref [com/isy/d.a ()Z]
+  + Methodref [com/isy/e.<init> (I)V]
+  + Methodref [com/isy/e.a ()I]
+  + Methodref [com/isy/e.a ([S)V]
+  + Methodref [com/isy/e.b ()I]
+  + Methodref [com/isy/e.c ()I]
+  + Methodref [com/isy/f.b ()Landroid/media/AudioRecord;]
+  + Methodref [com/isy/f.sleep (J)V]
+  + Methodref [java/lang/InterruptedException.printStackTrace ()V]
+  + Methodref [java/lang/Thread.<init> ()V]
+  + NameAndType [<init> ()V]
+  + NameAndType [<init> (I)V]
+  + NameAndType [<init> (IIIII)V]
+  + NameAndType [a ()I]
+  + NameAndType [a ()Landroid/content/Context;]
+  + NameAndType [a ()Z]
+  + NameAndType [a (FFFI)V]
+  + NameAndType [a ([S)V]
+  + NameAndType [a Lcom/isy/SoundsView;]
+  + NameAndType [b ()I]
+  + NameAndType [b ()Landroid/media/AudioRecord;]
+  + NameAndType [b Z]
+  + NameAndType [c ()F]
+  + NameAndType [c ()I]
+  + NameAndType [c S]
+  + NameAndType [d Landroid/media/AudioRecord;]
+  + NameAndType [e I]
+  + NameAndType [f F]
+  + NameAndType [g I]
+  + NameAndType [getHeight ()I]
+  + NameAndType [getMinBufferSize (III)I]
+  + NameAndType [getSampleRate ()I]
+  + NameAndType [getState ()I]
+  + NameAndType [getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+  + NameAndType [getWidth ()I]
+  + NameAndType [h I]
+  + NameAndType [printStackTrace ()V]
+  + NameAndType [read ([SII)I]
+  + NameAndType [release ()V]
+  + NameAndType [sleep (J)V]
+  + NameAndType [startRecording ()V]
+  + NameAndType [stop ()V]
+  + NameAndType [vibrate (J)V]
+  + Utf8 [()F]
+  + Utf8 [()I]
+  + Utf8 [()Landroid/content/Context;]
+  + Utf8 [()Landroid/media/AudioRecord;]
+  + Utf8 [()V]
+  + Utf8 [()Z]
+  + Utf8 [(F)V]
+  + Utf8 [(FFFI)V]
+  + Utf8 [(I)V]
+  + Utf8 [(III)I]
+  + Utf8 [(IIIII)V]
+  + Utf8 [(J)V]
+  + Utf8 [(Lcom/isy/SoundsView;)V]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/Object;]
+  + Utf8 [([S)V]
+  + Utf8 [([SII)I]
+  + Utf8 [<clinit>]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [F]
+  + Utf8 [I]
+  + Utf8 [Landroid/media/AudioRecord;]
+  + Utf8 [Lcom/isy/SoundsView;]
+  + Utf8 [S]
+  + Utf8 [StackMapTable]
+  + Utf8 [Z]
+  + Utf8 [[I]
+  + Utf8 [[S]
+  + Utf8 [a]
+  + Utf8 [android/content/Context]
+  + Utf8 [android/media/AudioRecord]
+  + Utf8 [android/os/Vibrator]
+  + Utf8 [b]
+  + Utf8 [c]
+  + Utf8 [com/isy/ConfigActivity]
+  + Utf8 [com/isy/IsyApplication]
+  + Utf8 [com/isy/SoundsView]
+  + Utf8 [com/isy/d]
+  + Utf8 [com/isy/e]
+  + Utf8 [com/isy/f]
+  + Utf8 [d]
+  + Utf8 [e]
+  + Utf8 [f]
+  + Utf8 [g]
+  + Utf8 [getHeight]
+  + Utf8 [getMinBufferSize]
+  + Utf8 [getSampleRate]
+  + Utf8 [getState]
+  + Utf8 [getSystemService]
+  + Utf8 [getWidth]
+  + Utf8 [h]
+  + Utf8 [java/lang/InterruptedException]
+  + Utf8 [java/lang/Thread]
+  + Utf8 [printStackTrace]
+  + Utf8 [read]
+  + Utf8 [release]
+  + Utf8 [run]
+  + Utf8 [sleep]
+  + Utf8 [startRecording]
+  + Utf8 [stop]
+  + Utf8 [vibrate]
+  + Utf8 [vibrator]
+
+Fields (count = 8):
+  + Field:        a Lcom/isy/SoundsView;
+    Access flags: 0x2
+      = private com.isy.SoundsView a
+  + Field:        b Z
+    Access flags: 0x2
+      = private boolean b
+  + Field:        c S
+    Access flags: 0x2
+      = private short c
+  + Field:        d Landroid/media/AudioRecord;
+    Access flags: 0xa
+      = private static android.media.AudioRecord d
+  + Field:        e I
+    Access flags: 0xa
+      = private static int e
+  + Field:        f F
+    Access flags: 0xa
+      = private static float f
+  + Field:        g I
+    Access flags: 0xa
+      = private static int g
+  + Field:        h I
+    Access flags: 0xa
+      = private static int h
+
+Methods (count = 8):
+  - Method:       <clinit>()V
+    Access flags: 0x8
+      = static void <clinit>()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 9, locals = 0, stack = 1):
+      [0] aconst_null
+      [1] putstatic #19
+        + Fieldref [com/isy/f.d Landroid/media/AudioRecord;]
+      [4] iconst_0
+      [5] putstatic #20
+        + Fieldref [com/isy/f.e I]
+      [8] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       a(F)V
+    Access flags: 0x9
+      = public static void a(float)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] fload_0 v0
+      [1] putstatic #21
+        + Fieldref [com/isy/f.f F]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       a(I)V
+    Access flags: 0x9
+      = public static void a(int)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] iload_0 v0
+      [1] putstatic #22
+        + Fieldref [com/isy/f.g I]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       b(I)V
+    Access flags: 0x9
+      = public static void b(int)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] iload_0 v0
+      [1] putstatic #23
+        + Fieldref [com/isy/f.h I]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       <init>(Lcom/isy/SoundsView;)V
+    Access flags: 0x0
+      = f(com.isy.SoundsView)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 65, locals = 2, stack = 2):
+      [0] aload_0 v0
+      [1] invokespecial #50
+        + Methodref [java/lang/Thread.<init> ()V]
+      [4] aload_0 v0
+      [5] sipush 500
+      [8] putfield #18
+        + Fieldref [com/isy/f.c S]
+      [11] aload_0 v0
+      [12] aload_1 v1
+      [13] putfield #16
+        + Fieldref [com/isy/f.a Lcom/isy/SoundsView;]
+      [16] aload_0 v0
+      [17] iconst_0
+      [18] putfield #17
+        + Fieldref [com/isy/f.b Z]
+      [21] aload_0 v0
+      [22] getfield #16
+        + Fieldref [com/isy/f.a Lcom/isy/SoundsView;]
+      [25] ifnonnull +9 (target=34)
+      [28] aload_0 v0
+      [29] bipush 100
+      [31] putfield #18
+        + Fieldref [com/isy/f.c S]
+      [34] getstatic #19
+        + Fieldref [com/isy/f.d Landroid/media/AudioRecord;]
+      [37] ifnonnull +9 (target=46)
+      [40] invokestatic #47
+        + Methodref [com/isy/f.b ()Landroid/media/AudioRecord;]
+      [43] putstatic #19
+        + Fieldref [com/isy/f.d Landroid/media/AudioRecord;]
+      [46] invokestatic #35
+        + Methodref [com/isy/ConfigActivity.b ()I]
+      [49] putstatic #23
+        + Fieldref [com/isy/f.h I]
+      [52] invokestatic #34
+        + Methodref [com/isy/ConfigActivity.a ()I]
+      [55] putstatic #22
+        + Fieldref [com/isy/f.g I]
+      [58] invokestatic #36
+        + Methodref [com/isy/ConfigActivity.c ()F]
+      [61] putstatic #21
+        + Fieldref [com/isy/f.f F]
+      [64] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 2):
+        - [34] Var: [a:com/isy/f][a:com/isy/SoundsView], Stack: 
+        - [46] Var: ..., Stack: (empty)
+  + Method:       a()V
+    Access flags: 0x11
+      = public final void a()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 34, locals = 1, stack = 2):
+      [0] aload_0 v0
+      [1] iconst_1
+      [2] putfield #17
+        + Fieldref [com/isy/f.b Z]
+      [5] getstatic #20
+        + Fieldref [com/isy/f.e I]
+      [8] iconst_1
+      [9] isub
+      [10] dup
+      [11] putstatic #20
+        + Fieldref [com/isy/f.e I]
+      [14] ifne +19 (target=33)
+      [17] getstatic #19
+        + Fieldref [com/isy/f.d Landroid/media/AudioRecord;]
+      [20] invokevirtual #32
+        + Methodref [android/media/AudioRecord.stop ()V]
+      [23] getstatic #19
+        + Fieldref [com/isy/f.d Landroid/media/AudioRecord;]
+      [26] invokevirtual #30
+        + Methodref [android/media/AudioRecord.release ()V]
+      [29] aconst_null
+      [30] putstatic #19
+        + Fieldref [com/isy/f.d Landroid/media/AudioRecord;]
+      [33] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 1):
+        - [33] Var: ..., Stack: (empty)
+  + Method:       run()V
+    Access flags: 0x11
+      = public final void run()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 315, locals = 10, stack = 6):
+      [0] getstatic #19
+        + Fieldref [com/isy/f.d Landroid/media/AudioRecord;]
+      [3] ifnonnull +4 (target=7)
+      [6] return
+      [7] getstatic #20
+        + Fieldref [com/isy/f.e I]
+      [10] iconst_1
+      [11] iadd
+      [12] dup
+      [13] putstatic #20
+        + Fieldref [com/isy/f.e I]
+      [16] iconst_1
+      [17] ificmpne +9 (target=26)
+      [20] getstatic #19
+        + Fieldref [com/isy/f.d Landroid/media/AudioRecord;]
+      [23] invokevirtual #31
+        + Methodref [android/media/AudioRecord.startRecording ()V]
+      [26] aload_0 v0
+      [27] getfield #18
+        + Fieldref [com/isy/f.c S]
+      [30] getstatic #19
+        + Fieldref [com/isy/f.d Landroid/media/AudioRecord;]
+      [33] invokevirtual #27
+        + Methodref [android/media/AudioRecord.getSampleRate ()I]
+      [36] imul
+      [37] sipush 1000
+      [40] idiv
+      [41] istore_1 v1
+      [42] new #12
+        + Class [com/isy/e]
+      [45] dup
+      [46] sipush 1000
+      [49] aload_0 v0
+      [50] getfield #18
+        + Fieldref [com/isy/f.c S]
+      [53] idiv
+      [54] getstatic #22
+        + Fieldref [com/isy/f.g I]
+      [57] imul
+      [58] invokespecial #42
+        + Methodref [com/isy/e.<init> (I)V]
+      [61] astore_2 v2
+      [62] goto +245 (target=307)
+      [65] aload_0 v0
+      [66] astore_3 v3
+      [67] invokestatic #41
+        + Methodref [com/isy/d.a ()Z]
+      [70] ifeq +38 (target=108)
+      [73] getstatic #19
+        + Fieldref [com/isy/f.d Landroid/media/AudioRecord;]
+      [76] invokevirtual #32
+        + Methodref [android/media/AudioRecord.stop ()V]
+      [79] goto +11 (target=90)
+      [82] aload_3 v3
+      [83] getfield #18
+        + Fieldref [com/isy/f.c S]
+      [86] i2l
+      [87] invokestatic #48
+        + Methodref [com/isy/f.sleep (J)V]
+      [90] invokestatic #41
+        + Methodref [com/isy/d.a ()Z]
+      [93] ifne -11 (target=82)
+      [96] getstatic #19
+        + Fieldref [com/isy/f.d Landroid/media/AudioRecord;]
+      [99] invokevirtual #31
+        + Methodref [android/media/AudioRecord.startRecording ()V]
+      [102] goto +6 (target=108)
+      [105] invokevirtual #49
+        + Methodref [java/lang/InterruptedException.printStackTrace ()V]
+      [108] iload_1 v1
+      [109] newarray 9
+      [111] astore_3 v3
+      [112] getstatic #19
+        + Fieldref [com/isy/f.d Landroid/media/AudioRecord;]
+      [115] aload_3 v3
+      [116] iconst_0
+      [117] aload_3 v3
+      [118] arraylength
+      [119] invokevirtual #29
+        + Methodref [android/media/AudioRecord.read ([SII)I]
+      [122] pop
+      [123] aload_2 v2
+      [124] aload_3 v3
+      [125] invokevirtual #44
+        + Methodref [com/isy/e.a ([S)V]
+      [128] aload_0 v0
+      [129] getfield #16
+        + Fieldref [com/isy/f.a Lcom/isy/SoundsView;]
+      [132] ifnull +125 (target=257)
+      [135] aload_0 v0
+      [136] aload_2 v2
+      [137] astore v4
+      [139] astore_3 v3
+      [140] aload v4
+      [142] invokevirtual #46
+        + Methodref [com/isy/e.c ()I]
+      [145] bipush 50
+      [147] ificmplt +107 (target=254)
+      [150] aload v4
+      [152] invokevirtual #45
+        + Methodref [com/isy/e.b ()I]
+      [155] aload_3 v3
+      [156] getfield #16
+        + Fieldref [com/isy/f.a Lcom/isy/SoundsView;]
+      [159] invokevirtual #40
+        + Methodref [com/isy/SoundsView.getWidth ()I]
+      [162] irem
+      [163] istore v5
+      [165] aload v4
+      [167] invokevirtual #46
+        + Methodref [com/isy/e.c ()I]
+      [170] istore v6
+      [172] aload v4
+      [174] invokevirtual #46
+        + Methodref [com/isy/e.c ()I]
+      [177] aload_3 v3
+      [178] getfield #16
+        + Fieldref [com/isy/f.a Lcom/isy/SoundsView;]
+      [181] invokevirtual #39
+        + Methodref [com/isy/SoundsView.getHeight ()I]
+      [184] irem
+      [185] istore v4
+      [187] iload v5
+      [189] sipush 256
+      [192] irem
+      [193] istore v7
+      [195] iload v4
+      [197] sipush 256
+      [200] irem
+      [201] istore v8
+      [203] iload v7
+      [205] iload v8
+      [207] iadd
+      [208] iconst_2
+      [209] idiv
+      [210] sipush 256
+      [213] irem
+      [214] istore v9
+      [216] iload v8
+      [218] bipush 8
+      [220] ishl
+      [221] istore v8
+      [223] iload v9
+      [225] bipush 16
+      [227] ishl
+      [228] istore v9
+      [230] aload_3 v3
+      [231] getfield #16
+        + Fieldref [com/isy/f.a Lcom/isy/SoundsView;]
+      [234] iload v5
+      [236] i2f
+      [237] iload v4
+      [239] i2f
+      [240] iload v6
+      [242] i2f
+      [243] iload v9
+      [245] iload v8
+      [247] iadd
+      [248] iload v7
+      [250] iadd
+      [251] invokevirtual #38
+        + Methodref [com/isy/SoundsView.a (FFFI)V]
+      [254] goto +39 (target=293)
+      [257] aload_2 v2
+      [258] invokevirtual #46
+        + Methodref [com/isy/e.c ()I]
+      [261] i2f
+      [262] aload_2 v2
+      [263] invokevirtual #43
+        + Methodref [com/isy/e.a ()I]
+      [266] i2f
+      [267] getstatic #21
+        + Fieldref [com/isy/f.f F]
+      [270] fmul
+      [271] fcmpl
+      [272] ifle +21 (target=293)
+      [275] invokestatic #37
+        + Methodref [com/isy/IsyApplication.a ()Landroid/content/Context;]
+      [278] ldc #2
+        + String [vibrator]
+      [280] invokevirtual #24
+        + Methodref [android/content/Context.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+      [283] checkcast #7
+        + Class [android/os/Vibrator]
+      [286] getstatic #23
+        + Fieldref [com/isy/f.h I]
+      [289] i2l
+      [290] invokevirtual #33
+        + Methodref [android/os/Vibrator.vibrate (J)V]
+      [293] aload_0 v0
+      [294] getfield #18
+        + Fieldref [com/isy/f.c S]
+      [297] i2l
+      [298] invokestatic #48
+        + Methodref [com/isy/f.sleep (J)V]
+      [301] goto +6 (target=307)
+      [304] invokevirtual #49
+        + Methodref [java/lang/InterruptedException.printStackTrace ()V]
+      [307] aload_0 v0
+      [308] getfield #17
+        + Fieldref [com/isy/f.b Z]
+      [311] ifeq -246 (target=65)
+      [314] return
+      Code attribute exceptions (count = 2):
+      - ExceptionInfo (67 -> 102: 105):
+      + Class [java/lang/InterruptedException]
+      - ExceptionInfo (65 -> 301: 304):
+      + Class [java/lang/InterruptedException]
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 7):
+        - [7] Var: ..., Stack: (empty)
+        - [26] Var: ..., Stack: (empty)
+        - [65] Var: ...[i][a:com/isy/e], Stack: (empty)
+        - [257] Var: ...[a:[S], Stack: (empty)
+        - [293] Var: ..., Stack: (empty)
+        - [304] Var: [a:com/isy/f][i][a:com/isy/e], Stack: [a:java/lang/InterruptedException]
+        - [307] Var: ..., Stack: (empty)
+  + Method:       b()Landroid/media/AudioRecord;
+    Access flags: 0xa
+      = private static android.media.AudioRecord b()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 208, locals = 16, stack = 8):
+      [0] iconst_5
+      [1] newarray 10
+      [3] dup
+      [4] iconst_0
+      [5] sipush 16000
+      [8] iastore
+      [9] dup
+      [10] iconst_1
+      [11] sipush 8000
+      [14] iastore
+      [15] dup
+      [16] iconst_2
+      [17] sipush 11025
+      [20] iastore
+      [21] dup
+      [22] iconst_3
+      [23] sipush 22050
+      [26] iastore
+      [27] dup
+      [28] iconst_4
+      [29] ldc #1
+        + Integer [44100]
+      [31] iastore
+      [32] astore_0 v0
+      [33] iconst_1
+      [34] newarray 10
+      [36] dup
+      [37] iconst_0
+      [38] iconst_2
+      [39] iastore
+      [40] astore_1 v1
+      [41] iconst_2
+      [42] newarray 10
+      [44] dup
+      [45] iconst_0
+      [46] iconst_2
+      [47] iastore
+      [48] dup
+      [49] iconst_1
+      [50] iconst_3
+      [51] iastore
+      [52] astore_2 v2
+      [53] aload_0 v0
+      [54] dup
+      [55] astore v5
+      [57] arraylength
+      [58] istore v4
+      [60] iconst_0
+      [61] istore_3 v3
+      [62] goto +138 (target=200)
+      [65] aload v5
+      [67] iload_3 v3
+      [68] iaload
+      [69] istore_0 v0
+      [70] aload_1 v1
+      [71] dup
+      [72] astore v9
+      [74] arraylength
+      [75] istore v8
+      [77] iconst_0
+      [78] istore v7
+      [80] goto +110 (target=190)
+      [83] aload v9
+      [85] iload v7
+      [87] iaload
+      [88] istore v6
+      [90] aload_2 v2
+      [91] dup
+      [92] astore v13
+      [94] arraylength
+      [95] istore v12
+      [97] iconst_0
+      [98] istore v11
+      [100] goto +80 (target=180)
+      [103] aload v13
+      [105] iload v11
+      [107] iaload
+      [108] istore v10
+      [110] iload_0 v0
+      [111] iload v6
+      [113] iload v10
+      [115] invokestatic #26
+        + Methodref [android/media/AudioRecord.getMinBufferSize (III)I]
+      [118] dup
+      [119] istore v14
+      [121] bipush -2
+      [123] ificmpeq +54 (target=177)
+      [126] sipush 500
+      [129] iload_0 v0
+      [130] imul
+      [131] sipush 1000
+      [134] idiv
+      [135] istore v15
+      [137] new #6
+        + Class [android/media/AudioRecord]
+      [140] dup
+      [141] iconst_1
+      [142] iload_0 v0
+      [143] iload v6
+      [145] iload v10
+      [147] iload v15
+      [149] iload v14
+      [151] ificmple +8 (target=159)
+      [154] iload v15
+      [156] goto +5 (target=161)
+      [159] iload v14
+      [161] invokespecial #25
+        + Methodref [android/media/AudioRecord.<init> (IIIII)V]
+      [164] dup
+      [165] astore v10
+      [167] invokevirtual #28
+        + Methodref [android/media/AudioRecord.getState ()I]
+      [170] iconst_1
+      [171] ificmpne +6 (target=177)
+      [174] aload v10
+      [176] areturn
+      [177] iinc v11, 1
+      [180] iload v11
+      [182] iload v12
+      [184] ificmplt -81 (target=103)
+      [187] iinc v7, 1
+      [190] iload v7
+      [192] iload v8
+      [194] ificmplt -111 (target=83)
+      [197] iinc v3, 1
+      [200] iload_3 v3
+      [201] iload v4
+      [203] ificmplt -138 (target=65)
+      [206] aconst_null
+      [207] areturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 9):
+        - [65] Var: [a:com/isy/f][a:[I][a:[I][a:[I][T][i][i][a:[I], Stack: 
+        - [83] Var: [a:com/isy/f][a:[I][a:[I][a:[I][i][i][i][a:[I][T][i][i][a:[I], Stack: 
+        - [103] Var: [a:com/isy/f][a:[I][a:[I][a:[I][i][i][i][a:[I][i][i][i][a:[I][T][i][i][a:[I], Stack: 
+        - [159] Var: [a:com/isy/f][a:[I][a:[I][a:[I][i][i][i][a:[I][i][i][i][a:[I][i][i][i][a:[I][i][i], Stack: [u:137][u:137][i][i][i][i]
+        - [161] Var: [a:com/isy/f][a:[I][a:[I][a:[I][i][i][i][a:[I][i][i][i][a:[I][i][i][i][a:[I][i][i], Stack: [u:137][u:137][i][i][i][i][i]
+        - [177] Var: [a:com/isy/f][a:[I][a:[I][a:[I][i][i][i][a:[I][i][i][i][a:[I][T][i][i][a:[I], Stack: 
+        - [180] Var: ..., Stack: (empty)
+        - [190] Var: [a:com/isy/f][a:[I][a:[I][a:[I][i][i][i][a:[I][T][i][i][a:[I], Stack: 
+        - [200] Var: [a:com/isy/f][a:[I][a:[I][a:[I][T][i][i][a:[I], Stack: 
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: com/isy/g
+  Superclass:    java/lang/Thread
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x31
+    = public final class com.isy.g extends java.lang.Thread
+
+Interfaces (count = 0):
+
+Constant Pool (count = 62):
+  + Class [android/os/Process]
+  + Class [com/isy/SoundsView]
+  + Class [com/isy/g]
+  + Class [java/lang/InterruptedException]
+  + Class [java/lang/Thread]
+  + Long [5]
+  + Long [10]
+  + Long [100]
+  + Fieldref [com/isy/g.a Lcom/isy/SoundsView;]
+  + Fieldref [com/isy/g.b J]
+  + Fieldref [com/isy/g.c F]
+  + Fieldref [com/isy/g.d F]
+  + Fieldref [com/isy/g.e F]
+  + Fieldref [com/isy/g.f I]
+  + Methodref [android/os/Process.setThreadPriority (I)V]
+  + Methodref [com/isy/SoundsView.a (FFFFI)V]
+  + Methodref [com/isy/g.sleep (J)V]
+  + Methodref [java/lang/InterruptedException.printStackTrace ()V]
+  + Methodref [java/lang/Thread.<init> ()V]
+  + NameAndType [<init> ()V]
+  + NameAndType [a (FFFFI)V]
+  + NameAndType [a Lcom/isy/SoundsView;]
+  + NameAndType [b J]
+  + NameAndType [c F]
+  + NameAndType [d F]
+  + NameAndType [e F]
+  + NameAndType [f I]
+  + NameAndType [printStackTrace ()V]
+  + NameAndType [setThreadPriority (I)V]
+  + NameAndType [sleep (J)V]
+  + Utf8 [()V]
+  + Utf8 [(FFFFI)V]
+  + Utf8 [(FFFI)V]
+  + Utf8 [(I)V]
+  + Utf8 [(J)V]
+  + Utf8 [(Lcom/isy/SoundsView;)V]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [F]
+  + Utf8 [I]
+  + Utf8 [J]
+  + Utf8 [Lcom/isy/SoundsView;]
+  + Utf8 [StackMapTable]
+  + Utf8 [a]
+  + Utf8 [android/os/Process]
+  + Utf8 [b]
+  + Utf8 [c]
+  + Utf8 [com/isy/SoundsView]
+  + Utf8 [com/isy/g]
+  + Utf8 [d]
+  + Utf8 [e]
+  + Utf8 [f]
+  + Utf8 [java/lang/InterruptedException]
+  + Utf8 [java/lang/Thread]
+  + Utf8 [printStackTrace]
+  + Utf8 [run]
+  + Utf8 [setThreadPriority]
+  + Utf8 [sleep]
+
+Fields (count = 6):
+  + Field:        a Lcom/isy/SoundsView;
+    Access flags: 0x0
+      = com.isy.SoundsView a
+  + Field:        b J
+    Access flags: 0x0
+      = long b
+  + Field:        c F
+    Access flags: 0x0
+      = float c
+  + Field:        d F
+    Access flags: 0x0
+      = float d
+  + Field:        e F
+    Access flags: 0x0
+      = float e
+  + Field:        f I
+    Access flags: 0x0
+      = int f
+
+Methods (count = 3):
+  - Method:       <init>(Lcom/isy/SoundsView;)V
+    Access flags: 0x0
+      = g(com.isy.SoundsView)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 25, locals = 3, stack = 3):
+      [0] aload_0 v0
+      [1] invokespecial #22
+        + Methodref [java/lang/Thread.<init> ()V]
+      [4] aload_0 v0
+      [5] aload_1 v1
+      [6] astore_2 v2
+      [7] astore_1 v1
+      [8] iconst_m1
+      [9] invokestatic #18
+        + Methodref [android/os/Process.setThreadPriority (I)V]
+      [12] aload_1 v1
+      [13] aload_2 v2
+      [14] putfield #12
+        + Fieldref [com/isy/g.a Lcom/isy/SoundsView;]
+      [17] aload_1 v1
+      [18] ldc2_w #10
+        + Long [100]
+      [21] putfield #13
+        + Fieldref [com/isy/g.b J]
+      [24] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       a(FFFI)V
+    Access flags: 0x11
+      = public final void a(float,float,float,int)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 22, locals = 5, stack = 2):
+      [0] aload_0 v0
+      [1] fload_1 v1
+      [2] putfield #14
+        + Fieldref [com/isy/g.c F]
+      [5] aload_0 v0
+      [6] fload_2 v2
+      [7] putfield #15
+        + Fieldref [com/isy/g.d F]
+      [10] aload_0 v0
+      [11] fload_3 v3
+      [12] putfield #16
+        + Fieldref [com/isy/g.e F]
+      [15] aload_0 v0
+      [16] iload v4
+      [18] putfield #17
+        + Fieldref [com/isy/g.f I]
+      [21] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       run()V
+    Access flags: 0x11
+      = public final void run()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 75, locals = 4, stack = 6):
+      [0] aload_0 v0
+      [1] getfield #16
+        + Fieldref [com/isy/g.e F]
+      [4] aload_0 v0
+      [5] getfield #13
+        + Fieldref [com/isy/g.b J]
+      [8] ldc2_w #8
+        + Long [10]
+      [11] ldiv
+      [12] l2f
+      [13] fdiv
+      [14] dup
+      [15] fstore_1 v1
+      [16] fstore_2 v2
+      [17] fload_1 v1
+      [18] fconst_2
+      [19] fmul
+      [20] fstore_3 v3
+      [21] goto +40 (target=61)
+      [24] aload_0 v0
+      [25] getfield #12
+        + Fieldref [com/isy/g.a Lcom/isy/SoundsView;]
+      [28] aload_0 v0
+      [29] getfield #14
+        + Fieldref [com/isy/g.c F]
+      [32] aload_0 v0
+      [33] getfield #15
+        + Fieldref [com/isy/g.d F]
+      [36] fload_2 v2
+      [37] fload_3 v3
+      [38] aload_0 v0
+      [39] getfield #17
+        + Fieldref [com/isy/g.f I]
+      [42] invokevirtual #19
+        + Methodref [com/isy/SoundsView.a (FFFFI)V]
+      [45] fload_2 v2
+      [46] fload_1 v1
+      [47] fadd
+      [48] fstore_2 v2
+      [49] fload_3 v3
+      [50] fload_1 v1
+      [51] fconst_2
+      [52] fdiv
+      [53] fadd
+      [54] fstore_3 v3
+      [55] ldc2_w #6
+        + Long [5]
+      [58] invokestatic #20
+        + Methodref [com/isy/g.sleep (J)V]
+      [61] fload_2 v2
+      [62] aload_0 v0
+      [63] getfield #16
+        + Fieldref [com/isy/g.e F]
+      [66] fcmpg
+      [67] ifle -43 (target=24)
+      [70] return
+      [71] invokevirtual #21
+        + Methodref [java/lang/InterruptedException.printStackTrace ()V]
+      [74] return
+      Code attribute exceptions (count = 1):
+      - ExceptionInfo (21 -> 70: 71):
+      + Class [java/lang/InterruptedException]
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 4):
+        - [24] Var: ...[f][f][f], Stack: (empty)
+        - [61] Var: ..., Stack: (empty)
+        - [71] Var: ..., Stack: [a:java/lang/InterruptedException]
+        - [74] Var: ..., Stack: (empty)
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: com/isy/SoundsView
+  Superclass:    android/view/SurfaceView
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x21
+    = public class com.isy.SoundsView extends android.view.SurfaceView
+
+Interfaces (count = 0):
+
+Constant Pool (count = 132):
+  + Class [android/graphics/Bitmap]
+  + Class [android/graphics/Bitmap$Config]
+  + Class [android/graphics/Canvas]
+  + Class [android/graphics/Paint]
+  + Class [android/graphics/RadialGradient]
+  + Class [android/graphics/Rect]
+  + Class [android/graphics/Shader$TileMode]
+  + Class [android/view/SurfaceHolder]
+  + Class [android/view/SurfaceView]
+  + Class [com/isy/SoundsView]
+  + Class [com/isy/g]
+  + Fieldref [android/graphics/Bitmap$Config.RGB_565 Landroid/graphics/Bitmap$Config;]
+  + Fieldref [android/graphics/Shader$TileMode.MIRROR Landroid/graphics/Shader$TileMode;]
+  + Fieldref [com/isy/SoundsView.a I]
+  + Fieldref [com/isy/SoundsView.b Landroid/view/SurfaceHolder;]
+  + Fieldref [com/isy/SoundsView.c Landroid/graphics/Bitmap;]
+  + Methodref [android/graphics/Bitmap.createBitmap (IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;]
+  + Methodref [android/graphics/Canvas.<init> (Landroid/graphics/Bitmap;)V]
+  + Methodref [android/graphics/Canvas.drawBitmap (Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V]
+  + Methodref [android/graphics/Canvas.drawCircle (FFFLandroid/graphics/Paint;)V]
+  + Methodref [android/graphics/Canvas.drawRect (Landroid/graphics/Rect;Landroid/graphics/Paint;)V]
+  + Methodref [android/graphics/Paint.<init> ()V]
+  + Methodref [android/graphics/Paint.setColor (I)V]
+  + Methodref [android/graphics/Paint.setDither (Z)V]
+  + Methodref [android/graphics/Paint.setShader (Landroid/graphics/Shader;)Landroid/graphics/Shader;]
+  + Methodref [android/graphics/RadialGradient.<init> (FFFIILandroid/graphics/Shader$TileMode;)V]
+  + Methodref [android/graphics/Rect.<init> (IIII)V]
+  + Methodref [android/view/SurfaceView.<init> (Landroid/content/Context;)V]
+  + Methodref [android/view/SurfaceView.<init> (Landroid/content/Context;Landroid/util/AttributeSet;)V]
+  + Methodref [android/view/SurfaceView.<init> (Landroid/content/Context;Landroid/util/AttributeSet;I)V]
+  + Methodref [com/isy/SoundsView.c ()V]
+  + Methodref [com/isy/SoundsView.d ()V]
+  + Methodref [com/isy/SoundsView.getHeight ()I]
+  + Methodref [com/isy/SoundsView.getHolder ()Landroid/view/SurfaceHolder;]
+  + Methodref [com/isy/SoundsView.getWidth ()I]
+  + Methodref [com/isy/SoundsView.setFocusable (Z)V]
+  + Methodref [com/isy/g.<init> (Lcom/isy/SoundsView;)V]
+  + Methodref [com/isy/g.a (FFFI)V]
+  + Methodref [com/isy/g.start ()V]
+  + InterfaceMethodref [android/view/SurfaceHolder.lockCanvas ()Landroid/graphics/Canvas;]
+  + InterfaceMethodref [android/view/SurfaceHolder.unlockCanvasAndPost (Landroid/graphics/Canvas;)V]
+  + NameAndType [<init> ()V]
+  + NameAndType [<init> (FFFIILandroid/graphics/Shader$TileMode;)V]
+  + NameAndType [<init> (IIII)V]
+  + NameAndType [<init> (Landroid/content/Context;)V]
+  + NameAndType [<init> (Landroid/content/Context;Landroid/util/AttributeSet;)V]
+  + NameAndType [<init> (Landroid/content/Context;Landroid/util/AttributeSet;I)V]
+  + NameAndType [<init> (Landroid/graphics/Bitmap;)V]
+  + NameAndType [<init> (Lcom/isy/SoundsView;)V]
+  + NameAndType [MIRROR Landroid/graphics/Shader$TileMode;]
+  + NameAndType [RGB_565 Landroid/graphics/Bitmap$Config;]
+  + NameAndType [a (FFFI)V]
+  + NameAndType [a I]
+  + NameAndType [b Landroid/view/SurfaceHolder;]
+  + NameAndType [c ()V]
+  + NameAndType [c Landroid/graphics/Bitmap;]
+  + NameAndType [createBitmap (IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;]
+  + NameAndType [d ()V]
+  + NameAndType [drawBitmap (Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V]
+  + NameAndType [drawCircle (FFFLandroid/graphics/Paint;)V]
+  + NameAndType [drawRect (Landroid/graphics/Rect;Landroid/graphics/Paint;)V]
+  + NameAndType [getHeight ()I]
+  + NameAndType [getHolder ()Landroid/view/SurfaceHolder;]
+  + NameAndType [getWidth ()I]
+  + NameAndType [lockCanvas ()Landroid/graphics/Canvas;]
+  + NameAndType [setColor (I)V]
+  + NameAndType [setDither (Z)V]
+  + NameAndType [setFocusable (Z)V]
+  + NameAndType [setShader (Landroid/graphics/Shader;)Landroid/graphics/Shader;]
+  + NameAndType [start ()V]
+  + NameAndType [unlockCanvasAndPost (Landroid/graphics/Canvas;)V]
+  + Utf8 [()I]
+  + Utf8 [()Landroid/graphics/Canvas;]
+  + Utf8 [()Landroid/view/SurfaceHolder;]
+  + Utf8 [()V]
+  + Utf8 [(FFFFI)V]
+  + Utf8 [(FFFI)V]
+  + Utf8 [(FFFIILandroid/graphics/Shader$TileMode;)V]
+  + Utf8 [(FFFLandroid/graphics/Paint;)V]
+  + Utf8 [(I)V]
+  + Utf8 [(IIII)V]
+  + Utf8 [(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;]
+  + Utf8 [(Landroid/content/Context;)V]
+  + Utf8 [(Landroid/content/Context;Landroid/util/AttributeSet;)V]
+  + Utf8 [(Landroid/content/Context;Landroid/util/AttributeSet;I)V]
+  + Utf8 [(Landroid/graphics/Bitmap;)V]
+  + Utf8 [(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V]
+  + Utf8 [(Landroid/graphics/Canvas;)V]
+  + Utf8 [(Landroid/graphics/Rect;Landroid/graphics/Paint;)V]
+  + Utf8 [(Landroid/graphics/Shader;)Landroid/graphics/Shader;]
+  + Utf8 [(Lcom/isy/SoundsView;)V]
+  + Utf8 [(Z)V]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [I]
+  + Utf8 [Landroid/graphics/Bitmap$Config;]
+  + Utf8 [Landroid/graphics/Bitmap;]
+  + Utf8 [Landroid/graphics/Shader$TileMode;]
+  + Utf8 [Landroid/view/SurfaceHolder;]
+  + Utf8 [MIRROR]
+  + Utf8 [RGB_565]
+  + Utf8 [StackMapTable]
+  + Utf8 [a]
+  + Utf8 [android/graphics/Bitmap]
+  + Utf8 [android/graphics/Bitmap$Config]
+  + Utf8 [android/graphics/Canvas]
+  + Utf8 [android/graphics/Paint]
+  + Utf8 [android/graphics/RadialGradient]
+  + Utf8 [android/graphics/Rect]
+  + Utf8 [android/graphics/Shader$TileMode]
+  + Utf8 [android/view/SurfaceHolder]
+  + Utf8 [android/view/SurfaceView]
+  + Utf8 [b]
+  + Utf8 [c]
+  + Utf8 [com/isy/SoundsView]
+  + Utf8 [com/isy/g]
+  + Utf8 [createBitmap]
+  + Utf8 [d]
+  + Utf8 [drawBitmap]
+  + Utf8 [drawCircle]
+  + Utf8 [drawRect]
+  + Utf8 [getHeight]
+  + Utf8 [getHolder]
+  + Utf8 [getWidth]
+  + Utf8 [lockCanvas]
+  + Utf8 [setColor]
+  + Utf8 [setDither]
+  + Utf8 [setFocusable]
+  + Utf8 [setShader]
+  + Utf8 [start]
+  + Utf8 [unlockCanvasAndPost]
+
+Fields (count = 3):
+  + Field:        a I
+    Access flags: 0x2
+      = private int a
+  + Field:        b Landroid/view/SurfaceHolder;
+    Access flags: 0x2
+      = private android.view.SurfaceHolder b
+  + Field:        c Landroid/graphics/Bitmap;
+    Access flags: 0x2
+      = private android.graphics.Bitmap c
+
+Methods (count = 9):
+  + Method:       a()V
+    Access flags: 0x11
+      = public final void a()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 6, locals = 1, stack = 2):
+      [0] aload_0 v0
+      [1] iconst_m1
+      [2] putfield #14
+        + Fieldref [com/isy/SoundsView.a I]
+      [5] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       c()V
+    Access flags: 0x2
+      = private void c()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 19, locals = 1, stack = 2):
+      [0] aload_0 v0
+      [1] iconst_1
+      [2] invokevirtual #36
+        + Methodref [com/isy/SoundsView.setFocusable (Z)V]
+      [5] aload_0 v0
+      [6] iconst_0
+      [7] putfield #14
+        + Fieldref [com/isy/SoundsView.a I]
+      [10] aload_0 v0
+      [11] aload_0 v0
+      [12] invokevirtual #34
+        + Methodref [com/isy/SoundsView.getHolder ()Landroid/view/SurfaceHolder;]
+      [15] putfield #15
+        + Fieldref [com/isy/SoundsView.b Landroid/view/SurfaceHolder;]
+      [18] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    Access flags: 0x1
+      = public SoundsView(android.content.Context,android.util.AttributeSet,int)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 12, locals = 4, stack = 4):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] aload_2 v2
+      [3] iload_3 v3
+      [4] invokespecial #30
+        + Methodref [android/view/SurfaceView.<init> (Landroid/content/Context;Landroid/util/AttributeSet;I)V]
+      [7] aload_0 v0
+      [8] invokespecial #31
+        + Methodref [com/isy/SoundsView.c ()V]
+      [11] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    Access flags: 0x1
+      = public SoundsView(android.content.Context,android.util.AttributeSet)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 11, locals = 3, stack = 3):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] aload_2 v2
+      [3] invokespecial #29
+        + Methodref [android/view/SurfaceView.<init> (Landroid/content/Context;Landroid/util/AttributeSet;)V]
+      [6] aload_0 v0
+      [7] invokespecial #31
+        + Methodref [com/isy/SoundsView.c ()V]
+      [10] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       <init>(Landroid/content/Context;)V
+    Access flags: 0x1
+      = public SoundsView(android.content.Context)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 10, locals = 2, stack = 2):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] invokespecial #28
+        + Methodref [android/view/SurfaceView.<init> (Landroid/content/Context;)V]
+      [5] aload_0 v0
+      [6] invokespecial #31
+        + Methodref [com/isy/SoundsView.c ()V]
+      [9] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       a(FFFFI)V
+    Access flags: 0x11
+      = public final void a(float,float,float,float,int)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 72, locals = 7, stack = 8):
+      [0] new #3
+        + Class [android/graphics/Canvas]
+      [3] dup
+      [4] aload_0 v0
+      [5] getfield #16
+        + Fieldref [com/isy/SoundsView.c Landroid/graphics/Bitmap;]
+      [8] invokespecial #18
+        + Methodref [android/graphics/Canvas.<init> (Landroid/graphics/Bitmap;)V]
+      [11] astore v6
+      [13] new #5
+        + Class [android/graphics/RadialGradient]
+      [16] dup
+      [17] fload_1 v1
+      [18] fload_2 v2
+      [19] fload v4
+      [21] iload v5
+      [23] aload_0 v0
+      [24] getfield #14
+        + Fieldref [com/isy/SoundsView.a I]
+      [27] getstatic #13
+        + Fieldref [android/graphics/Shader$TileMode.MIRROR Landroid/graphics/Shader$TileMode;]
+      [30] invokespecial #26
+        + Methodref [android/graphics/RadialGradient.<init> (FFFIILandroid/graphics/Shader$TileMode;)V]
+      [33] astore v4
+      [35] new #4
+        + Class [android/graphics/Paint]
+      [38] dup
+      [39] invokespecial #22
+        + Methodref [android/graphics/Paint.<init> ()V]
+      [42] dup
+      [43] astore v5
+      [45] iconst_1
+      [46] invokevirtual #24
+        + Methodref [android/graphics/Paint.setDither (Z)V]
+      [49] aload v5
+      [51] aload v4
+      [53] invokevirtual #25
+        + Methodref [android/graphics/Paint.setShader (Landroid/graphics/Shader;)Landroid/graphics/Shader;]
+      [56] pop
+      [57] aload v6
+      [59] fload_1 v1
+      [60] fload_2 v2
+      [61] fload_3 v3
+      [62] aload v5
+      [64] invokevirtual #20
+        + Methodref [android/graphics/Canvas.drawCircle (FFFLandroid/graphics/Paint;)V]
+      [67] aload_0 v0
+      [68] invokespecial #32
+        + Methodref [com/isy/SoundsView.d ()V]
+      [71] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       a(FFFI)V
+    Access flags: 0x11
+      = public final void a(float,float,float,int)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 25, locals = 6, stack = 5):
+      [0] new #11
+        + Class [com/isy/g]
+      [3] dup
+      [4] aload_0 v0
+      [5] invokespecial #37
+        + Methodref [com/isy/g.<init> (Lcom/isy/SoundsView;)V]
+      [8] dup
+      [9] astore v5
+      [11] fload_1 v1
+      [12] fload_2 v2
+      [13] fload_3 v3
+      [14] iload v4
+      [16] invokevirtual #38
+        + Methodref [com/isy/g.a (FFFI)V]
+      [19] aload v5
+      [21] invokevirtual #39
+        + Methodref [com/isy/g.start ()V]
+      [24] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 2):
+        - [24] Var: ..., Stack: (empty)
+        - [24] Var: ..., Stack: (empty)
+  + Method:       b()V
+    Access flags: 0x11
+      = public final void b()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 73, locals = 3, stack = 7):
+      [0] aload_0 v0
+      [1] aload_0 v0
+      [2] invokevirtual #35
+        + Methodref [com/isy/SoundsView.getWidth ()I]
+      [5] aload_0 v0
+      [6] invokevirtual #33
+        + Methodref [com/isy/SoundsView.getHeight ()I]
+      [9] getstatic #12
+        + Fieldref [android/graphics/Bitmap$Config.RGB_565 Landroid/graphics/Bitmap$Config;]
+      [12] invokestatic #17
+        + Methodref [android/graphics/Bitmap.createBitmap (IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;]
+      [15] putfield #16
+        + Fieldref [com/isy/SoundsView.c Landroid/graphics/Bitmap;]
+      [18] new #3
+        + Class [android/graphics/Canvas]
+      [21] dup
+      [22] aload_0 v0
+      [23] getfield #16
+        + Fieldref [com/isy/SoundsView.c Landroid/graphics/Bitmap;]
+      [26] invokespecial #18
+        + Methodref [android/graphics/Canvas.<init> (Landroid/graphics/Bitmap;)V]
+      [29] astore_1 v1
+      [30] new #4
+        + Class [android/graphics/Paint]
+      [33] dup
+      [34] invokespecial #22
+        + Methodref [android/graphics/Paint.<init> ()V]
+      [37] dup
+      [38] astore_2 v2
+      [39] aload_0 v0
+      [40] getfield #14
+        + Fieldref [com/isy/SoundsView.a I]
+      [43] invokevirtual #23
+        + Methodref [android/graphics/Paint.setColor (I)V]
+      [46] aload_1 v1
+      [47] new #6
+        + Class [android/graphics/Rect]
+      [50] dup
+      [51] iconst_0
+      [52] iconst_0
+      [53] aload_0 v0
+      [54] invokevirtual #35
+        + Methodref [com/isy/SoundsView.getWidth ()I]
+      [57] aload_0 v0
+      [58] invokevirtual #33
+        + Methodref [com/isy/SoundsView.getHeight ()I]
+      [61] invokespecial #27
+        + Methodref [android/graphics/Rect.<init> (IIII)V]
+      [64] aload_2 v2
+      [65] invokevirtual #21
+        + Methodref [android/graphics/Canvas.drawRect (Landroid/graphics/Rect;Landroid/graphics/Paint;)V]
+      [68] aload_0 v0
+      [69] invokespecial #32
+        + Methodref [com/isy/SoundsView.d ()V]
+      [72] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       d()V
+    Access flags: 0x2
+      = private void d()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 75, locals = 2, stack = 9):
+      [0] aload_0 v0
+      [1] getfield #15
+        + Fieldref [com/isy/SoundsView.b Landroid/view/SurfaceHolder;]
+      [4] invokeinterface #40
+        + InterfaceMethodref [android/view/SurfaceHolder.lockCanvas ()Landroid/graphics/Canvas;]
+      [9] dup
+      [10] astore_1 v1
+      [11] ifnonnull +4 (target=15)
+      [14] return
+      [15] aload_1 v1
+      [16] aload_0 v0
+      [17] getfield #16
+        + Fieldref [com/isy/SoundsView.c Landroid/graphics/Bitmap;]
+      [20] new #6
+        + Class [android/graphics/Rect]
+      [23] dup
+      [24] iconst_0
+      [25] iconst_0
+      [26] aload_0 v0
+      [27] invokevirtual #35
+        + Methodref [com/isy/SoundsView.getWidth ()I]
+      [30] aload_0 v0
+      [31] invokevirtual #33
+        + Methodref [com/isy/SoundsView.getHeight ()I]
+      [34] invokespecial #27
+        + Methodref [android/graphics/Rect.<init> (IIII)V]
+      [37] new #6
+        + Class [android/graphics/Rect]
+      [40] dup
+      [41] iconst_0
+      [42] iconst_0
+      [43] aload_0 v0
+      [44] invokevirtual #35
+        + Methodref [com/isy/SoundsView.getWidth ()I]
+      [47] aload_0 v0
+      [48] invokevirtual #33
+        + Methodref [com/isy/SoundsView.getHeight ()I]
+      [51] invokespecial #27
+        + Methodref [android/graphics/Rect.<init> (IIII)V]
+      [54] new #4
+        + Class [android/graphics/Paint]
+      [57] dup
+      [58] invokespecial #22
+        + Methodref [android/graphics/Paint.<init> ()V]
+      [61] invokevirtual #19
+        + Methodref [android/graphics/Canvas.drawBitmap (Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V]
+      [64] aload_0 v0
+      [65] getfield #15
+        + Fieldref [com/isy/SoundsView.b Landroid/view/SurfaceHolder;]
+      [68] aload_1 v1
+      [69] invokeinterface #41
+        + InterfaceMethodref [android/view/SurfaceHolder.unlockCanvasAndPost (Landroid/graphics/Canvas;)V]
+      [74] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 1):
+        - [15] Var: ...[a:android/graphics/Canvas], Stack: (empty)
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: com/isy/StartBeforeBoot
+  Superclass:    android/content/BroadcastReceiver
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x21
+    = public class com.isy.StartBeforeBoot extends android.content.BroadcastReceiver
+
+Interfaces (count = 0):
+
+Constant Pool (count = 32):
+  + Class [android/content/BroadcastReceiver]
+  + Class [android/content/Context]
+  + Class [android/content/Intent]
+  + Class [com/isy/ConfigActivity]
+  + Class [com/isy/MainService]
+  + Class [com/isy/StartBeforeBoot]
+  + Methodref [android/content/BroadcastReceiver.<init> ()V]
+  + Methodref [android/content/Context.startService (Landroid/content/Intent;)Landroid/content/ComponentName;]
+  + Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+  + Methodref [com/isy/ConfigActivity.d ()Z]
+  + NameAndType [<init> ()V]
+  + NameAndType [<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+  + NameAndType [d ()Z]
+  + NameAndType [startService (Landroid/content/Intent;)Landroid/content/ComponentName;]
+  + Utf8 [()V]
+  + Utf8 [()Z]
+  + Utf8 [(Landroid/content/Context;Landroid/content/Intent;)V]
+  + Utf8 [(Landroid/content/Context;Ljava/lang/Class;)V]
+  + Utf8 [(Landroid/content/Intent;)Landroid/content/ComponentName;]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [StackMapTable]
+  + Utf8 [android/content/BroadcastReceiver]
+  + Utf8 [android/content/Context]
+  + Utf8 [android/content/Intent]
+  + Utf8 [com/isy/ConfigActivity]
+  + Utf8 [com/isy/MainService]
+  + Utf8 [com/isy/StartBeforeBoot]
+  + Utf8 [d]
+  + Utf8 [onReceive]
+  + Utf8 [startService]
+
+Fields (count = 0):
+
+Methods (count = 2):
+  - Method:       <init>()V
+    Access flags: 0x1
+      = public StartBeforeBoot()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #7
+        + Methodref [android/content/BroadcastReceiver.<init> ()V]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    Access flags: 0x1
+      = public void onReceive(android.content.Context,android.content.Intent)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 22, locals = 3, stack = 5):
+      [0] invokestatic #10
+        + Methodref [com/isy/ConfigActivity.d ()Z]
+      [3] ifeq +18 (target=21)
+      [6] aload_1 v1
+      [7] new #3
+        + Class [android/content/Intent]
+      [10] dup
+      [11] aload_1 v1
+      [12] ldc #5
+        + Class [com/isy/MainService]
+      [14] invokespecial #9
+        + Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+      [17] invokevirtual #8
+        + Methodref [android/content/Context.startService (Landroid/content/Intent;)Landroid/content/ComponentName;]
+      [20] pop
+      [21] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 1):
+        - [21] Var: ..., Stack: (empty)
+
+Class file attributes (count = 0):
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Avatar Wallpaper</string>
+    <string name="action_settings">Configurações</string>
+    <string name="btnavatarstate">Estado Avatar</string>
+    <string name="btnSpiritBend">Dobra Espiritual</string>
+    <string name="btnAdultAang">Aang Adulto</string>
+    <string name="developedBy">Desenvolvido por William Barbosa</string>
+    <string name="email">wbs.developer@gmail.com</string>
+    <string name="MALinkDisclaimer">Quer saber tudo sobre Avatar?</string>
+    <string name="MALink">http://www.mundoavatar.com.br</string>
+
+</resources>

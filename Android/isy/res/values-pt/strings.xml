@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <string name="app_name">Isy</string>
+    <string name="activeService">Ativar Detector</string>
+    <string name="about">Sobre o Isy</string>
+    <string name="desactiveService">Desativar Detector</string>
+    <string name="configuration">Configurações</string>
+    <string name="tolerance">Tolerância</string>
+    <string name="timer">Tempo de referência (em segundos)</string>
+    <string name="contact">Desenvolvido por William Barbosa</string>
+    <string name="email">E-mail: wbs.developer@gmail.com</string>
+    <string name="aboutText">    	
+    	Isy é um sistema desenvolvido pensando na comunidade surda. Sua principal funcionalidade é a de vibrar o celular ao detectar um som mais alto do que o som ambiente.
+    	Na configuração "Tolerância" define-se o nível de tolerância ao som, quanto mais alto a tolerância, mais alto o som precisa ser para o vibrar o celular.
+    	O Isy considera um volume alto quando ele é maior que o volume de som do ambiente, para isso ele usa uma faixa de tempo de amostragem, configurada em "Tempo de Referência".
+		A tela principal do sistema é um presente, detectando a altura e comprimento do som é desenhado na tela círculos de diferentes tamanhos e cores, assim permitindo se "ver" o som de uma forma diferente.  	
+    </string>
+    <string name="vibration">Tempo de Vibração (ms)</string>
+</resources>

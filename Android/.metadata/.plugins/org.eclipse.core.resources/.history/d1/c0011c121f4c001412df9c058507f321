@@ -1,0 +1,16 @@
+package com.wallpapers;
+
+import com.avatarbatterywallpaper.AvatarWallpaperService;
+import com.avatarbatterywallpaper.R;
+
+public class KorraSpirit extends AvatarWallpaperService 
+{
+
+	static int x = R.drawable.korraspirit000;
+	
+	@Override
+	public int getWallpaperId(int i) {
+		return x++;
+	}
+
+}
