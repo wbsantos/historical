@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1283374854 source:d:\meus documentos\william\c++\outros\equações\main.cpp
+	<iostream>
+	<string>
+	<vector>
+	"include\Equacao.h"
+
+1283374854 source:d:\meus documentos\william\c++\outros\equações\src\equacao.cpp
+	"..\include\Equacao.h"
+	<iostream>
+	<string>
+	<vector>
+	<conio.h>
+	<math.h>
+
+1283374821 d:\meus documentos\william\c++\outros\equações\include\equacao.h
+	<string>
+	<vector>
+

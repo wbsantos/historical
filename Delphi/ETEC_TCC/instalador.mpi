@@ -1,0 +1,42 @@
+; Projeto gerado pelo Assistente de Projeto do Mep Installer.
+; VEJA A DOCUMENTAÇÃO PARA OBTER DETALHES SOBRE A CRIAÇÃO DE PROJETOS DO MEP INSTALLER!
+
+[Setup]
+AppName=Eclipse
+AppVerName=Elipse 1.7
+AppId=Eclipse ID
+AppPublisher=F11
+DefaultDirName={pf}\Eclipse System
+DefaultGroupName=Eclipse
+AllowNoIcons=yes
+OutputDir=C:\Users\william\Desktop
+OutputBaseFilename=eclipse_1.7
+SetupIMG=C:\Program Files\Mep Installer 2\setup.img
+Compression=lzma/max
+SolidCompression=yes
+PrivilegesRequired=none
+
+[Languages]
+Name: "english"; MessagesFile: "compiler:Default.isl"
+Name: "portuguesebr"; MessagesFile: "compiler:Languages\PortugueseBR.isl"
+
+[Tasks]
+Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: checkedonce
+Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: checkedonce
+
+[Files]
+Source: "C:\Users\william\Desktop\intalador\programa\Eclipse.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\william\Desktop\intalador\programa\BD\*"; DestDir: "{app}\bd"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "C:\Users\william\Desktop\intalador\programa\help\*"; DestDir: "{app}\help"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "C:\Users\william\Desktop\intalador\programa\Imagens\*"; DestDir: "{app}\imagens"; Flags: ignoreversion recursesubdirs createallsubdirs
+; NOTA: Nunca use "Flags: ignoreversion" em arquivos de sistema compartilhados
+
+[Icons]
+Name: "{group}\Eclipse"; WorkingDir: "{app}";Filename: "{app}\Eclipse.exe"
+Name: "{group}\{cm:UninstallProgram,Eclipse}";WorkingDir: "{app}"; Filename: "{uninstallexe}"
+Name: "{commondesktop}\Eclipse";WorkingDir: "{app}"; Filename: "{app}\Eclipse.exe"; Tasks: desktopicon
+Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\Eclipse"; Filename: "{app}\Eclipse.exe"; Tasks: quicklaunchicon
+
+[Run]
+Filename: "{app}\Eclipse.exe"; Description: "{cm:LaunchProgram,Eclipse}"; Flags: nowait postinstall skipifsilent
+
