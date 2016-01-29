@@ -1,0 +1,122 @@
+unit Uprincipal;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, ExtCtrls, jpeg, XPMan, StdCtrls, Buttons;
+
+type
+  TForm1 = class(TForm)
+    Panel1: TPanel;
+    barra: TImage;
+    Time: TTimer;
+    bolinha: TImage;
+    XPManifest1: TXPManifest;
+    Timer1: TTimer;
+    SpeedButton1: TSpeedButton;
+    procedure TimeTimer(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure movebarra;
+    procedure movebolinha;
+    procedure FormKeyUp(Sender: TObject; var Key: Word;
+      Shift: TShiftState);
+    procedure FormKeyDown(Sender: TObject; var Key: Word;
+      Shift: TShiftState);
+    procedure Button1Click(Sender: TObject);
+    procedure SpeedButton1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+  velocidade:byte;
+  player,x,y:integer;
+  placar,velocidadeb:integer;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.TimeTimer(Sender: TObject);
+begin
+movebarra;
+movebolinha;
+
+end;
+
+procedure tform1.movebarra;
+begin
+if (barra.left<=0)then
+barra.Left:=1;
+if (barra.left>=432)then
+barra.Left:=431;
+if (barra.left>=0) and (barra.left<=432) then
+ barra.Left:=barra.Left+velocidade*player;
+end;
+
+procedure tform1.movebolinha;
+begin
+if bolinha.left<=0 then
+ x:=3;
+if bolinha.left>=531 then
+ x:=-3;
+if bolinha.top<=0 then
+ y:=3;
+bolinha.left:=bolinha.Left+x*velocidadeb;
+bolinha.Top:=bolinha.top+y*velocidadeb;
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+randomize;
+player:=0;
+velocidade:=3;
+panel1.color:=clWhite;
+end;
+
+procedure TForm1.FormKeyUp(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+player:=0;
+end;
+
+procedure TForm1.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+    if key=37 then
+   begin
+       player:=-2;
+   end;
+   if key=39 then
+   begin
+       player:=2;
+   end;
+end;
+
+procedure TForm1.Button1Click(Sender: TObject);
+var sorteio:byte;
+begin
+
+end;
+
+procedure TForm1.SpeedButton1Click(Sender: TObject);
+var sorteio:byte;
+begin
+sorteio:=random(2);
+if sorteio=1 then
+x:=3
+else
+x:=-3;
+y:=-3;
+velocidadeb:=1;
+bolinha.Top:=572;
+bolinha.Left:=256;
+barra.Top:=592;
+barra.Left:=208;
+end;
+
+end.

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2009/02/15 14:01:52.897.pas,C:\Users\William\Documents\RAD Studio\Projects\Unit1.pas=C:\Users\William\Desktop\editor de texto puro\unitblocow.pas</Transaction>
+    <Transaction>2009/02/15 14:01:52.911.dfm,C:\Users\William\Documents\RAD Studio\Projects\Unit1.dfm=C:\Users\William\Desktop\editor de texto puro\unitblocow.dfm</Transaction>
+    <Transaction>2009/02/15 14:02:03.736.dproj,C:\Users\William\Documents\RAD Studio\Projects\Project1.dproj=C:\Users\William\Desktop\editor de texto puro\Projetoblocow.dproj</Transaction>
+    <Transaction>2009/02/23 18:42:52.658.pas,C:\Users\William\Desktop\editor de texto puro\Unit2.pas=C:\Users\William\Desktop\editor de texto puro\unitsalvar.pas</Transaction>
+    <Transaction>2009/02/23 18:42:52.658.dfm,C:\Users\William\Desktop\editor de texto puro\Unit2.dfm=C:\Users\William\Desktop\editor de texto puro\unitsalvar.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

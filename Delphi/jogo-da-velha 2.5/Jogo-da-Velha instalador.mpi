@@ -1,0 +1,43 @@
+; Projeto gerado pelo Assistente de Projeto do Mep Installer.
+; VEJA A DOCUMENTAÇÃO PARA OBTER DETALHES SOBRE A CRIAÇÃO DE PROJETOS DO MEP INSTALLER!
+
+[Setup]
+AppName=Jogo-da-Velha
+AppVerName=Jogo-da-Velha 2.5
+AppId=Jogo-da-Velha ID
+AppPublisher=William Barbosa dos Santos
+AppPublisherURL=william_bs@terra.com.br
+AppSupportURL=william_bs@terra.com.br
+AppUpdatesURL=william_bs@terra.com.br
+DefaultDirName={pf}\Jogo-da-Velha
+DefaultGroupName=Jogo-da-Velha
+AllowNoIcons=yes
+OutputDir=D:\Meus Documentos\William\meu\jogo-da-velha 2.5
+OutputBaseFilename=setup
+SetupIMG=C:\Program Files\Mep Installer 2\setup.img
+Compression=lzma/max
+SolidCompression=yes
+PrivilegesRequired=none
+
+[Languages]
+Name: "english"; MessagesFile: "compiler:Default.isl"
+Name: "portuguesebr"; MessagesFile: "compiler:Languages\PortugueseBR.isl"
+
+[Tasks]
+Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: checkablealone
+Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
+
+[Files]
+Source: "D:\Meus Documentos\William\meu\jogo-da-velha 2.5\Jogo-da-Velha.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Meus Documentos\William\meu\jogo-da-velha 2.5\imagens\*"; DestDir: "{app}\imagens"; Flags: ignoreversion recursesubdirs createallsubdirs
+; NOTA: Nunca use "Flags: ignoreversion" em arquivos de sistema compartilhados
+
+[Icons]
+Name: "{group}\Jogo-da-Velha"; Filename: "{app}\Jogo-da-Velha.exe"; WorkingDir: "{app}"
+Name: "{group}\{cm:UninstallProgram,Jogo-da-Velha}"; Filename: "{uninstallexe}"
+Name: "{commondesktop}\Jogo-da-Velha"; Filename: "{app}\Jogo-da-Velha.exe"; Tasks: desktopicon; WorkingDir: "{app}"
+Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\Jogo-da-Velha"; Filename: "{app}\Jogo-da-Velha.exe"; Tasks: quicklaunchicon; WorkingDir: "{app}"
+
+[Run]
+Filename: "{app}\Jogo-da-Velha.exe"; Description: "{cm:LaunchProgram,Jogo-da-Velha}"; Flags: nowait postinstall skipifsilent
+

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2008/09/14 14:15:59.937.pas,C:\Documents and Settings\William\Meus documentos\RAD Studio\Projects\Unit1.pas=C:\Documents and Settings\William\Desktop\jogo-da-velha\Ujogo.pas</Transaction>
+    <Transaction>2008/09/14 14:15:59.937.dfm,C:\Documents and Settings\William\Meus documentos\RAD Studio\Projects\Unit1.dfm=C:\Documents and Settings\William\Desktop\jogo-da-velha\Ujogo.dfm</Transaction>
+    <Transaction>2008/09/14 14:16:08.250.dproj,C:\Documents and Settings\William\Meus documentos\RAD Studio\Projects\Project1.dproj=C:\Documents and Settings\William\Desktop\jogo-da-velha\Pjogo.dproj</Transaction>
+    <Transaction>2008/09/27 22:28:57.734.pas,D:\Meus Documentos\jogo-da-velha per\Unit2.pas=D:\Meus Documentos\jogo-da-velha per\Uplacar.pas</Transaction>
+    <Transaction>2008/09/27 22:28:57.734.dfm,D:\Meus Documentos\jogo-da-velha per\Unit2.dfm=D:\Meus Documentos\jogo-da-velha per\Uplacar.dfm</Transaction>
+    <Transaction>2008/09/28 18:11:45.770.pas,D:\Meus Documentos\jogo-da-velha per\Unit3.pas=D:\Meus Documentos\jogo-da-velha per\Umulti.pas</Transaction>
+    <Transaction>2008/09/28 18:11:45.770.dfm,D:\Meus Documentos\jogo-da-velha per\Unit3.dfm=D:\Meus Documentos\jogo-da-velha per\Umulti.dfm</Transaction>
+    <Transaction>2008/09/28 19:48:07.301.pas,D:\Meus Documentos\jogo-da-velha per\Unit4.pas=D:\Meus Documentos\jogo-da-velha per\Uinstru.pas</Transaction>
+    <Transaction>2008/09/28 19:48:07.301.dfm,D:\Meus Documentos\jogo-da-velha per\Unit4.dfm=D:\Meus Documentos\jogo-da-velha per\Uinstru.dfm</Transaction>
+    <Transaction>2008/09/28 20:00:01.629.pas,D:\Meus Documentos\jogo-da-velha per\Unit5.pas=D:\Meus Documentos\jogo-da-velha per\sobre.pas</Transaction>
+    <Transaction>2008/09/28 20:00:01.629.dfm,D:\Meus Documentos\jogo-da-velha per\Unit5.dfm=D:\Meus Documentos\jogo-da-velha per\sobre.dfm</Transaction>
+    <Transaction>2008/09/28 20:19:04.520.pas,D:\Meus Documentos\jogo-da-velha per\Unit6.pas=D:\Meus Documentos\jogo-da-velha per\Usplash.pas</Transaction>
+    <Transaction>2008/09/28 20:19:04.520.dfm,D:\Meus Documentos\jogo-da-velha per\Unit6.dfm=D:\Meus Documentos\jogo-da-velha per\Usplash.dfm</Transaction>
+  </Transactions>
+</BorlandProject>
