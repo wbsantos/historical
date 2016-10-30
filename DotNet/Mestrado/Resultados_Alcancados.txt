@@ -1,0 +1,51 @@
+O experimento teve como objetivo testar duas formas de resolver o problema da densidade, uma utilizando a regra da maioria (regra 232) para reticulado unidimensional de tamanho 64 e contorno periódico, e outra utilizando a regra de Toom com reticulado de 8x8, contorno também periódico. A regra de Toom é também a da maioria, mas com vizinhança em L. Isto é, para vizinhança foi utilizado a própria célula, a célula imediatamente acima desta, e a célula à direita da mesma.
+
+Os estados iniciais testados foram gerados através de números aleatórios não repetidos. Foi utilizado a função Random do .NET com algumas alterações, de modo a gerar um número inteiro de 64 bits, sendo cada bit uma posição no reticulado de teste. Tanto para a regra 232 (reticulado unidimensional), quanto para de Toom (reticulado bidimensional), foram utilizados os mesmos estados iniciais que haviam sido sorteados. A diferença se dá que, para regra de Toom, o reticulado de 64 posições foi "quebrado" em 8 blocos e remontado numa matriz 8x8.
+
+Em suma, para os dois métodos foram utilizados os mesmos estados iniciais, apenas alterando a matriz de entrada para a regra devida.
+
+Ambas as regras foram testadas contra a resposta correta, que foi processada através de métodos clássicos (realmente contando o número de bits ligados em cada estado inicial de teste).
+Foi gerado uma população de testes de 1.000.003
+
+Recursos utilizados:
+	.NET C#: Os autômatos foram processados através de um algoritmo em .NET de forma paralela (20 threads simultâneas)
+	SQL Server: Todos os dados foram salvos numa base SQL Server.
+
+Abaixo segue os resultados alcançados.
+Obs.: 
+*	"Conversões para Quase 1" ou para "Quase 0" significa que cerca de 92% do reticulado convergiu àquele número (mais de 59 células naquele estado)
+*	"Conversões para 1" ou para "0" significa que todo o reticulado (100%) convergiu ao mesmo estado
+*	"Sem Solução" significa que o reticulado não convergiu a um estado homogêneo
+
+
+
+Espaço elementar, regra 232 para retículado unidimensional de 64 posições, e 64*20 steps
+Conversões para 1 Corretas: 92.961
+Conversões para 0 Corretas: 0
+Conversões para 1 Erradas: 0
+Conversões para 0 Erradas: 0
+Conversões para Quase 1 Corretas: 156.691
+Conversões para Quase 0 Corretas: 0
+Conversões para Quase 1 Erradas: 0
+Conversões para Quase 0 Erradas: 0
+Conversões sem solução: 750.351
+
+Respondeu corretamente em 9,296% dos casos
+
+Matriz Bidimensional, regra de Tom para retículado de 8x8, e 20*64 steps
+Conversões para 1 Corretas: 520.218
+Conversões para 0 Corretas: 117.099
+Conversões para 1 Erradas: 0
+Conversões para 0 Erradas: 151.934
+Conversões para 1 Quase Corretas: 0
+Conversões para 0 Quase Corretas: 0
+Conversões para Quase 1 Erradas: 0
+Conversões para Quase 0 Erradas: 0
+Conversões sem solução: 210.752
+
+Respondeu corretamente em 63,7315% dos casos
+
+
+
+Com isso chega-se a conclusão que a regra da maioria não é uma boa regra para a resolução do problema da densidade, tendo performance parca.
+Já a regra de Toom, em comparação à essa última se sai muito melhor, tendo desempenho considerável.

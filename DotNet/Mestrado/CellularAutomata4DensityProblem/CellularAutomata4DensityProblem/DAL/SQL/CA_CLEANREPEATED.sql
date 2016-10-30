@@ -1,0 +1,36 @@
+﻿IF EXISTS (SELECT * FROM SYSOBJECTS WHERE TYPE = 'P' AND NAME = 'CA_CLEANREPEATED')
+	BEGIN
+		PRINT 'DROPPING PROCEDURE CA_CLEANREPEATED'
+		DROP  PROCEDURE CA_CLEANREPEATED
+	END
+GO
+
+PRINT 'CREATING PROCEDURE CA_CLEANREPEATED'
+GO
+
+CREATE PROCEDURE CA_CLEANREPEATED
+AS
+
+/******************************************************************************
+**		NOME DO AQUIVO: CA_CLEANREPEATED.SQL
+**		NOME DA PROCEDURE: CA_CLEANREPEATED
+**
+**		DESCRIÇÃO: EXCLUI SAMPLES REPETIDOS
+**				   RETORNA A QUANTIDADE DE SAMPLES EXCLUÍDOS
+**
+**		TEAMPLATE ELABORADO POR: EWERTON DE PAULA DINIZ
+**              
+**		PROGRAMADOR AUTOR: WILLIAM BARBOSA DOS SANTOS
+**		DATA: 29/10/2016
+*******************************************************************************
+**		HISTÓRICO DE ALTERAÇÕES
+*******************************************************************************
+**		DATA:		AUTOR:				DESCRIÇÃO:
+**
+*******************************************************************************/
+
+DELETE S FROM SAMPLES AS S WHERE EXISTS(SELECT TOP 1 1 FROM SAMPLES S2 WHERE S2.INITIALSTATE = S.INITIALSTATE AND S2.ID > S.ID)
+
+RETURN @@ROWCOUNT
+
+GO
