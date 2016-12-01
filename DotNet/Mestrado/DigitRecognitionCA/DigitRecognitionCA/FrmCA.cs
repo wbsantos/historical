@@ -163,10 +163,43 @@ namespace DigitRecognitionCA
             
         }
 
+        int _totalDone = 0;
         private void btnMassiveProcess_Click(object sender, EventArgs e)
         {
-            AutomataManager.CellularAutomatas.AsParallel().ForAll(ca => { while (!ca.HasFinished) ca.NextCycle(); ca.Evaluate(); });
-            rtxAnswer.Text = AutomataManager.PrintEstatistica();
+            _totalDone = 0;
+            System.Threading.Thread t = 
+                new System.Threading.Thread(new System.Threading.ThreadStart(() => 
+                {
+                    AutomataManager.CellularAutomatas.AsParallel().ForAll(ca => 
+                        {
+                            while (!ca.HasFinished)
+                                ca.NextCycle();
+                            ca.ExperimentalEvaluate();
+                            _totalDone++;
+                            SetTextMemo($"Done: {_totalDone}");
+                        });
+
+                    SetTextMemo(AutomataManager.PrintEstatistica());
+                } ) );
+            t.Start();
+            //rtxAnswer.Text = AutomataManager.PrintEstatistica();
+        }
+
+        delegate void SetTextCallback(string text);
+        private void SetTextMemo(string text)
+        {
+            // InvokeRequired required compares the thread ID of the
+            // calling thread to the thread ID of the creating thread.
+            // If these threads are different, it returns true.
+            if (this.rtxAnswer.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(SetTextMemo);
+                this.Invoke(d, new object[] { text });
+            }
+            else
+            {
+                this.rtxAnswer.Text = text;
+            }
         }
     }
 }

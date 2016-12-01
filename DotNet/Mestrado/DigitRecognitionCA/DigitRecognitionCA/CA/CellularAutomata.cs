@@ -191,51 +191,134 @@ namespace DigitRecognitionCA.CA
                 }
             }
 
-            List<float> pesos = new List<float>();
-            float current = 0, step = 0.01f, limit = 1;
-            for (current = 0; current <= limit; current += step)
-                pesos.Add(current);
-
-            
-            for(int a = 0; a < pesos.Count; a++)
+            for (int k = 0; k < 10; k++)
             {
-                for (int b = 0; b < pesos.Count; b++)
+                List<float> porcentagens = new List<float>(4);
+                porcentagens.Add(((float)TotalLeftBitsHits[k] / TotalBitsToHit[k]) * 0.76f);
+                porcentagens.Add(((float)TotalLeftBitsHits[k] / TotalOriginalBits) * 0.6f);
+                //porcentagens.Add(((float)TotalBottomBitsHits[k] / TotalBitsToHit[k]));
+                porcentagens.Add(((float)TotalBottomBitsHits[k] / TotalOriginalBits) * 0.12f);
+                //porcentagens.Add(((float)TotalSingleBitsHits[k] / TotalBitsToHit[k]));
+
+                AnswerProbability[k] = (porcentagens.Where(f => !float.IsNaN(f)).Sum());// / porcentagens.Count()) * 100;
+            }
+        }
+        #region Experimental
+        public void ExperimentalEvaluate()
+        {
+            long currentBitsFromLeftSpent, currentBitsFromBottomSpent, baseValue;
+            TotalOriginalBits = 0;
+            TotalLeftBitsHits = new int[10];
+            TotalBottomBitsHits = new int[10];
+            TotalSingleBitsHits = new int[10];
+            TotalBitsToHit = new int[10];
+            AnswerProbability = new float[10];
+
+
+            for (int i = 0; i < Matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < Matrix.GetLength(1); j++)
                 {
-                    for (int c = 0; c < pesos.Count; c++)
+                    baseValue = ((Matrix[i, j] >> 50) & 0x3FF);
+                    currentBitsFromLeftSpent = ((Matrix[i, j] >> 0) & 0x3FFL);
+                    currentBitsFromBottomSpent = ((Matrix[i, j] >> 10) & 0x3FFL);
+
+                    for (int k = 0; k < 10; k++)
+                        if ((baseValue & (0x1L << k)) != 0)
+                            TotalBitsToHit[k]++;
+
+                    for (int k = 0; k < 10; k++)
+                        if ((currentBitsFromLeftSpent & (0x1L << k)) != 0)
+                            TotalLeftBitsHits[k]++;
+
+                    for (int k = 0; k < 10; k++)
+                        if ((currentBitsFromBottomSpent & (0x1L << k)) != 0)
+                            TotalBottomBitsHits[k]++;
+
+                    for (int k = 0; k < 10; k++)
+                        if (((currentBitsFromBottomSpent & (0x1L << k)) != 0) || ((currentBitsFromLeftSpent & (0x1L << k)) != 0))
+                            TotalSingleBitsHits[k]++;
+
+                    if ((Matrix[i, j] & (0x1L << 63)) != 0)//BIT on the left cell is on
+                        TotalOriginalBits++;
+                }
+            }
+
+            /*
+            PESOAMIN               PESOAMAX               PESOBMIN               PESOBMAX               PESOCMIN               PESOCMAX               PESODMIN               PESODMAX               PESOEMIN               PESOEMAX               TOTALAVG
+            ---------------------- ---------------------- ---------------------- ---------------------- ---------------------- ---------------------- ---------------------- ---------------------- ---------------------- ---------------------- -----------
+            0,4                    1                      0,2                    1                      0                      0,2                    0                      0,6                    0                      0,6                    5648
+ 
+             * */
+            float current = 0, step = 0, limit = 0;
+
+            List<float> pesosA = new List<float>();
+            current = 0.4F; limit = 1; step = (limit - current) / 5f;
+            for (; current <= limit; current += step)
+                pesosA.Add(current);
+
+            List<float> pesosB = new List<float>();
+            current = 0F; limit = 1; step = (limit - current) / 5f;
+            for (; current <= limit; current += step)
+                pesosB.Add(current);
+
+            List<float> pesosC = new List<float>();
+            current = 0F; limit = 1; step = (limit - current) / 5f;
+            for (; current <= limit; current += step)
+                pesosC.Add(current);
+
+            List<float> pesosD = new List<float>();
+            current = 0F; limit = 0.6f; step = (limit - current) / 5f;
+            for (; current <= limit; current += step)
+                pesosD.Add(current);
+
+            List<float> pesosE = new List<float>();
+            current = 0F; limit = 0.6f; step = (limit - current) / 5f;
+            for (; current <= limit; current += step)
+                pesosE.Add(current);
+
+            bool correctAnswerFound = false;
+
+            for (int a = 0; a < pesosA.Count; a++)
+            {
+                for (int b = 0; b < pesosB.Count; b++)
+                {
+                    for (int c = 0; c < pesosC.Count; c++)
                     {
-                        for (int d = 0; d < pesos.Count; d++)
+                        for (int d = 0; d < pesosD.Count; d++)
                         {
-                            for (int e = 0; e < pesos.Count; e++)
+                            for (int e = 0; e < pesosE.Count; e++)
                             {
                                 for (int k = 0; k < 10; k++)
                                 {
                                     List<float> porcentagens = new List<float>(4);
-                                    porcentagens.Add(((float)TotalLeftBitsHits[k] / TotalBitsToHit[k]) * pesos[a]);
-                                    porcentagens.Add(((float)TotalLeftBitsHits[k] / TotalOriginalBits) * pesos[b]);
-                                    porcentagens.Add(((float)TotalBottomBitsHits[k] / TotalBitsToHit[k]) * pesos[c]);
-                                    porcentagens.Add(((float)TotalBottomBitsHits[k] / TotalOriginalBits) * pesos[d]);
-                                    porcentagens.Add(((float)TotalSingleBitsHits[k] / TotalBitsToHit[k]) * pesos[e]);
+                                    porcentagens.Add(((float)TotalLeftBitsHits[k] / TotalBitsToHit[k]) * pesosA[a]);
+                                    porcentagens.Add(((float)TotalLeftBitsHits[k] / TotalOriginalBits) * pesosB[b]);
+                                    porcentagens.Add(((float)TotalBottomBitsHits[k] / TotalBitsToHit[k]) * pesosC[c]);
+                                    porcentagens.Add(((float)TotalBottomBitsHits[k] / TotalOriginalBits) * pesosD[d]);
+                                    porcentagens.Add(((float)TotalSingleBitsHits[k] / TotalBitsToHit[k]) * pesosE[e]);
 
                                     AnswerProbability[k] = (porcentagens.Where(f => !float.IsNaN(f)).Sum());// / porcentagens.Count()) * 100;
                                 }
                                 if (IsTheCorrectAnswer)
                                 {
+                                    correctAnswerFound = true;
                                     lock (Locker)
                                     {
                                         var peso = PesosMaisUsados.FirstOrDefault(p =>
-                                                                                    p.PesoA == pesos[a] &&
-                                                                                    p.PesoB == pesos[b] &&
-                                                                                    p.PesoC == pesos[c] &&
-                                                                                    p.PesoD == pesos[d] &&
-                                                                                    p.PesoE == pesos[e]);
+                                                                                    p.PesoA == pesosA[a] &&
+                                                                                    p.PesoB == pesosB[b] &&
+                                                                                    p.PesoC == pesosC[c] &&
+                                                                                    p.PesoD == pesosD[d] &&
+                                                                                    p.PesoE == pesosE[e]);
                                         if (peso == null)
                                         {
                                             PesosMaisUsados.Add(new EstatisticaPesos(
-                                                                                        pesos[a],
-                                                                                        pesos[b],
-                                                                                        pesos[c],
-                                                                                        pesos[d],
-                                                                                        pesos[e],
+                                                                                        pesosA[a],
+                                                                                        pesosB[b],
+                                                                                        pesosC[c],
+                                                                                        pesosD[d],
+                                                                                        pesosE[e],
                                                                                         1));
                                         }
                                         else
@@ -246,7 +329,32 @@ namespace DigitRecognitionCA.CA
                         }
                     }
                 }
-            }               
+            }
+
+            if (!correctAnswerFound)
+            {
+                lock (Locker)
+                {
+                    var peso = PesosMaisUsados.FirstOrDefault(p =>
+                                                                p.PesoA == -1 &&
+                                                                p.PesoB == -1 &&
+                                                                p.PesoC == -1 &&
+                                                                p.PesoD == -1 &&
+                                                                p.PesoE == -1);
+                    if (peso == null)
+                    {
+                        PesosMaisUsados.Add(new EstatisticaPesos(
+                                                                    -1,
+                                                                    -1,
+                                                                    -1,
+                                                                    -1,
+                                                                    -1,
+                                                                    1));
+                    }
+                    else
+                        peso.Total++;
+                }
+            }
         }
 
         private static object Locker = new object();
@@ -277,5 +385,7 @@ namespace DigitRecognitionCA.CA
         }
 
         public static List<EstatisticaPesos> PesosMaisUsados { get; private set; } = new List<EstatisticaPesos>();
+
+        #endregion
     }
 }
