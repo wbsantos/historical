@@ -1,0 +1,244 @@
+\documentclass[a4,11pt]{reportN}
+
+\usepackage[brazil]{babel}      % para texto em Português
+%\usepackage[english]{babel}    % para texto em Inglês
+
+\usepackage[latin1]{inputenc}   % para acentuação em Português
+%\input{P-margin.inf}
+
+\usepackage{graphics}
+\usepackage{subfigure}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage[centertags]{amsmath}
+\usepackage{graphicx,indentfirst,amsmath,amsfonts,amssymb,amsthm,newlfont}
+\usepackage{longtable}
+\usepackage{cite}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+%\usepackage[usenames,dvipsnames]{color}
+%\usepackage{color}
+
+
+
+
+\begin{document}
+
+%********************************************************
+\title{Instruções para Submissão de Trabalhos para o DINCON 2017}
+%Este trabalho foi apresentado no evento X, na cidade Y no
+%ano Z.}}
+
+
+\author
+    { \Large{Maria Cecília Zanardi}\thanks{maria.zanardi@ufabc.edu.br, cecilia@feg.unesp.br} \\
+ {\small Centro de Engenharia, Modelagem e Ciências Sociais, UFABC, Santo André, SP,\\
+ Departamento de Matemática, Unesp, Guaratinguetá, SP}\\
+  \Large{Mateus Bernardes}\thanks{mbernardes@uftpr.edu.br} \\
+     {\small Departamento Acadêmico de Matemática, UTFPR, Curitiba, PR}\\
+   \Large{Igor Leite Freire}\thanks {igor.freire@ufabc.edu.br} \\
+ {\small Centro de Matemática, Computação e Cognição, UFABC, Santo André, SP} }
+
+\criartitulo
+
+%\markboth{\hfill Write the title of your work here, concisely if
+%necessary \hfill Write the last authors' name here} {Proceeding Series of the Brazilian
+%Society of Computational and Applied Mathematics \hfill}
+
+\begin{abstract}
+{\bf Resumo}. Este é o template a ser usado nos trabalhos completos submetidos ao DINCON 2017. Os trabalhos completos são referentes `as atividades de pesquisa no nível de pós-graduação, com resultados conclusivos e devem conter de 3 a 7 páginas. 
+Os template a ser utilizado para a preparação do trabalho é disponibilizado na página do evento nos formatos LaTeX e MSWord. É importante ressaltar que os trabalhos submetidos que não respeitem os templates disponibilizados serão {\bf rejeitados} imediatamente pelo Comitê Editorial do evento, sem análise do mérito científico.
+
+\noindent
+{\bf Palavras-chave}. Instruções, Trabalhos, DINCON (de 03 a 06 palavras-chave)
+\end{abstract}
+
+\section{Introdução}
+
+Os trabalhos submetidos ao DINCON devem seguir as seguintes instruções. O resumo deve informar sobre o conteúdo do artigo, os métodos empregados e os resultados alcançados, com ênfase especial para a contribuição científica e/ou tecnológica reportada no trabalho. O resumo tem tamanho limitado a 10 linhas. A parte principal do artigo deve ser preferencialmente dividida nas seguintes seções: Introdução, Propósito, Métodos, Resultados, Discussões e Conclusões. As seções podem ser subdivididas em subseções. A introdução deve apresentar o problema, explicar sua relevância e reportar os esforços e caminhos conhecidos para solucioná-lo de forma adequada. As três seções subsequentes (Propósito, Métodos, Resultados) devem descrever em detalhes os métodos e procedimentos que foram aplicados pelos autores e que geraram os resultados retratados no presente artigo. Na seção seguinte, a de Discussões, os resultados obtidos devem ser analisados e comparados com resultados que aparecem em trabalhos anteriores. Na seção final (Conclusão), a aplicabilidade dos resultados, restrições constatadas em relação ao (s) método (s) usado (s), desdobramentos futuros e aplicações relacionadas ao trabalho devem ser apresentados.
+
+\medskip
+
+\noindent As formas de apresentação dos trabalhos nos eventos da SBMAC são:
+
+\begin{itemize}
+\item Sessão Técnica, com apresentação oral
+\item Sessão de Posters, com apresentação em painel 
+\end{itemize}
+
+\noindent Os autores devem optar por uma das formas de apresentação do trabalho, entretanto o comitê científico é quem decidira ao final a forma de apresentação. 
+
+\section{Regras de Submissão}
+
+Os autores podem submeter seus trabalhos em Português ou Inglês.  Solicitamos aos autores que não alterem as configurações de tamanho e fonte pré-determinadas neste template. Conforme já mencionado, trabalhos fora do padrão serão rejeitados.
+As referências bibliográficas devem estar em ordem alfabética pelo sobrenome do primeiro autor e dos demais, se necessário, usando-se, ainda, ordem cronológica, para trabalhos de um mesmo autor.  Recomendamos fortemente aos autores que se atenham às instruções apresentadas na seção \ref{sec5}.
+
+%Somente serão publicados nos anais do DINCON 2017 os trabalhos {\bf aceitos e que tenham sido apresentados no evento}.
+
+\section{Figuras e Tabelas}\label{sec3}
+
+Os autores podem introduzir tabelas e figuras em seus textos, respeitados os limites de páginas.
+
+\begin{obs}
+Não esqueçam, tabelas e figuras têm legenda. Cuidado com a qualidade das figuras!
+\end{obs}
+
+\subsection{Exemplo de inclusão de figuras}
+
+Nos trabalhos submetidos em LaTeX, para gerar as figuras recomendamos o uso da estrutura que se segue,
+Figura \ref{figura01}.
+
+\begin{verbatim}
+\begin{figure}[h!]
+\centering
+\epsfig{file=figura.eps, height=5.5cm, width=7.5cm}
+\caption{ {\small Fun\c c\~ao seno.}}
+\label{figura01}
+\end{figure}
+\end{verbatim}
+
+\begin{figure}[h!]
+\centering
+\epsfig{file=figura.eps, height=5.5cm, width=7.5cm}
+\caption{ {\small Fun\c c\~ao seno.}}
+\label{figura01}
+\end{figure}
+
+\subsection{Exemplo de inclusão de tabelas}
+
+Para a confecção das tabelas sugerimos o comando {\it table}, como
+na Tabela \ref{tabela01}.
+
+\begin{verbatim}
+\begin{table}[h]
+\caption{ {\small Categorias dos trabalhos.}}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Categoria do trabalho  & Número de páginas & Tipo de Apresenta\c c\~ao\\
+\hline
+minicurso          &  &    \\
+\hline
+minissimposio          & apenas resumo & oral \\
+\hline
+Trabalho Completo         & entre 3 e 7 páginas & oral ou poster \\
+\hline
+\end{tabular}\label{tabela01}
+\end{center}
+\end{table}
+\end{verbatim}
+
+\begin{table}[h]
+\caption{ {\small Categorias dos trabalhos.}}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Categoria do trabalho  & Número de páginas & Tipo de Apresenta\c c\~ao\\
+\hline
+minicurso          &  &   \\
+\hline
+minissimposio          & apenas resumo & oral \\
+\hline
+Trabalho Completo          & entre 3 e 7 páginas & oral ou pster \\
+\hline
+\end{tabular}\label{tabela01}
+\end{center}
+\end{table}
+
+\section{Teoremas, Corolários e Outros Ambientes Úteis}\label{sec4}
+
+Teoremas, lemas, proposições, corolários, definições e observações devem 
+ser numerados por seção. Por esta razão os autores devem chamá-los utilizando os seguintes comandos:
+\begin{teorema}
+Primeiro teorema desta seção.
+\end{teorema}
+
+\begin{lema}
+Primeiro lema desta seção.
+\end{lema}
+
+\begin{prop}
+Primeira proposição desta seção.
+\end{prop}
+
+\begin{defi}
+Primeira definição desta seção.
+\end{defi}
+
+\begin{obs}
+Primeira observação desta seção.
+\end{obs}
+
+\begin{cor}
+Primeiro corolário desta seção.
+\end{cor}
+
+\section{Instruções Relativas às Referências}\label{sec5}
+
+As referências bibliográficas devem estar em ordem alfabética pelo
+sobrenome do primeiro autor e dos demais, se necessário, usando-se, ainda, ordem cronológica,
+para trabalhos de um mesmo autor. Trabalhos dos mesmos autores, publicados no
+mesmo ano, devem ser listados utilizando-se a ordem alfabética do título do trabalho.
+
+As referências devem seguir o padrão adotado neste arquivo, ou seja: as iniciais dos nomes dos
+autores devem ser abreviadas, sendo escrito, por extenso, apenas o último sobrenome. Em seguida,
+o título do trabalho e o título da publicação (revista, livro, dissertação, tese, anais de evento).
+
+A seguir seguem instruções para diversos tipos de publicações:
+\begin{itemize}
+
+\item Quando forem citadas mais de três referências, em sequência, deve-se usar, por exemplo, \cite{Diniz1,Diniz2,Faleiros,Jafelice,Santos}.
+
+\item Se artigo, após o título da publicação deve vir o volume e as páginas correspondentes, seguidos do ano,
+conforme as referências \cite{Diniz2, Jafelice}. Trabalhos aceitos, mas não publicados, devem ser citados conforme
+mostrado na referência \cite{Cuminato}. Não havendo DOI, coloque-se (to appear).
+
+\item Se capítulo de livro, após o título da publicação deve vir o título da série (quando aplicável), o número do capítulo e
+o volume, como na referência \cite{Silva}.
+
+\item Dissertações, teses e similares devem seguir o padrão da referência \cite{Diniz1}.
+
+\item No caso de livros, deve-se seguir o padrão da referência \cite{Faleiros}.
+
+\item Trabalhos publicados em anais de eventos devem seguir o padrão da referência \cite{Santos}. Havendo-se
+o DOI para esta publicação, este deve ser adicionado somente após o ano de publicação, como em \cite{Santos}.
+
+\item Para trabalhos com mais de um autor, o nome do último deve ser precedido por ``and'', quando os
+mesmos tiverem títulos em Inglês, como em \cite{Cuminato,Jafelice,Silva}, e por ``e'', quando escritos em
+Português, como em \cite{Diniz2,Santos}.
+
+\end{itemize}
+\begin{obs}
+Em todas as publicações o ano deve vir entre parênteses, ao final. Naquelas publicações em que for pertinente colocar o
+DOI, este deve vir {\bf após} o ano de publicação, como ilustrado nas referências \cite{Cuminato} e \cite{Santos}.
+\end{obs}
+
+\section*{Agradecimentos}
+Aqui os autores devem apresentar os agradecimentos as pessoas e instituições pertinentes. A Comissão Organizadora do DINCON 2017 agradece aos autores por seguirem as recomendações descritas neste template.
+
+
+ 
+\begin{thebibliography}{99}
+
+\bibitem[1]{Cuminato}
+J. A. Cuminato and V. Ruas, Unification of distance inequalities for linear variational problems, Comp. Appl. Math., (2014), DOI: 10.1007/s40314-014-0163-6.
+
+\bibitem[2]{Silva}
+P. L. da Silva and I. L. Freire, On the group analysis of a modified Novikov equation, Interdisciplinary Topics in Applied Mathematics, Modeling and Computational Science, Springer Proceedings in Mathematics and Statistics, Cap. 23, vol. 117, (2015).
+
+\bibitem[3]{Diniz1}
+G. L. Diniz, A mudança no habitat de populações de peixes: de rio a represa -- o modelo matemático, Dissertação de Mestrado em Matemática Aplicada, Unicamp, (1994).
+
+\bibitem[4]{Diniz2}
+G. L. Diniz, J. F. C. A. Meyer e L. C. Barros, Solução numérica para um problema de Cauchy Fuzzy que modela o decaimento radioativo, TEMA, vol. 2, 63--72, (2001).
+
+\bibitem[5]{Faleiros}
+A. C. Faleiros, Criptografia, Notas em Matemática Aplicada, SBMAC, vol. 52, (2011).
+
+\bibitem[6]{Jafelice}
+R. M. Jafelice, L. C. Barros and R. C. Bassanezi, Study of the dynamics of HIV under treatment considering fuzzy delay, Comp. Appl. Math., vol. 33, 45--61, (2014).
+
+\bibitem[7]{Santos}
+I. L. D. Santos e G. N. Silva, Uma classe de problemas de controle ótimo em escalas temporais, Proceeding Series of the Brazilian Society of Computational and Applied Mathematics, vol. 1, (2013), DOI: 10.5540/03.2013.001.01.0177.
+
+\end{thebibliography}
+\end{document}

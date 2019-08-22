@@ -1,0 +1,105 @@
+(*Problema: Nome das variáveis são muito importantes para correto funcionando, mas essa dependência não deveria existis*)
+ComplementaryTemplates	[
+							template1_Association
+						] :=
+		 With	[
+					{
+						complementEquation = 	(
+													(
+														# 
+														& /@ 
+														Map	[ (*Iguala cada campo calculado ao MOD respectivo para realizar a negação do valor da equação*)
+																Part[#, 1] 
+																== 
+																Mod	[
+																		Part[#, 2] + w, 
+																		k[template1]
+																	] 
+																&,
+																Select	[(*Filtra somente as posições calculadas do template, ignorando variáveis livres*)
+																			MapThread	[ 
+																							If	[
+																									#1 === #2, 
+																									"X", 
+																									#1 == #2
+																								] &
+																								, 
+																								{
+																									ChangeSymbols	[
+																														BaseTemplateCore	[
+																																				k[template1], 
+																																				r[template1]
+																																			]
+																																	]
+																									, 
+																									ChangeSymbols	[
+																														templateCore[template1]
+																													]
+																								}
+																						]
+																						, 
+																						Not[# === "X"] &
+																		]
+															]
+													) 
+													/. 
+													w -> # (*Substituí a variável w pelo valor respectivo da itereação do MOD*)
+												)
+												& /@ (*Mapeia cada campo calculado com a iteração de 1 à k -1 para realizar a operação de MOD da negação*)
+												Range[1, k[template1] - 1]
+							, 
+							baseTemplate = BaseTemplateCore[k[template1], r[template1]]
+					}
+					,
+					complementEquation
+				]
+				
+				
+				
+
+				
+				
+ChangeSymbols	[
+					core_List
+				] := 
+		 Module	[
+					{ 
+						newCore = core, 
+						coreSymbols = Map	[
+												Select	[
+															Position	[
+																			core, 
+																			#
+																		]
+																		, 
+																		Length[#] == 1 &
+														][[1]][[1]] &
+												, 
+												DeleteDuplicates	[
+																		Select	[
+																					core, 
+																					Length[#] == 0 && #[[0]] === Symbol &
+																				]
+																	]
+											] 
+					}
+					, 
+					For	[
+							i = 1, 
+							i <= Length[coreSymbols], 
+							i++, 
+							newCore = 	(
+											newCore 
+											/. 
+											core	[	
+														[	
+															coreSymbols[[i]]
+														]
+													] 
+													-> 
+													Symbol["x" <> ToString[Length[core] - coreSymbols[[i]]]]
+										)
+						]
+					; 
+					newCore
+				]

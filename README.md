@@ -23,11 +23,20 @@ Esse repositório contém códigos e projetos antigos de âmbito pessoal e acad�
 * `Jogo-da-Velha` é uma implementação do jogo com 4 níveis de dificuldade. O último sendo imbatível, de forma que o usuário consegue no máximo um empate. Desenvolvido por volta de `2008`
 * `Pong` é uma implementação do jogo pong usando sprites do Mario e do Sonic. Desenvolvido por volta de `2008`
 
+### Dotnet
+
+* `MyList` seria um sistema que permitiria ao usuário (em um app mobile) adicionar filmes, livros, séries, etc, à sua lista pessoal. Marcando-os como vistos, a ver, interessado... Projeto foi interrompido e o código aqui existente não passa de uma fase preliminar de criação das bibliotecas de acesso à base. Desenvolvido por volta de `2013`
+
 ### Python
 
-* `Scraper` é web crawler feito para varrer o cadastro de animes do site anbient (http://www.anbient.net). Desenvolvido por volta de `2013`
+* `Scraper` é web crawler feito para varrer o cadastro de animes do site [Anbient](http://www.anbient.net). Desenvolvido por volta de `2013`
 
 ### TCC
 
 * `ETEC` contém o TCC desenvolvido para o curso técnico em informática da ETEC. O sistema é feito em Delphi e é um gerenciador de bilblioteca. Desenvolvido por volta de `2009`
 * `Faculdade` contém o TCC desenvolvido para o curso de Ciência da Computação. O sistema é um combinador de cursos, displinas e professores, que basicamente monta a grade horária de uma instituição de ensino. Foi utilziado algoritmo genético para solução do problema e o sistema é feito em C#. Desenvolvido por volta de `2013`
+* `Mestrado` contém a uma qualificação para mestrado que foi defendida na Mackenzie. Devido a problemas pessoais na época o mestrado foi interrompido e a tese se encontra incompleta. O framework [CATemplate](https://github.com/mverardo/CATemplates) contido nessa pasta não é de minha autoria, foi apenas modificado para a tese em que estava trabalhando. O link da implentação oficial é <https://github.com/mverardo/CATemplates>. Vale dizer que o template laTEX utilizado para compilação da tese foi recebido em uma das aulas da Mackenzie, não sendo de minha autoria também. Desenvolvido por volta de `2017`
+> Nota: 
+> * O artigo contido em DINCON foi de fato publicado no evento.
+> * A pasta `Referências` foi compactada com senha para protecão de direitos autorais.
+> * Quanto à tese, aqueles citados como co-autores não têm qualquer responsabilidade com o conteúdo do documento dado que a defesa final do mestrado não foi realizada. Ainda sim foram de vital importância para o trabalho chegar ao estágio em que se encontra.

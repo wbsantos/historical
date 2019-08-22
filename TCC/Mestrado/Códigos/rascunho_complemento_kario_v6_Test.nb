@@ -1,0 +1,1280 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     49071,       1272]
+NotebookOptionsPosition[     47494,       1223]
+NotebookOutlinePosition[     47840,       1238]
+CellTagsIndexPosition[     47797,       1235]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"<<", "CATemplates`"}]], "Input",
+ CellChangeTimes->{{3.7215507395650854`*^9, 3.721550740190138*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ListasIguais", "[", 
+   RowBox[{"lista1_List", ",", " ", "lista2_List"}], "]"}], " ", ":=", " ", 
+  RowBox[{
+   RowBox[{"ContainsAll", "[", 
+    RowBox[{"lista1", ",", " ", "lista2"}], "]"}], " ", "&&", " ", 
+   RowBox[{"ContainsAll", "[", 
+    RowBox[{"lista2", ",", " ", "lista1"}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.7213423691269083`*^9, 3.7213423912486334`*^9}, {
+  3.721342650056893*^9, 3.721342701491232*^9}, {3.7213433056726265`*^9, 
+  3.7213433212846947`*^9}, {3.7218381842210608`*^9, 3.7218381943303385`*^9}, {
+  3.7218382260604205`*^9, 3.721838241354743*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ListasDiferenca", "[", 
+   RowBox[{"lista1_List", ",", " ", "lista2_List"}], "]"}], " ", ":=", " ", 
+  RowBox[{"Select", "[", 
+   RowBox[{"lista1", ",", 
+    RowBox[{
+     RowBox[{"ContainsNone", "[", 
+      RowBox[{"lista2", ",", " ", 
+       RowBox[{"{", "#", "}"}]}], "]"}], " ", "&"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.7213435193834763`*^9, 3.7213436950307407`*^9}, {
+   3.7213440159182568`*^9, 3.7213440565397635`*^9}, {3.721344113969632*^9, 
+   3.7213441226698923`*^9}, 3.721344703361226*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ExpandirDiferencaForcaBruta", "[", 
+   RowBox[{"template1_Association", ",", "template2_Association"}], "]"}], 
+  " ", ":=", " ", 
+  RowBox[{"ListasDiferenca", "[", 
+   RowBox[{
+    RowBox[{"ExpandTemplate", "[", "template1", "]"}], ",", " ", 
+    RowBox[{"ExpandTemplate", "[", "template2", "]"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.7221161205387864`*^9, 3.722116173041207*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ExpandirOperacaoDiferenca", "[", 
+   RowBox[{"template1_Association", ",", "template2_Association"}], "]"}], 
+  " ", ":=", " ", 
+  RowBox[{"Select", "[", 
+   RowBox[{
+    RowBox[{"DeleteDuplicates", "[", 
+     RowBox[{"Flatten", "[", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"ExpandTemplate", "[", "#", "]"}], " ", "&"}], " ", "/@", 
+         " ", 
+         RowBox[{"OperacaoDiferenca", "[", 
+          RowBox[{"template1", ",", " ", "template2"}], "]"}]}], ")"}], ",", 
+       " ", "1"}], "]"}], "]"}], ",", " ", 
+    RowBox[{
+     RowBox[{"ContainsNone", "[", 
+      RowBox[{"#", ",", " ", 
+       RowBox[{"{", "Undefined", "}"}]}], "]"}], "&"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.7213438148462*^9, 3.7213438202836018`*^9}, {
+   3.7213438528470507`*^9, 3.721343863911915*^9}, {3.7213439222240143`*^9, 
+   3.7213439867186947`*^9}, {3.721344142312975*^9, 3.7213441684287205`*^9}, 
+   3.721344222617734*^9, {3.7213446473085165`*^9, 3.7213446741746664`*^9}, {
+   3.721344955049387*^9, 3.721344958384242*^9}, {3.7213451024265037`*^9, 
+   3.721345115174814*^9}, {3.7218382886122847`*^9, 3.721838383565312*^9}, {
+   3.721838422099693*^9, 3.7218384563133607`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"TestarOperacaoDiferenca", "[", 
+   RowBox[{"template1_Association", ",", "template2_Association"}], "]"}], 
+  " ", ":=", " ", 
+  RowBox[{"{", 
+   RowBox[{"Now", ",", 
+    RowBox[{"ListasIguais", "[", 
+     RowBox[{
+      RowBox[{"ListasDiferenca", "[", 
+       RowBox[{
+        RowBox[{"ExpandTemplate", "[", "template1", "]"}], ",", " ", 
+        RowBox[{"ExpandTemplate", "[", "template2", "]"}]}], "]"}], ",", " ", 
+      RowBox[{"ExpandirOperacaoDiferenca", "[", 
+       RowBox[{"template1", ",", " ", "template2"}], "]"}]}], "]"}], ",", " ",
+     "Now"}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.7213446804493046`*^9, 3.721344693210619*^9}, {
+  3.7213447236735044`*^9, 3.721344788961403*^9}, {3.7221966533212085`*^9, 
+  3.7221966642788334`*^9}, {3.7221967262683506`*^9, 3.72219676069221*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"TestarNegacao", "[", "template1_Association", "]"}], " ", ":=", 
+  " ", 
+  RowBox[{"ListasIguais", "[", 
+   RowBox[{
+    RowBox[{"Select", "[", 
+     RowBox[{
+      RowBox[{"DeleteDuplicates", "[", 
+       RowBox[{"Flatten", "[", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"ExpandTemplate", "[", "#", "]"}], " ", "&"}], " ", "/@", 
+           " ", 
+           RowBox[{"OperacaoNegacao", "[", "template1", "]"}]}], ")"}], ",", 
+         " ", "1"}], "]"}], "]"}], ",", " ", 
+      RowBox[{
+       RowBox[{"ContainsNone", "[", 
+        RowBox[{"#", ",", " ", 
+         RowBox[{"{", "Undefined", "}"}]}], "]"}], "&"}]}], "]"}], ",", " ", 
+    RowBox[{"ListasDiferenca", "[", 
+     RowBox[{
+      RowBox[{"ExpandTemplate", "[", 
+       RowBox[{"BaseTemplate", "[", 
+        RowBox[{
+         RowBox[{"k", "[", "template1", "]"}], ",", " ", 
+         RowBox[{"r", "[", "template1", "]"}]}], "]"}], "]"}], ",", " ", 
+      RowBox[{"ExpandTemplate", "[", "template1", "]"}]}], "]"}]}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.7219313978779697`*^9, 3.721931562041278*^9}, 
+   3.722196823971512*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"TestarOperacaoDiferenca", "[", 
+    RowBox[{
+     RowBox[{"ColorBlindTemplate", "[", 
+      RowBox[{"2", ",", "0.5"}], "]"}], ",", 
+     RowBox[{"StateConservingTemplate", "[", 
+      RowBox[{"2", ",", "0.5"}], "]"}]}], "]"}], "\n", 
+   RowBox[{"TestarOperacaoDiferenca", "[", 
+    RowBox[{
+     RowBox[{"ColorBlindTemplate", "[", 
+      RowBox[{"2", ",", "1.0"}], "]"}], ",", 
+     RowBox[{"StateConservingTemplate", "[", 
+      RowBox[{"2", ",", "1.0"}], "]"}]}], "]"}], "\n", 
+   RowBox[{"TestarOperacaoDiferenca", "[", 
+    RowBox[{
+     RowBox[{"ColorBlindTemplate", "[", 
+      RowBox[{"3", ",", "0.5"}], "]"}], ",", 
+     RowBox[{"StateConservingTemplate", "[", 
+      RowBox[{"3", ",", "0.5"}], "]"}]}], "]"}], "\n", "\[IndentingNewLine]", 
+   RowBox[{"TestarOperacaoDiferenca", "[", 
+    RowBox[{
+     RowBox[{"StateConservingTemplate", "[", 
+      RowBox[{"2", ",", "0.5"}], "]"}], ",", 
+     RowBox[{"ColorBlindTemplate", "[", 
+      RowBox[{"2", ",", "0.5"}], "]"}]}], "]"}], "\n", 
+   RowBox[{"TestarOperacaoDiferenca", "[", 
+    RowBox[{
+     RowBox[{"StateConservingTemplate", "[", 
+      RowBox[{"2", ",", "1.0"}], "]"}], ",", 
+     RowBox[{"ColorBlindTemplate", "[", 
+      RowBox[{"2", ",", "1.0"}], "]"}]}], "]"}], "\n", 
+   RowBox[{"TestarOperacaoDiferenca", "[", 
+    RowBox[{
+     RowBox[{"StateConservingTemplate", "[", 
+      RowBox[{"3", ",", "0.5"}], "]"}], ",", 
+     RowBox[{"ColorBlindTemplate", "[", 
+      RowBox[{"3", ",", "0.5"}], "]"}]}], "]"}], "\n", "\[IndentingNewLine]", 
+   RowBox[{"TestarOperacaoDiferenca", "[", 
+    RowBox[{
+     RowBox[{"ColorBlindTemplate", "[", 
+      RowBox[{"2", ",", "0.5"}], "]"}], ",", 
+     RowBox[{"TotalisticTemplate", "[", 
+      RowBox[{"2", ",", "0.5"}], "]"}]}], "]"}], "\n", 
+   RowBox[{"TestarOperacaoDiferenca", "[", 
+    RowBox[{
+     RowBox[{"ColorBlindTemplate", "[", 
+      RowBox[{"2", ",", "1.0"}], "]"}], ",", 
+     RowBox[{"TotalisticTemplate", "[", 
+      RowBox[{"2", ",", "1.0"}], "]"}]}], "]"}], "\n", 
+   RowBox[{"TestarOperacaoDiferenca", "[", 
+    RowBox[{
+     RowBox[{"ColorBlindTemplate", "[", 
+      RowBox[{"3", ",", "0.5"}], "]"}], ",", 
+     RowBox[{"TotalisticTemplate", "[", 
+      RowBox[{"3", ",", "0.5"}], "]"}]}], "]"}], "\n", "\[IndentingNewLine]", 
+   RowBox[{"TestarOperacaoDiferenca", "[", 
+    RowBox[{
+     RowBox[{"TotalisticTemplate", "[", 
+      RowBox[{"2", ",", "0.5"}], "]"}], ",", 
+     RowBox[{"ColorBlindTemplate", "[", 
+      RowBox[{"2", ",", "0.5"}], "]"}]}], "]"}], "\n", 
+   RowBox[{"TestarOperacaoDiferenca", "[", 
+    RowBox[{
+     RowBox[{"TotalisticTemplate", "[", 
+      RowBox[{"2", ",", "1.0"}], "]"}], ",", 
+     RowBox[{"ColorBlindTemplate", "[", 
+      RowBox[{"2", ",", "1.0"}], "]"}]}], "]"}], "\n", 
+   RowBox[{"TestarOperacaoDiferenca", "[", 
+    RowBox[{
+     RowBox[{"TotalisticTemplate", "[", 
+      RowBox[{"3", ",", "0.5"}], "]"}], ",", 
+     RowBox[{"ColorBlindTemplate", "[", 
+      RowBox[{"3", ",", "0.5"}], "]"}]}], "]"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{"TestarOperacaoDiferenca", "[", 
+    RowBox[{
+     RowBox[{"StateConservingTemplate", "[", 
+      RowBox[{"3", ",", "0.5"}], "]"}], ",", 
+     RowBox[{"TotalisticTemplate", "[", 
+      RowBox[{"3", ",", "0.5"}], "]"}]}], "]"}], "\n", 
+   RowBox[{"TestarOperacaoDiferenca", "[", 
+    RowBox[{
+     RowBox[{"StateConservingTemplate", "[", 
+      RowBox[{"2", ",", "0.5"}], "]"}], ",", 
+     RowBox[{"TotalisticTemplate", "[", 
+      RowBox[{"2", ",", "0.5"}], "]"}]}], "]"}], "\n", 
+   RowBox[{"TestarOperacaoDiferenca", "[", 
+    RowBox[{
+     RowBox[{"StateConservingTemplate", "[", 
+      RowBox[{"2", ",", "1.0"}], "]"}], ",", 
+     RowBox[{"TotalisticTemplate", "[", 
+      RowBox[{"2", ",", "1.0"}], "]"}]}], "]"}], "\n", "\[IndentingNewLine]", 
+   RowBox[{"TestarOperacaoDiferenca", "[", 
+    RowBox[{
+     RowBox[{"TotalisticTemplate", "[", 
+      RowBox[{"3", ",", "0.5"}], "]"}], ",", 
+     RowBox[{"StateConservingTemplate", "[", 
+      RowBox[{"3", ",", "0.5"}], "]"}]}], "]"}], "\n", 
+   RowBox[{"TestarOperacaoDiferenca", "[", 
+    RowBox[{
+     RowBox[{"TotalisticTemplate", "[", 
+      RowBox[{"2", ",", "0.5"}], "]"}], ",", 
+     RowBox[{"StateConservingTemplate", "[", 
+      RowBox[{"2", ",", "0.5"}], "]"}]}], "]"}], "\n", 
+   RowBox[{"TestarOperacaoDiferenca", "[", 
+    RowBox[{
+     RowBox[{"TotalisticTemplate", "[", 
+      RowBox[{"2", ",", "1.0"}], "]"}], ",", 
+     RowBox[{"StateConservingTemplate", "[", 
+      RowBox[{"2", ",", "1.0"}], "]"}]}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.722196338837776*^9, 3.7221963396148415`*^9}, {
+  3.7221981729184446`*^9, 3.722198191028301*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{RowBox[{"\"Mon 12 Feb 2018 18:14:51\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "2.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2018", ",", "2", ",", "12"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"18", ",", "14", ",", "51.1647154`"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "2.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "2.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", "True", ",", 
+   TemplateBox[{RowBox[{"\"Mon 12 Feb 2018 18:14:51\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "2.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2018", ",", "2", ",", "12"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"18", ",", "14", ",", "51.6126607`"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "2.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "2.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False]}], "}"}]], "Output",
+ CellChangeTimes->{3.7221968288391047`*^9, 3.722198569802526*^9, 
+  3.722200924015631*^9, 3.727455291612661*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{RowBox[{"\"Mon 12 Feb 2018 18:14:51\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "2.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2018", ",", "2", ",", "12"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"18", ",", "14", ",", "51.6126607`"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "2.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "2.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", "True", ",", 
+   TemplateBox[{RowBox[{"\"Mon 12 Feb 2018 18:16:11\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "2.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2018", ",", "2", ",", "12"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"18", ",", "16", ",", "11.1083571`"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "2.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "2.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False]}], "}"}]], "Output",
+ CellChangeTimes->{3.7221968288391047`*^9, 3.722198569802526*^9, 
+  3.722200924015631*^9, 3.727455371117359*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{RowBox[{"\"Mon 12 Feb 2018 18:16:11\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "2.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2018", ",", "2", ",", "12"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"18", ",", "16", ",", "11.1383643`"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "2.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "2.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", "True", ",", 
+   TemplateBox[{RowBox[{"\"Mon 12 Feb 2018 18:16:45\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "2.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2018", ",", "2", ",", "12"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"18", ",", "16", ",", "45.3510398`"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "2.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "2.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False]}], "}"}]], "Output",
+ CellChangeTimes->{3.7221968288391047`*^9, 3.722198569802526*^9, 
+  3.722200924015631*^9, 3.727455405361042*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{RowBox[{"\"Mon 12 Feb 2018 18:16:45\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "2.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2018", ",", "2", ",", "12"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"18", ",", "16", ",", "45.3540408`"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "2.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "2.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", "True", ",", 
+   TemplateBox[{RowBox[{"\"Mon 12 Feb 2018 18:16:45\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "2.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2018", ",", "2", ",", "12"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"18", ",", "16", ",", "45.43006`"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "2.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "2.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False]}], "}"}]], "Output",
+ CellChangeTimes->{3.7221968288391047`*^9, 3.722198569802526*^9, 
+  3.722200924015631*^9, 3.7274554054400625`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{RowBox[{"\"Mon 12 Feb 2018 18:16:45\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "2.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2018", ",", "2", ",", "12"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"18", ",", "16", ",", "45.4340611`"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "2.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "2.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", "True", ",", 
+   TemplateBox[{RowBox[{"\"Mon 12 Feb 2018 18:16:45\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "2.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2018", ",", "2", ",", "12"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"18", ",", "16", ",", "45.9921059`"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "2.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "2.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False]}], "}"}]], "Output",
+ CellChangeTimes->{3.7221968288391047`*^9, 3.722198569802526*^9, 
+  3.722200924015631*^9, 3.727455406001113*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{RowBox[{"\"Mon 12 Feb 2018 18:16:46\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "2.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2018", ",", "2", ",", "12"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"18", ",", "16", ",", "46.0070974`"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "2.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "2.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", "True", ",", 
+   TemplateBox[{RowBox[{"\"Mon 12 Feb 2018 18:16:46\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "2.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2018", ",", "2", ",", "12"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"18", ",", "16", ",", "46.8988506`"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "2.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "2.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False]}], "}"}]], "Output",
+ CellChangeTimes->{3.7221968288391047`*^9, 3.722198569802526*^9, 
+  3.722200924015631*^9, 3.727455406908965*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{RowBox[{"\"Mon 12 Feb 2018 18:16:46\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "2.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2018", ",", "2", ",", "12"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"18", ",", "16", ",", "46.9018517`"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "2.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "2.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", "True", ",", 
+   TemplateBox[{RowBox[{"\"Mon 12 Feb 2018 18:16:49\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "2.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2018", ",", "2", ",", "12"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"18", ",", "16", ",", "49.1384582`"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "2.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "2.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False]}], "}"}]], "Output",
+ CellChangeTimes->{3.7221968288391047`*^9, 3.722198569802526*^9, 
+  3.722200924015631*^9, 3.727455409148468*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{RowBox[{"\"Mon 12 Feb 2018 18:16:49\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "2.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2018", ",", "2", ",", "12"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"18", ",", "16", ",", "49.1414589`"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "2.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "2.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", "True", ",", 
+   TemplateBox[{RowBox[{"\"Mon 12 Feb 2018 18:17:01\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "2.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2018", ",", "2", ",", "12"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"18", ",", "17", ",", "1.5232289`"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "2.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "2.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False]}], "}"}]], "Output",
+ CellChangeTimes->{3.7221968288391047`*^9, 3.722198569802526*^9, 
+  3.722200924015631*^9, 3.7274554215322313`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{RowBox[{"\"Mon 12 Feb 2018 18:17:01\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "2.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2018", ",", "2", ",", "12"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"18", ",", "17", ",", "1.5372326`"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "2.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "2.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", "True", ",", 
+   TemplateBox[{RowBox[{"\"Mon 12 Feb 2018 18:17:25\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "2.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2018", ",", "2", ",", "12"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"18", ",", "17", ",", "25.0504331`"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "2.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "2.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False]}], "}"}]], "Output",
+ CellChangeTimes->{3.7221968288391047`*^9, 3.722198569802526*^9, 
+  3.722200924015631*^9, 3.7274554450614443`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{RowBox[{"\"Mon 12 Feb 2018 18:17:25\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "2.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2018", ",", "2", ",", "12"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"18", ",", "17", ",", "25.0544349`"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "2.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "2.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", "True", ",", 
+   TemplateBox[{RowBox[{"\"Mon 12 Feb 2018 18:17:25\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "2.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2018", ",", "2", ",", "12"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"18", ",", "17", ",", "25.1588537`"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "2.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "2.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False]}], "}"}]], "Output",
+ CellChangeTimes->{3.7221968288391047`*^9, 3.722198569802526*^9, 
+  3.722200924015631*^9, 3.7274554451688643`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{RowBox[{"\"Mon 12 Feb 2018 18:17:25\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "2.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2018", ",", "2", ",", "12"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"18", ",", "17", ",", "25.1618547`"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "2.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "2.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", "True", ",", 
+   TemplateBox[{RowBox[{"\"Mon 12 Feb 2018 18:17:25\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "2.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2018", ",", "2", ",", "12"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"18", ",", "17", ",", "25.5543058`"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "2.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "2.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False]}], "}"}]], "Output",
+ CellChangeTimes->{3.7221968288391047`*^9, 3.722198569802526*^9, 
+  3.722200924015631*^9, 3.7274554455633087`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{RowBox[{"\"Mon 12 Feb 2018 18:17:25\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "2.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2018", ",", "2", ",", "12"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"18", ",", "17", ",", "25.5683095`"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "2.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "2.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", "True", ",", 
+   TemplateBox[{RowBox[{"\"Mon 12 Feb 2018 18:17:28\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "2.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2018", ",", "2", ",", "12"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"18", ",", "17", ",", "28.2248982`"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "2.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "2.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False]}], "}"}]], "Output",
+ CellChangeTimes->{3.7221968288391047`*^9, 3.722198569802526*^9, 
+  3.722200924015631*^9, 3.7274554482339*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{RowBox[{"\"Mon 12 Feb 2018 18:17:28\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "2.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2018", ",", "2", ",", "12"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"18", ",", "17", ",", "28.2289003`"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "2.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "2.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", "True", ",", 
+   TemplateBox[{RowBox[{"\"Mon 12 Feb 2018 18:17:28\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "2.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2018", ",", "2", ",", "12"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"18", ",", "17", ",", "28.6779511`"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "2.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "2.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False]}], "}"}]], "Output",
+ CellChangeTimes->{3.7221968288391047`*^9, 3.722198569802526*^9, 
+  3.722200924015631*^9, 3.7274554486935773`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{RowBox[{"\"Mon 12 Feb 2018 18:17:28\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "2.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2018", ",", "2", ",", "12"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"18", ",", "17", ",", "28.6779511`"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "2.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "2.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", "True", ",", 
+   TemplateBox[{RowBox[{"\"Mon 12 Feb 2018 18:17:28\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "2.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2018", ",", "2", ",", "12"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"18", ",", "17", ",", "28.7479191`"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "2.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "2.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False]}], "}"}]], "Output",
+ CellChangeTimes->{3.7221968288391047`*^9, 3.722198569802526*^9, 
+  3.722200924015631*^9, 3.7274554487569213`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{RowBox[{"\"Mon 12 Feb 2018 18:17:28\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "2.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2018", ",", "2", ",", "12"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"18", ",", "17", ",", "28.7519204`"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "2.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "2.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", "True", ",", 
+   TemplateBox[{RowBox[{"\"Mon 12 Feb 2018 18:17:29\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "2.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2018", ",", "2", ",", "12"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"18", ",", "17", ",", "29.3112129`"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "2.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "2.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False]}], "}"}]], "Output",
+ CellChangeTimes->{3.7221968288391047`*^9, 3.722198569802526*^9, 
+  3.722200924015631*^9, 3.7274554493112125`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{RowBox[{"\"Mon 12 Feb 2018 18:17:29\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "2.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2018", ",", "2", ",", "12"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"18", ",", "17", ",", "29.3112129`"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "2.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "2.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", "True", ",", 
+   TemplateBox[{RowBox[{"\"Mon 12 Feb 2018 18:17:37\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "2.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2018", ",", "2", ",", "12"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"18", ",", "17", ",", "37.369647`"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "2.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "2.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False]}], "}"}]], "Output",
+ CellChangeTimes->{3.7221968288391047`*^9, 3.722198569802526*^9, 
+  3.722200924015631*^9, 3.72745545737965*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{RowBox[{"\"Mon 12 Feb 2018 18:17:37\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "2.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2018", ",", "2", ",", "12"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"18", ",", "17", ",", "37.3726481`"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "2.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "2.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", "True", ",", 
+   TemplateBox[{RowBox[{"\"Mon 12 Feb 2018 18:17:38\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "2.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2018", ",", "2", ",", "12"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"18", ",", "17", ",", "38.5337425`"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "2.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "2.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False]}], "}"}]], "Output",
+ CellChangeTimes->{3.7221968288391047`*^9, 3.722198569802526*^9, 
+  3.722200924015631*^9, 3.727455458543745*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{RowBox[{"\"Mon 12 Feb 2018 18:17:38\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "2.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2018", ",", "2", ",", "12"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"18", ",", "17", ",", "38.5377439`"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "2.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "2.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", "True", ",", 
+   TemplateBox[{RowBox[{"\"Mon 12 Feb 2018 18:18:48\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "2.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2018", ",", "2", ",", "12"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"18", ",", "18", ",", "48.7086311`"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "2.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "2.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False]}], "}"}]], "Output",
+ CellChangeTimes->{3.7221968288391047`*^9, 3.722198569802526*^9, 
+  3.722200924015631*^9, 3.7274555287086315`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TestarOperacaoDiferenca", "[", 
+  RowBox[{
+   RowBox[{"ColorBlindTemplate", "[", 
+    RowBox[{"2", ",", "1.0"}], "]"}], ",", 
+   RowBox[{"StateConservingTemplate", "[", 
+    RowBox[{"2", ",", "1.0"}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7274524386932764`*^9, 3.727452520277614*^9}, {
+   3.727452552056385*^9, 3.7274525641832113`*^9}, {3.7274526461301413`*^9, 
+   3.72745264789736*^9}, {3.727452712274893*^9, 3.7274527803084655`*^9}, {
+   3.727452824037806*^9, 3.727453017394824*^9}, {3.7274543487087574`*^9, 
+   3.7274543682103944`*^9}, {3.7274545553690786`*^9, 
+   3.7274545869041543`*^9}, {3.727454650324329*^9, 3.727454651324669*^9}, {
+   3.727454709163974*^9, 3.727454716648635*^9}, {3.7274550208678293`*^9, 
+   3.727455030275893*^9}, {3.7274550889124374`*^9, 3.7274552044325624`*^9}, 
+   3.727455636387656*^9, {3.7275251923488398`*^9, 3.727525207679505*^9}, {
+   3.727525238259948*^9, 3.727525239650546*^9}, {3.7275253227905383`*^9, 
+   3.72752532608805*^9}, {3.72768145174876*^9, 3.7276815009420133`*^9}, {
+   3.727681697686594*^9, 3.72768169856982*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{RowBox[{"\"Thu 15 Feb 2018 09:08:20\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "2.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2018", ",", "2", ",", "15"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"9", ",", "8", ",", "20.9994457`"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "2.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "2.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", "True", ",", 
+   TemplateBox[{RowBox[{"\"Thu 15 Feb 2018 09:09:42\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "2.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2018", ",", "2", ",", "15"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"9", ",", "9", ",", "42.7774994`"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "2.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "2.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.7274530179353905`*^9, 3.7274531582302985`*^9, {3.727454350945917*^9, 
+   3.7274543686772423`*^9}, 3.7274544734868846`*^9, 3.7274545138291693`*^9, {
+   3.7274545567130804`*^9, 3.727454588046252*^9}, 3.7274546525181885`*^9, {
+   3.7274547101035194`*^9, 3.7274547171935167`*^9}, {3.72745478539456*^9, 
+   3.7274548167087564`*^9}, 3.7274548838830104`*^9, {3.727454953392897*^9, 
+   3.7274550305719557`*^9}, {3.7274550988667374`*^9, 3.7274551873239546`*^9}, 
+   3.727455275018304*^9, {3.727455716392012*^9, 3.7274557402004595`*^9}, 
+   3.7274557770626893`*^9, 3.7275252447116055`*^9, {3.7276814589206476`*^9, 
+   3.727681504082616*^9}, 3.7276816427984624`*^9, 3.727681782782501*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"ReplacementTest", "[", 
+    RowBox[{"template1_Association", ",", "template2_Association", ",", 
+     RowBox[{"forceCoreVariableBoundary_:", " ", "False"}]}], "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"k", "=", 
+        RowBox[{"k", "[", "template1", "]"}]}], ",", 
+       RowBox[{"rawTemplate1", "=", 
+        RowBox[{"RawCore", "[", 
+         RowBox[{"templateCore", "[", "template1", "]"}], "]"}]}], ",", 
+       RowBox[{"rawTemplate2", "=", 
+        RowBox[{"RawCore", "[", 
+         RowBox[{"templateCore", "[", "template2", "]"}], "]"}]}], ",", 
+       "templateVars"}], "}"}], ",", 
+     RowBox[{
+      RowBox[{"templateVars", "=", 
+       RowBox[{"SortBy", "[", 
+        RowBox[{
+         RowBox[{"Union", "[", 
+          RowBox[{"Flatten", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{"TemplateCoreVars", "[", "#", "]"}], "&"}], "/@", 
+             RowBox[{"{", 
+              RowBox[{"rawTemplate1", ",", "rawTemplate2"}], "}"}]}], ",", 
+            "1"}], "]"}], "]"}], ",", 
+         RowBox[{
+          RowBox[{"FromDigits", "[", 
+           RowBox[{"StringDrop", "[", 
+            RowBox[{
+             RowBox[{"SymbolName", "[", "#", "]"}], ",", "1"}], "]"}], "]"}], 
+          "&"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"symbols", "=", 
+       RowBox[{"Union", "[", 
+        RowBox[{
+         RowBox[{"Select", "[", 
+          RowBox[{"rawTemplate1", ",", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"#", "[", 
+              RowBox[{"[", "0", "]"}], "]"}], "\[Equal]", "Symbol"}], "&"}]}],
+           "]"}], ",", 
+         RowBox[{"Select", "[", 
+          RowBox[{"rawTemplate2", ",", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"#", "[", 
+              RowBox[{"[", "0", "]"}], "]"}], "\[Equal]", "Symbol"}], "&"}]}],
+           "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"equationK", "=", 
+       RowBox[{"If", "[", 
+        RowBox[{"forceCoreVariableBoundary", ",", 
+         RowBox[{"Union", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"#", "\[GreaterEqual]", "0"}], "&"}], "/@", "symbols"}], 
+           ",", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"#", "<", "k"}], "&"}], "/@", "symbols"}]}], "]"}], ",", 
+         RowBox[{"{", "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"realRawTemplate1", "=", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"forceCoreVariableBoundary", "&&", 
+          RowBox[{"ModTemplateQ", "[", "template1", "]"}]}], ",", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Mod", "[", 
+            RowBox[{"#", ",", "k"}], "]"}], "&"}], "/@", "rawTemplate1"}], 
+         ",", "rawTemplate1"}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"realRawTemplate2", "=", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"forceCoreVariableBoundary", "&&", 
+          RowBox[{"ModTemplateQ", "[", "template2", "]"}]}], ",", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Mod", "[", 
+            RowBox[{"#", ",", "k"}], "]"}], "&"}], "/@", "rawTemplate2"}], 
+         ",", "rawTemplate2"}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"Solve", "[", 
+       RowBox[{
+        RowBox[{"Union", "[", 
+         RowBox[{
+          RowBox[{"restrictions", "[", "template1", "]"}], ",", 
+          RowBox[{"restrictions", "[", "template2", "]"}], ",", "equationK", 
+          ",", 
+          RowBox[{"EquationSystem", "[", 
+           RowBox[{"realRawTemplate1", ",", "realRawTemplate2"}], "]"}]}], 
+         "]"}], ",", "templateVars"}], "]"}]}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.727454676101964*^9, 3.7274547015878763`*^9}, {
+   3.727454782259867*^9, 3.727454814646847*^9}, {3.7274549629937954`*^9, 
+   3.7274549631291184`*^9}, 3.727454993589035*^9, {3.7274550738672056`*^9, 
+   3.7274550762578297`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ColorBlindTemplate", "[", 
+  RowBox[{"2", ",", "0.5"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"k\"\>", "\[Rule]", "2"}], ",", 
+   RowBox[{"\<\"r\"\>", "\[Rule]", "0.5`"}], ",", 
+   RowBox[{"\<\"core\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"1", "-", "x0"}], ",", 
+      RowBox[{"1", "-", "x1"}], ",", "x1", ",", "x0"}], "}"}]}], ",", 
+   RowBox[{"\<\"postExpansionFn\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"FilterNotAllowed", ",", "ModK"}], "}"}]}], ",", 
+   RowBox[{"\<\"restrictions\"\>", "\[Rule]", 
+    RowBox[{"{", "}"}]}]}], "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{
+  3.7274548290963893`*^9, {3.7274548871640873`*^9, 3.7274549065968866`*^9}, 
+   3.7274549517116127`*^9}]
+}, Open  ]]
+},
+WindowSize->{957, 988},
+WindowMargins->{{Automatic, -7}, {Automatic, 0}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 124, 2, 30, "Input"],
+Cell[685, 24, 613, 12, 30, "Input"],
+Cell[1301, 38, 543, 12, 30, "Input"],
+Cell[1847, 52, 422, 9, 50, "Input"],
+Cell[2272, 63, 1251, 28, 69, "Input"],
+Cell[3526, 93, 833, 18, 69, "Input"],
+Cell[4362, 113, 1186, 32, 88, "Input"],
+Cell[CellGroupData[{
+Cell[5573, 149, 4723, 113, 487, "Input"],
+Cell[10299, 264, 1607, 40, 43, "Output"],
+Cell[11909, 306, 1607, 40, 43, "Output"],
+Cell[13519, 348, 1607, 40, 43, "Output"],
+Cell[15129, 390, 1607, 40, 43, "Output"],
+Cell[16739, 432, 1607, 40, 43, "Output"],
+Cell[18349, 474, 1607, 40, 43, "Output"],
+Cell[19959, 516, 1607, 40, 43, "Output"],
+Cell[21569, 558, 1608, 40, 43, "Output"],
+Cell[23180, 600, 1608, 40, 43, "Output"],
+Cell[24791, 642, 1609, 40, 43, "Output"],
+Cell[26403, 684, 1609, 40, 43, "Output"],
+Cell[28015, 726, 1605, 40, 43, "Output"],
+Cell[29623, 768, 1609, 40, 43, "Output"],
+Cell[31235, 810, 1609, 40, 43, "Output"],
+Cell[32847, 852, 1609, 40, 43, "Output"],
+Cell[34459, 894, 1605, 40, 43, "Output"],
+Cell[36067, 936, 1607, 40, 43, "Output"],
+Cell[37677, 978, 1609, 40, 43, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[39323, 1023, 1096, 18, 30, "Input"],
+Cell[40422, 1043, 2192, 48, 76, "Output"]
+}, Open  ]],
+Cell[42629, 1094, 4023, 101, 240, "Input"],
+Cell[CellGroupData[{
+Cell[46677, 1199, 96, 2, 30, "Input"],
+Cell[46776, 1203, 702, 17, 30, "Output"]
+}, Open  ]]
+}
+]
+*)
+

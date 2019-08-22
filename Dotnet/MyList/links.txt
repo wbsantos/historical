@@ -1,0 +1,2 @@
+http://eduardopires.net.br/2013/07/asp-net-web-api-meu-primeiro-servico-rest/
+http://www.asp.net/web-api/overview/older-versions/build-restful-apis-with-aspnet-web-api

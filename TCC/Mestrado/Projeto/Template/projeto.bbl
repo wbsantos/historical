@@ -1,0 +1,18 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{1.52 }
+
+\bibitem[Andrade 1999]{andrade99}
+\abntrefinfo{Andrade}{ANDRADE}{1999}
+{ANDRADE, M.~M. de. \emph{Como preparar trabalhos para cursos de
+  p{\'o}s-gradua{\c c}\~ao}. 3. ed. S\~ao Paulo: Atlas, 1999.}
+
+\bibitem[Gil 1991]{gil91}
+\abntrefinfo{Gil}{GIL}{1991}
+{GIL, A.~C. \emph{Como elaborar projetos de pesquisa}. 3. ed. S\~ao Paulo:
+  Atlas, 1991.}
+
+\end{thebibliography}

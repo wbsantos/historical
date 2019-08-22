@@ -1,0 +1,68 @@
+Autômatos Celulares	
+	O que é?
+Autômatos celulares (ACs) são sistemas que podem representar comportamento global complexo a partir de operações locais simplórias \cite{wolfram2002}. O nome é dado como referência ao comportamento celular, onde cada célula age localmente mas um conjunto de células acaba tendo um padrão complexo de funcionamento. Mesmo no conjunto mais básico de regras ACs possuem uma miríade de comportamentos diversos que é díficil à nossa intuição prever \cite{wolfram2002}.
+
+	Como funciona?
+ACs são comumente representados como uma matriz, que pode possuir N dimensões (sendo N maior que zero). Cada célula dessa matriz possui um estado em um tempo T, sendo esse estado um valor qualquer definido em uma tabela de estados \cite {nubia2016}. A partir de uma matriz inicial, os estados das células em T + 1 são calculados tendo como base as próprias células e suas vizinhas em T. Essa alteração obedece à regra de transição desse autômato celular, que pode ser expressa por uma operação matemática, ou, mais comumente no caso do espaço elementar, por uma tabela de transições \cite{wolfram2002}.
+
+A quantidade de células que são consideradas como vizinhas é definida no autômato celular, tal qual a quantidade de estados possíveis e o contorno de periodicidade. O espaço elementar dos autômatos celulares é o menor espaço de ``família'' de regras, tendo raio de vizinhança igual à 1 e quantidade de valores possíveis igual à 2. Devido à quantidade reduzida de regras nesse espaço a busca de uma que satisfaça determinadas condições desejadas pelo pesquisador se torna relativamente simples, porém ao se aumentar qualquer desses parâmetros a busca entre as regras possíveis se torna inviável através do espaço por completo \cite{zorandir2016}.
+
+	Para quê é usado?
+Por mais simples que sejam ACs em sua essência, a complexidade que são capazes de gerar e a forma contra-intuitiva com que se comportam \cite{wolfram2002} tornam estudos como os apresentados por \citeonline{verardo2014} e \citeonline{zorandir2016} importantes na criação de um ferramental que auxilie pesquisas na área.
+
+
+	Propriedades Estáticas
+Contudo, tendo-se uma propriedade desejada já definida, se torna possível estabelecer uma tabela de transições com propriedades estáticas. Isso é útil pois limita-se o espaço de busca à apenas as regras que possuem tais propriedades, e essas propriedades se tornam indicativo do comportamento geral do AC \cite{verardo2014}.
+
+	Conservabilidade de estados
+
+``Conservabilidade de estados'', por exemplo, é uma das propriedades que uma regra pode possuir. Um autômato celular que utilize uma regra conservativa não tem os valores da soma de suas células alterados durante a evolução do espaço temporal \cite{zorandir2016}.
+
+Um AC é tido como conservativo quando a densidade da matriz que o representa não se altera durante suas iterações. Isto é, a soma dos valores em suas células se mantém sempre o mesmo. Para AC's binários isso significa que a quantidade de 1's nunca se altera, enquanto AC's onde $k > 2$ podem conter um comportamento mais diversificado, mas sempre com a característica de manter a densidade geral do AC \cite{durand2002}.
+
+Esse tipo de AC vem sendo utilizado nos estudos de fluxo de trânsito, como engarrafamentos, tráfego de massas, cruzamentos de estradas, acidentes de automóveis, etc. Além disso há um interesse da comunidade nessa característica pelo ponto de vista puramente teórica, tendo \citeonline{morita1998} apresentado um AC bidimensional reversível e conservativo capaz de computabilidade universal.
+	
+	Simetria Interna
+	Invariância a trocas de cor
+	Confinamento
+	
+	Totalidade e Semi-Totalidade
+Regras consideradas totalísticas são aquelas cujo o próximo valor de determinada célula é definido unicamente pela soma dos valores das células em sua vizinhança. Sendo assim, diferentes valores na vizinhança que somam um mesmo resultado devem sempre convergir à um mesmo valor para célula central \cite{wolfram1985}.
+
+A semi-totalidade por sua vez define que o próximo valor de uma célula deve depender do seu próprio valor atual e do valor da soma das outras células da vizinhança. Como pode-se observar pela definição, em contraste com os AC's totalísticos, exclui-se a célula central da soma geral onde seria definido sua dependência, e ao invés ela se torna um segundo fator de dependência \cite{wolfram1985}.
+	
+	Balanceamento
+Autômatos celulares balanceados são aqueles que possuem em sua matriz de transição quantidades iguais de todos os valores possíveis em $k$. Para um AC binário isso significa número igual de 1' e 0's. Devido à essa característica pode-se calcular a quantidade de regras balanceadas dado um determinado $k$ e $r$ (raio) calculando-se as permutações possíveis na tabela de transição. Em especial para o espaço elementar tem-se a equação: $8!/(4!×4!) =70$ \cite{kronemberger2011}.
+
+Uma generalização da fórmula para se calcular as regras balanceadas de qualquer espaço pode ser vista na função $f$ da equação \eqref{eq:totalbalanceada}:
+
+\begin{equation}\label{eq:totalbalanceada}
+g(k, r) = (k^(\ceil{r * 2} + 1));
+f(k, r) = g(k, r)! / ((g(k, r) / k)! ^ k)
+\end{equation}
+
+
+
+Há também determinadas transformações que podem ser aplicadas às regras, uma delas sendo a conjugação. A conjugação de uma regra nada mais é que a inversão de todos os valores de sua tabela de transição \cite{verardo2014}. 
+
+
+
+Templates
+	O que são?
+	Como funcionam?
+Devido à quantidade de regras de um determinado espaço possivelmente fugir à um trabalho que permita avaliá-las uma a uma, comumente cria-se determinadas notações para representar um conjunto de regras específicas. Tais notações no entanto não eram objetos de estudo, mas mera ferramenta. \citeonline{verardoenglish2014} apresenta uma formalização de tal representação, nomeando-a Templates de Autômatos Celulares
+
+Os Templates de ACs são uma representação da tabela de transição de estados que podem possuir funções com uma ou mais variáveis e podem representar um conjunto qualquer dentro de um espaço de regras (o que pode inclusive ser o espaço por completo) \cite{verardoenglish2014}.
+
+
+	Expansão
+A expansão de um template é a transformação do mesmo no conjunto de todas as regras que o compõe. Acaba sendo uma operação custosa por se tratar da transformação da representação de um conjunto no próprio conjunto \cite{verardo2014}.
+
+Para minimizar o custo da expanção é possível aplicar uma restrição maior ao conjunto que o template representa. 
+
+	Intersecção
+A operação de intersecção é importante no processo de restringir o espaço estudado, pois através dela é possível combinar diferentes templates em um novo template que possua todas as propriedades de suas partes. Isso é particularme útil ao se delimitar um conjunto de regras desejado \cite{verardo2014}.	
+	
+	Diferença
+Introduzida por \citeonline{zorandir2016}, trata-se da diferença entre templates, que se resume em produzir um novo template que contenha todas as regras representadas por um template X, mas não as regras representadas por um template Y. Em adição à intersecção essa operação pode ser utilizada como meio de limitar ainda mais o conjunto de regras.
+

@@ -1,0 +1,42 @@
+﻿IF EXISTS (SELECT * FROM SYSOBJECTS WHERE TYPE = 'P' AND NAME = 'ML_SP_GETCATEGORIAS')
+	BEGIN
+		PRINT 'DROPPING PROCEDURE ML_SP_GETCATEGORIAS'
+		DROP  PROCEDURE ML_SP_GETCATEGORIAS
+	END
+GO
+
+PRINT 'CREATING PROCEDURE ML_SP_GETCATEGORIAS'
+GO
+
+CREATE PROCEDURE ML_SP_GETCATEGORIAS
+	@GETFILHOS BIT
+AS
+
+/******************************************************************************
+**		NOME DO AQUIVO: ML_SP_GETCATEGORIAS.SQL
+**		NOME DA PROCEDURE: ML_SP_GETCATEGORIAS
+**
+**		DESCRIÇÃO: PROCEDURE RESPONSÁVEL EM CONSULTAR CATEGORIAS.
+**      
+**
+**		TEAMPLATE ELABORADO POR: WILLIAM BARBOSA
+**              
+**		PROGRAMADOR AUTOR: WILLIAM BARBOSA
+**		DATA: 07/11/2015
+*******************************************************************************
+**		HISTÓRICO DE ALTERAÇÕES
+*******************************************************************************
+**		DATA:		AUTOR:				DESCRIÇÃO:
+**
+*******************************************************************************/
+
+IF(@GETFILHOS = 0)
+	SELECT CTID, CTCATEGORIA, CTPAI FROM CATEGORIA WITH(NOLOCK)
+	WHERE CTPAI IS NULL
+	ORDER BY CTID
+ELSE
+	SELECT CTID, CTCATEGORIA, CTPAI FROM CATEGORIA WITH(NOLOCK)
+	ORDER BY CTPAI, CTID
+
+
+RETURN 0

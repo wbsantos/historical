@@ -1,0 +1,42 @@
+Autômatos Celulares
+
+O que é um AC
+Autômatos celulares são sistemas dinâmicos, discretos quanto ao tempo, espaço e quantidade de variáveis possíveis. 
+Um AC é composto de células, com cada célula podendo estar em um estado. 
+O comportamento do AC ocorre através de uma linha do tempo, onde em cada passo as células podem ou não alterar seu estado.
+As células interagem entre si, e de acordo com o resultado dessa interação é que seu estado se altera ou não.
+Um célula é influencia pelas células na sua vizinhança, e sua interação com elas define seu estado durante as iterações do AC.
+A computação de um AC típico ocorre de maneira local. Isto é, uma célula interage com suas vizinhas, mas não há a computação global. Em outras palavras, cada célula possui um limite definido de conhecimento dos dados do AC, não sendo influenciada diretamente pelos dados do AC completo.
+
+Para que serve
+Devido à natureza de computação local os Autômatos celulares são comumente usados em simulações de dispersão, além da área teórica da computação, como objeto de estudo na solução de problemas.
+À título de exemplo há estudos de utilização de AC's para dispersão de gases, fluxo de trânsito, criptografia, computação universal...
+
+Explicação de Células
+Computacionalmente cada célula de um AC é um dado. De modo que pode representar virtualmente qualquer coisa, podemos usar os números um e zero para representar os estados vivo e morto por exemplo. Ao se criar um AC se faz necessário definir qual a gama de estados possíveis para a célula, de modo a criar-se as regras de interação posteriormente. Para computacionar o AC é típico a utilização de números para representar os estados da célula, podendo estes números serem reais ou inteiros. A definição clássica utiliza-se de números inteiros apenas, que nesse caso devem variar de 0 à k - 1 (k sendo o número de estados possíveis para a célula deste AC).
+
+Explicação de vizinhança
+A vizinhança de uma célula é composta por todas as células que influenciam diretamente em seu estado. 
+Em cada passo da linha do tempo do AC, são os estados das células da vizinhança que definirão o estado da célula.
+A vizinhança da célula é definida pelo raio (r). Imaginando-se as células de um AC dispostas em um reticulado, a vizinhança de uma célula qualquer é composta pelas que estão à r células de distância.
+Para além disso, a vizinhança também pode ser irregular. Para um AC unidimensional por exemplo, pode-se ter r sendo múltiplo de 0.5. Nesse caso a vizinhança passa a ser irregular pois a vizinhança será maior em uma das direções do reticulados. Por exemplo: para r = 2,5 a vizinhança pode ser 2 células à esquerda e 1 à direita.
+
+Explicação de periodicidade
+Como as células são dispostas em um reticulado para definição de suas vizinhanças, as células na borda do reticulado acabam ficando com a vizinhança incompleta. Para esses casos pode-se definir algumas condições de contorno, como o contorno periódico, onde a primeira célula do reticulado fará vizinhança com a última (como se unissemos as duas pontas do reticulado). Outra condição de contorno utilizada é com valores fixos, onde as células das pontas fazem vizinhança com células fixas ()que jamais alteram seus estados).
+
+Explicação de Regras
+O que define a interação das células é a regra do AC. Na definição clássica o AC possui apenas uma regra. A regra do AC é o conjunto de instruções que define como uma célula deve ser portar durante as iterações do AC de acordo com sua vizinhança. A regra pode descrever explicitamente que, para determinados valores das células da vizinhança, a célula deve assumir um estado X. Ou a regra pode definir uma fórmula matemática ou lógica onde os valores das células vizinhas são as entradas da função, e o resultado é o estado que a célula deve assumir.
+
+Representação de Regras
+	Gráfico
+	Binário
+	
+Aplicação de Regras na evolução de um AC
+
+Família de Regras
+
+Cálculo do tamanho da família
+Demostração do crescimento exponencial da família
+Computabilidade Universal com AC
+Jogo da Vida
+Propriedades Estáticas de AC's

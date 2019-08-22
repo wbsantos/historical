@@ -1,0 +1,15 @@
+\select@language {brazil}
+\contentsline {section}{\numberline {1}INTRODU\c C\~AO}{1}{section.1}
+\contentsline {section}{\numberline {2}METODOLOGIA}{3}{section.2}
+\contentsline {section}{\numberline {3}AUT\^OMATOS CELULARES}{5}{section.3}
+\contentsline {subsection}{\numberline {3.1}CONSERVABILIDADE DE ESTADOS}{9}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}TOTALIDADE E SEMI-TOTALIDADE}{10}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}BALANCEAMENTO}{10}{subsection.3.3}
+\contentsline {section}{\numberline {4}TEMPLATES}{11}{section.4}
+\contentsline {subsection}{\numberline {4.1}EXPANS\~AO}{13}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}INTERSEC\c C\~AO}{15}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}TEMPLATE PARA REGRAS BALANCEADAS}{16}{subsection.4.3}
+\contentsline {section}{\numberline {5}DIFEREN\c CA ENTRE TEMPLATES BIN\'ARIOS}{18}{section.5}
+\contentsline {section}{\numberline {6}DIFEREN\c CA ENTRE TEMPLATES $K$-\'ARIOS}{23}{section.6}
+\contentsline {section}{\numberline {7}CONSIDERA\c C\~OES FINAIS E CRONOGRAMA}{29}{section.7}
+\contentsline {section}{REFER\^ENCIAS BIBLIOGR\'AFICAS}{31}{table.3}

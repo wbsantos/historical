@@ -1,0 +1,69 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{1.52 }
+
+\bibitem[BOCCARA e {FUK\'{S}} 2002]{boccara2002}
+\abntrefinfo{BOCCARA e {FUK\'{S}}}{BOCCARA; {FUK\'{S}}}{2002}
+{BOCCARA, N.; {FUK\'{S}}, H. Number-conserving cellular automaton rules.
+\emph{Fundamenta Informaticae}, IOS Press, v.~52, n.~1-3, p. 1--13, 2002.}
+
+\bibitem[{DE OLIVEIRA} e VERARDO 2014]{verardoenglish2014}
+\abntrefinfo{{DE OLIVEIRA} e VERARDO}{{DE OLIVEIRA}; VERARDO}{2014}
+{{DE OLIVEIRA}, P. P.~B.; VERARDO, M. Representing families of cellular
+  automata rules.
+\emph{The Mathematica Journal}, v.~16, n.~8, 2014.
+Dispon{\'\i}vel em: $<$dx\-.doi\-.org\-/doi:10\-.3888\-/tmj\-.16-8$>$.}
+
+\bibitem[KRONEMBERGER e {DE OLIVEIRA} 2011]{kronemberger2011}
+\abntrefinfo{KRONEMBERGER e {DE OLIVEIRA}}{KRONEMBERGER; {DE OLIVEIRA}}{2011}
+{KRONEMBERGER, G.; {DE OLIVEIRA}, P. P.~B. A hip\'otese das regras primitivas e
+  derivadas, na busca construtiva por aut\^omatos celulares revers\'iveis. In:
+  . S\~ao Jo\~ao del Rei, MG: Simp\'osio Brasileiro de Automa{\c{c}}\~ao
+  Inteligente, 2011.}
+
+\bibitem[MORITA e IMAI 1998]{morita1998}
+\abntrefinfo{MORITA e IMAI}{MORITA; IMAI}{1998}
+{MORITA, K.; IMAI, K. Number-conserving reversible cellular automata and their
+  computation universality.
+Satellite Workshop on Cellular Automata MFCS'98, p. 51--68, 1998.}
+
+\bibitem[PACKARD e WOLFRAM 1985]{wolfram1985}
+\abntrefinfo{PACKARD e WOLFRAM}{PACKARD; WOLFRAM}{1985}
+{PACKARD, N.~H.; WOLFRAM, S. Two-dimensional cellular automata.
+\emph{Journal of statistical Physics}, Springer, v.~38, n.~5, p. 901--946,
+  1985.}
+
+\bibitem[SOARES 2016]{zorandir2016}
+\abntrefinfo{SOARES}{SOARES}{2016}
+{SOARES, Z.
+\emph{Diferen\c{c}a entre Templates de Aut\^omatos Celulares Unidimensionais
+  Bin\'arios}.
+Disserta\c{c}\~ao (Mestrado) --- Universidade Presbiteriana Mackenzie, 2016.}
+
+\bibitem[VERARDO 2014]{verardo2014}
+\abntrefinfo{VERARDO}{VERARDO}{2014}
+{VERARDO, M.
+\emph{Representando fam\'ilias de aut\^omatos celulares por meio de templates}.
+Disserta\c{c}\~ao (Mestrado) --- Universidade Presbiteriana Mackenzie, 2014.}
+
+\bibitem[VERARDO e {DE OLIVEIRA} 2017]{catemplates}
+\abntrefinfo{VERARDO e {DE OLIVEIRA}}{VERARDO; {DE OLIVEIRA}}{2017}
+{VERARDO, M.; {DE OLIVEIRA}, P. P.~B. \emph{CATemplates}.
+[S.l.], 2017. Dispon{\'\i}vel em:
+  $<$https:\-/\-/github\-.com\-/mverardo\-/CATemplates$>$.}
+
+\bibitem[Wolfram 2002]{wolfram2002}
+\abntrefinfo{Wolfram}{WOLFRAM}{2002}
+{WOLFRAM. \emph{A new kind of science}. 1. ed. [S.l.]: Wolfram Media Inc,
+  2002.}
+
+\bibitem[WOLFRAM RESEARCH 2017]{mathematica}
+\abntrefinfo{WOLFRAM RESEARCH}{WOLFRAM RESEARCH}{2017}
+{WOLFRAM RESEARCH. \emph{Wolfram Mathematica}. 2017.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/www\-.wolfram\-.com\-/mathematica\-/$>$}{http://www.wolfram.com/mathematica/}.}
+
+\end{thebibliography}
